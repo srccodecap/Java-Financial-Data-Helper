@@ -9,4 +9,9 @@
     <parent>
         <groupId>com.greenback</groupId>
         <artifactId>greenback-java</artifactId>
- 
+        <version>1.0.39-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <main.java.package>com.greenback.api</main.java.package>
+    </p
