@@ -4,4 +4,9 @@
     <groupId>com.greenback</groupId>
     <artifactId>greenback-kit-core</artifactId>
     <name>greenback-kit-core</name>
-    <pa
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.greenback</groupId>
+        <artifactId>greenback-java</artifactId>
+ 
