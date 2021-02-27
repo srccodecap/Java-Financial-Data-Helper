@@ -14,4 +14,11 @@
 
     <properties>
         <main.java.package>com.greenback.api</main.java.package>
-    </p
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>crux-uri</artifactId>
+        </depende
