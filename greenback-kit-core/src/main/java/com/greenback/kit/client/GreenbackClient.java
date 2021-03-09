@@ -13,4 +13,10 @@ public interface GreenbackClient {
     
     // Users
     
-    default User getUserById(String userId) throws IOExceptio
+    default User getUserById(String userId) throws IOException {
+        return this.getUserById(userId, null);
+    }
+    
+    User getUserById(String userId, Iterable<String> expands) throws IOException;
+
+    Entitlements getEntitlemen
