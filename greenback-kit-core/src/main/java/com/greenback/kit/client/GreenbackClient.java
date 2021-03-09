@@ -5,4 +5,12 @@ import com.greenback.kit.model.*;
 
 import java.io.IOException;
 
-public interface 
+public interface GreenbackClient {
+
+    String getBaseUrl();
+    
+    GreenbackCodec getCodec();
+    
+    // Users
+    
+    default User getUserById(String userId) throws IOExceptio
