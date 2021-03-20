@@ -25,4 +25,7 @@ public interface GreenbackClient {
 
     // Connects
     
-    Paginated<Connect> getConnects(Connect
+    Paginated<Connect> getConnects(ConnectQuery connectQuery) throws IOException;
+    
+    default Connect getConnectByLabel(String connectLabel) throws IOException {
+        return this.getConnectByLabel
