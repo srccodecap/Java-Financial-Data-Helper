@@ -51,4 +51,8 @@ public interface GreenbackClient {
     
     Account createAccount(Account account) throws IOException;
     
-    Account updateAccount(Account account) throws IOEx
+    Account updateAccount(Account account) throws IOException;
+    
+    Paginated<Account> getAccounts(AccountQuery accountQuery) throws IOException;
+    
+    default Account getAccountById(String accou
