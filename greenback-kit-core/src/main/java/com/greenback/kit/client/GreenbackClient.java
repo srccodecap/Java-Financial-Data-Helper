@@ -34,3 +34,7 @@ public interface GreenbackClient {
     Connect getConnectByLabel(String connectLabel, Iterable<String> expands) throws IOException;
     
     // Connect Intents
+    
+    ConnectIntent beginConnectIntent(String connectLabel) throws IOException;
+    
+    ConnectIntent reconnectAccountIntent(String 
