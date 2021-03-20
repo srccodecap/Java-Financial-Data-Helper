@@ -41,4 +41,9 @@ public interface GreenbackClient {
     
     ConnectIntent authorizeConnectIntent(
         String token,
-        ConnectIntentAuthorize auth
+        ConnectIntentAuthorize authorize) throws IOException;
+    
+    ConnectIntent completeConnectIntent(
+        String token,
+        ConnectIntentComplete complete) throws IOException;
+  
