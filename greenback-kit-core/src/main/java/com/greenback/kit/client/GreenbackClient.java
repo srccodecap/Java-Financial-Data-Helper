@@ -37,4 +37,8 @@ public interface GreenbackClient {
     
     ConnectIntent beginConnectIntent(String connectLabel) throws IOException;
     
-    ConnectIntent reconnectAccountIntent(String 
+    ConnectIntent reconnectAccountIntent(String accountId) throws IOException;
+    
+    ConnectIntent authorizeConnectIntent(
+        String token,
+        ConnectIntentAuthorize auth
