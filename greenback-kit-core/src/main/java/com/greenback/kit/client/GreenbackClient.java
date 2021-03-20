@@ -46,4 +46,9 @@ public interface GreenbackClient {
     ConnectIntent completeConnectIntent(
         String token,
         ConnectIntentComplete complete) throws IOException;
-  
+    
+    // Accounts
+    
+    Account createAccount(Account account) throws IOException;
+    
+    Account updateAccount(Account account) throws IOEx
