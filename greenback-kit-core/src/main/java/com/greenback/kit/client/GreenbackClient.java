@@ -55,4 +55,8 @@ public interface GreenbackClient {
     
     Paginated<Account> getAccounts(AccountQuery accountQuery) throws IOException;
     
-    default Account getAccountById(String accou
+    default Account getAccountById(String accountId) throws IOException {
+        return this.getAccountById(accountId, null);
+    }
+    
+    Account getAccountById(String accountId, 
