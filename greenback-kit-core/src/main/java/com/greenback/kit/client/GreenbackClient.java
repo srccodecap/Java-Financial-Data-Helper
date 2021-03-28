@@ -59,4 +59,10 @@ public interface GreenbackClient {
         return this.getAccountById(accountId, null);
     }
     
-    Account getAccountById(String accountId, 
+    Account getAccountById(String accountId, Iterable<String> expands) throws IOException;
+
+    Account deleteAccountById(String accountId) throws IOException;
+    
+    // Visions
+    
+    Visi
