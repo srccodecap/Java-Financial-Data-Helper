@@ -77,4 +77,8 @@ public interface GreenbackClient {
     
     Paginated<Message> getMessages(MessageQuery messageQuery) throws IOException;
     
-    default Message createMessage(MessageRequest messageRe
+    default Message createMessage(MessageRequest messageRequest) throws IOException {
+        return this.createMessage(messageRequest, null);
+    }
+
+    Message createMessage(MessageRequest messageR
