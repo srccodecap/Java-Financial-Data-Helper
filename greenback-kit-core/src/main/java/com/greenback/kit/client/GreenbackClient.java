@@ -81,4 +81,7 @@ public interface GreenbackClient {
         return this.createMessage(messageRequest, null);
     }
 
-    Message createMessage(MessageRequest messageR
+    Message createMessage(MessageRequest messageRequest, String accountId) throws IOException;
+    
+    default Message getMessageById(String messageId) throws IOException {
+        re
