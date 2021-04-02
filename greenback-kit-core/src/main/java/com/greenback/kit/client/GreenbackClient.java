@@ -73,4 +73,8 @@ public interface GreenbackClient {
     
     Vision getVisionById(String visionId, Iterable<String> expands) throws IOException;
 
-    // Messag
+    // Messages
+    
+    Paginated<Message> getMessages(MessageQuery messageQuery) throws IOException;
+    
+    default Message createMessage(MessageRequest messageRe
