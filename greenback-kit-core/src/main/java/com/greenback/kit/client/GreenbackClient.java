@@ -68,4 +68,9 @@ public interface GreenbackClient {
     Vision createVision(VisionRequest visionRequest) throws IOException;
     
     default Vision getVisionById(String visionId) throws IOException {
-        return this.
+        return this.getVisionById(visionId, null);
+    }
+    
+    Vision getVisionById(String visionId, Iterable<String> expands) throws IOException;
+
+    // Messag
