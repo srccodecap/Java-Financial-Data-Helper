@@ -89,4 +89,8 @@ public interface GreenbackClient {
     
     Message getMessageById(String messageId, Iterable<String> expands) throws IOException;
     
-    // Tra
+    // Transactions
+
+    Transaction createTransaction(Transaction transaction) throws IOException;
+    
+    Transaction updateTransaction(Transaction t
