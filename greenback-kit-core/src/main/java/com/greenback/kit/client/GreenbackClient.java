@@ -96,4 +96,7 @@ public interface GreenbackClient {
     Transaction updateTransaction(Transaction transaction) throws IOException;
     
     default Transaction getTransactionById(String transactionId) throws IOException {
-   
+        return this.getTransactionById(transactionId, null);
+    }
+    
+    Transaction getTransactionById(String transactionId, Iterable<String> expands)
