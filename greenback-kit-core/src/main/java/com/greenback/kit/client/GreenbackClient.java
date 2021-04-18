@@ -99,4 +99,8 @@ public interface GreenbackClient {
         return this.getTransactionById(transactionId, null);
     }
     
-    Transaction getTransactionById(String transactionId, Iterable<String> expands)
+    Transaction getTransactionById(String transactionId, Iterable<String> expands) throws IOException;
+
+    Paginated<Transaction> getTransactions(TransactionQuery transactionQuery) throws IOException;
+    
+    Transaction 
