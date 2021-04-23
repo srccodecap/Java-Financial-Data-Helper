@@ -103,4 +103,9 @@ public interface GreenbackClient {
 
     Paginated<Transaction> getTransactions(TransactionQuery transactionQuery) throws IOException;
     
-    Transaction 
+    Transaction deleteTransactionById(String transactionId) throws IOException;
+    
+    // Exports
+    
+    default TransactionExportIntent getTransactionExportIntent(
+       
