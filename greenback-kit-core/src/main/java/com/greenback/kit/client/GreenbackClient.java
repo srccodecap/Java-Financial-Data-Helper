@@ -115,4 +115,7 @@ public interface GreenbackClient {
         return this.getTransactionExportIntent(transactionId, accountId, null, transactionExportIntentRequest);
     }
     
-    Transaction
+    TransactionExportIntent getTransactionExportIntent(
+            String transactionId,
+            String accountId,
+            String targetId,
