@@ -129,4 +129,8 @@ public interface GreenbackClient {
     TransactionExport getTransactionExportById(
             String transactionExportId) throws IOException;
     
-    TransactionExport deleteT
+    TransactionExport deleteTransactionExportById(
+            String transactionExportId,
+            TransactionExportDeleteMode deleteMode) throws IOException;
+
+    // Transform
