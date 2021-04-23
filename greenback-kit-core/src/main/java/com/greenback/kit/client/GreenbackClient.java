@@ -119,3 +119,7 @@ public interface GreenbackClient {
             String transactionId,
             String accountId,
             String targetId,
+            TransactionExportIntentRequest transactionExportIntentRequest) throws IOException;
+    
+    TransactionExport applyTransactionExportIntent(
+    
