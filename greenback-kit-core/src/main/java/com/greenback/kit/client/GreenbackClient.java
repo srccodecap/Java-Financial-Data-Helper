@@ -138,3 +138,8 @@ public interface GreenbackClient {
     Paginated<Transform> getTransforms(TransformQuery transformQuery) throws IOException;
     
     Transform createTransform(Transform transform) throws IOException;
+
+    Transform updateTransform(Transform transform) throws IOException;
+
+    Transform getTransformById(String transformId) throws IOException;
+ 
