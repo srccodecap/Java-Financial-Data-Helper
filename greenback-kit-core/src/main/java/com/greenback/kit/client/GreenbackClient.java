@@ -149,4 +149,8 @@ public interface GreenbackClient {
 
     AutoExport createAutoExport(AutoExport autoExport) throws IOException;
 
-    AutoExport updateAutoExport(AutoExport autoExport) throws 
+    AutoExport updateAutoExport(AutoExport autoExport) throws IOException;
+
+    Paginated<AutoExport> getAutoExports(AutoExportQuery autoExportQuery) throws IOException;
+
+    default AutoExport getAutoExportById(
