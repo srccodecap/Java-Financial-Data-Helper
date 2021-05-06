@@ -146,3 +146,7 @@ public interface GreenbackClient {
     Transform deleteTransformById(String transformId, DeleteMode deleteMode) throws IOException;
     
     // Auto Exports
+
+    AutoExport createAutoExport(AutoExport autoExport) throws IOException;
+
+    AutoExport updateAutoExport(AutoExport autoExport) throws 
