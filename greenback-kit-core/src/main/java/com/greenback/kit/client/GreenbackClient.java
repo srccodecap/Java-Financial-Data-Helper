@@ -157,4 +157,8 @@ public interface GreenbackClient {
         return this.getAutoExportById(autoExportId, null);
     }
 
-    AutoExport getAutoExportById(String autoE
+    AutoExport getAutoExportById(String autoExportId, Iterable<String> expands) throws IOException;
+
+    AutoExport deleteAutoExportById(String autoExportId) throws IOException;
+
+  
