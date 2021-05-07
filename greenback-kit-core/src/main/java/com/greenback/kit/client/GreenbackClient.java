@@ -153,4 +153,8 @@ public interface GreenbackClient {
 
     Paginated<AutoExport> getAutoExports(AutoExportQuery autoExportQuery) throws IOException;
 
-    default AutoExport getAutoExportById(
+    default AutoExport getAutoExportById(String autoExportId) throws IOException {
+        return this.getAutoExportById(autoExportId, null);
+    }
+
+    AutoExport getAutoExportById(String autoE
