@@ -18,4 +18,8 @@ public interface GreenbackCodec {
     
     Paginated<User> readUsers(InputStream input) throws IOException;
 
-    TeamMember readTeamMe
+    TeamMember readTeamMember(InputStream input) throws IOException;
+
+    Paginated<TeamMember> readTeamMembers(InputStream input) throws IOException;
+
+    Entitlements re
