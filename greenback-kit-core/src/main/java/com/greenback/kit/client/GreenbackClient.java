@@ -161,4 +161,8 @@ public interface GreenbackClient {
 
     AutoExport deleteAutoExportById(String autoExportId) throws IOException;
 
-  
+    // Auto Export Runs
+
+    ExportRun createAutoExportRun(String autoExportId, ExportRun exportRun) throws IOException;
+
+    default ExportRun getExportRunB
