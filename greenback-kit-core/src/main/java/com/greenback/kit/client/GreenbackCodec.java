@@ -10,4 +10,8 @@ public interface GreenbackCodec {
 
     String prettyPrint(Object value) throws IOException;
     
-   
+    Map<String,Object> toFlattenedMap(Object value) throws IOException;
+    
+    byte[] writeBytes(Object value) throws IOException;
+    
+    
