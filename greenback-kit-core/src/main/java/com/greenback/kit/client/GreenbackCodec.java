@@ -14,4 +14,8 @@ public interface GreenbackCodec {
     
     byte[] writeBytes(Object value) throws IOException;
     
+    User readUser(InputStream input) throws IOException;
     
+    Paginated<User> readUsers(InputStream input) throws IOException;
+
+    TeamMember readTeamMe
