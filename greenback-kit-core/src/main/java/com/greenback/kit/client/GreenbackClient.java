@@ -169,4 +169,6 @@ public interface GreenbackClient {
         return this.getExportRunById(exportRunId, null);
     }
 
-    ExportRun getExportRunById(String ex
+    ExportRun getExportRunById(String exportRunId, Iterable<String> expands) throws IOException;
+
+    default Paginated<ExportRun> getExportRunsByAutoExportId(String autoExportId) throws IOException {
