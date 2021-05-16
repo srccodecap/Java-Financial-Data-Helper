@@ -26,4 +26,8 @@ public interface GreenbackCodec {
 
     Connect readConnect(InputStream input) throws IOException;
     
-    Paginated<Connect> readConnects
+    Paginated<Connect> readConnects(InputStream input) throws IOException;
+
+    ConnectIntent readConnectIntent(InputStream input) throws IOException;
+    
+    Account readAccount(InputStr
