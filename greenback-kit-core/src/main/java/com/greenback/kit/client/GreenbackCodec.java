@@ -30,4 +30,8 @@ public interface GreenbackCodec {
 
     ConnectIntent readConnectIntent(InputStream input) throws IOException;
     
-    Account readAccount(InputStr
+    Account readAccount(InputStream input) throws IOException;
+
+    Paginated<Account> readAccounts(InputStream input) throws IOException;
+
+    Vision readVision(InputSt
