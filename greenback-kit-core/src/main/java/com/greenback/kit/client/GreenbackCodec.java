@@ -38,4 +38,8 @@ public interface GreenbackCodec {
     
     Paginated<Vision> readVisions(InputStream input) throws IOException;
     
-    Message readMessage(InputStr
+    Message readMessage(InputStream input) throws IOException;
+    
+    Paginated<Message> readMessages(InputStream input) throws IOException;
+    
+    Transactio
