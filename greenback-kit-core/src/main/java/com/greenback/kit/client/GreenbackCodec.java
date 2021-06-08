@@ -46,4 +46,8 @@ public interface GreenbackCodec {
     
     Paginated<Transaction> readTransactions(InputStream input) throws IOException;
 
-    Sy
+    Sync readSync(InputStream input) throws IOException;
+    
+    Paginated<Sync> readSyncs(InputStream input) throws IOException;
+
+    TransactionExport
