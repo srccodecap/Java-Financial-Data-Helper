@@ -52,4 +52,9 @@ public interface GreenbackCodec {
 
     TransactionExport readTransactionExport(InputStream input) throws IOException;
 
-    TransactionExportIntent readTransactionExporter(InputStream input) throws 
+    TransactionExportIntent readTransactionExporter(InputStream input) throws IOException;
+
+    Transform readTransform(InputStream input) throws IOException;
+
+    Paginated<Transform> readTransforms(InputStream input) throws IOException;
+    
