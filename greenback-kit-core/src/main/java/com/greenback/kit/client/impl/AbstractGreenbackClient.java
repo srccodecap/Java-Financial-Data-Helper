@@ -128,3 +128,154 @@ abstract public class AbstractGreenbackClient implements GreenbackClient {
     //
     // Connects
     //
+    
+    @Override
+    public Paginated<Connect> getConnects(
+            ConnectQuery connectQuery) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/connects")
+            .query(this.toQueryMap(connectQuery))
+            .toString();
+        
+        return toStreamingPaginated(url, v -> this.getConnectsByUrl(v));
+    }
+    
+    @Override
+    public Connect getConnectByLabel(
+            String connectLabel,
+            Iterable<String> expands) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/connects")
+            .rel(connectLabel)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+        
+        return toValue(() -> this.getConnectByUrl(url));
+    }
+    
+    abstract protected Paginated<Connect> getConnectsByUrl(
+            String url) throws IOException;
+    
+    abstract protected Connect getConnectByUrl(
+            String url) throws IOException;
+    
+    //
+    // Connect Intents
+    //
+    
+    @Override
+    public ConnectIntent beginConnectIntent(
+            String connectLabel) throws IOException {
+
+        Objects.requireNonNull(connectLabel, "connectLabel was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/connects")
+            .rel(connectLabel)
+            .rel("begin")
+            .toString();
+        
+        return toValue(() -> this.getConnectIntentByUrl(url));
+    }
+    
+    @Override
+    public ConnectIntent reconnectAccountIntent(
+            String accountId) throws IOException {
+
+        Objects.requireNonNull(accountId, "accountId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .rel(accountId)
+            .rel("reconnect")
+            .toString();
+        
+        return toValue(() -> this.getConnectIntentByUrl(url));
+    }
+    
+    @Override
+    public ConnectIntent authorizeConnectIntent(
+            String token,
+            ConnectIntentAuthorize request) throws IOException {
+
+        Objects.requireNonNull(token, "token was null");
+        Objects.requireNonNull(request, "request was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/connect_intents")
+            .rel(token)
+            .toString();
+        
+        return toValue(() -> this.postConnectIntentRequestByUrl(url, request));
+    }
+    
+    @Override
+    public ConnectIntent completeConnectIntent(
+            String token,
+            ConnectIntentComplete request) throws IOException {
+
+        Objects.requireNonNull(token, "token was null");
+        Objects.requireNonNull(request, "request was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/connect_intents")
+            .rel(token)
+            .rel("complete")
+            .toString();
+        
+        return toValue(() -> this.postConnectIntentRequestByUrl(url, request));
+    }
+    
+    abstract protected ConnectIntent getConnectIntentByUrl(
+            String url) throws IOException;
+    
+    abstract protected ConnectIntent postConnectIntentRequestByUrl(
+            String url,
+            Object request) throws IOException;
+    
+    //
+    // Accounts
+    //
+    
+    @Override
+    public Account createAccount(
+            Account account) throws IOException {
+
+        Objects.requireNonNull(account, "account was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .toString();
+        
+        return this.postAccountByUrl(url, account);
+    }
+    
+    @Override
+    public Account updateAccount(
+            Account account) throws IOException {
+
+        Objects.requireNonNull(account, "account was null");
+        Objects.requireNonNull(account.getId(), "account id was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .rel(account.getId())
+            .toString();
+        
+        return this.postAccountByUrl(url, account);
+    }
+    
+    @Override
+    public Paginated<Account> getAccounts(
+            AccountQuery accountQuery) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .query(this.toQueryMap(accountQuery))
+            .toString();
+        
+        return this.getAccountsByUrl(url);
+    }
+    
