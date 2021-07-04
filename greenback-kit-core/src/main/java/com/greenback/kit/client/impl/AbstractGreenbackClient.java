@@ -1,0 +1,130 @@
+
+package com.greenback.kit.client.impl;
+
+import com.fizzed.crux.uri.MutableUri;
+import com.greenback.kit.model.AutoExportQuery;
+import com.greenback.kit.client.GreenbackClient;
+import com.greenback.kit.client.GreenbackCodec;
+import static com.greenback.kit.client.impl.ClientHelper.toExpandQueryParameter;
+import static com.greenback.kit.client.impl.ClientHelper.toInstantParameter;
+import static com.greenback.kit.client.impl.ClientHelper.toListQueryParameter;
+import static com.greenback.kit.client.impl.ClientHelper.toStreamingPaginated;
+import static com.greenback.kit.client.impl.ClientHelper.toValue;
+import com.greenback.kit.model.*;
+import com.greenback.kit.util.Bytes;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+import static java.util.Optional.ofNullable;
+
+abstract public class AbstractGreenbackClient implements GreenbackClient {
+    
+    protected final String baseUrl;
+    protected final GreenbackCodec codec;
+    protected final String accessToken;
+
+    protected AbstractGreenbackClient(
+            String baseUrl,
+            GreenbackCodec codec,
+            String accessToken) {
+        
+        Objects.requireNonNull(baseUrl, "baseUrl was null");
+        Objects.requireNonNull(codec, "codec was null");
+        Objects.requireNonNull(accessToken, "accessToken was null");
+        
+        this.codec = codec;
+        this.baseUrl = baseUrl;
+        this.accessToken = accessToken;
+    }
+
+    @Override
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+    
+    @Override
+    public GreenbackCodec getCodec() {
+        return this.codec;
+    }
+    
+    protected MutableUri buildBaseUrl() {
+        final MutableUri url = new MutableUri(this.baseUrl);
+        // protect against someone include params on the base url that get included
+        url.setQuery(null);
+        url.fragment(null);
+        return url;
+    }
+
+    protected Map<String,String> toQueryMap(Object value) throws IOException {
+        final Map<String,String> map = new LinkedHashMap<>();
+
+        if (value != null) {
+            final Map<String,Object> flattenedMap = this.codec.toFlattenedMap(value);
+            if (flattenedMap != null) {
+                flattenedMap.forEach((k,v) -> {
+                    map.put(k, ClientHelper.toStringParameter(v));
+                });
+            }
+        }
+
+        return map;
+    }
+    
+    //
+    // Users
+    //
+    
+    @Override
+    public User getUserById(
+            String userId,
+            Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(userId, "userId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/users")
+            .rel(userId)
+            .queryIfPresent("expands", ofNullable(toListQueryParameter(expands)))
+            .toString();
+        
+        return toValue(() -> this.getUserByUrl(url));
+    }
+    
+    abstract protected User getUserByUrl(
+            String url) throws IOException;
+
+    @Override
+    public Paginated<TeamMember> getTeamMembersByTeamId(
+            String teamId) throws IOException {
+
+        Objects.requireNonNull(teamId, "teamId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/teams")
+            .rel(teamId)
+            .rel("members")
+            .toString();
+
+        return toStreamingPaginated(url, v -> this.getTeamMembersByUrl(v));
+    }
+
+    abstract protected Paginated<TeamMember> getTeamMembersByUrl(
+        String url) throws IOException;
+
+    @Override
+    public Entitlements getEntitlements() throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/entitlements")
+            .toString();
+
+        return toValue(() -> this.getEntitlementsByUrl(url));
+    }
+
+    abstract protected Entitlements getEntitlementsByUrl(
+        String url) throws IOException;
+
+    //
+    // Connects
+    //

@@ -64,4 +64,6 @@ public interface GreenbackCodec {
 
     ExportRun readExportRun(InputStream input) throws IOException;
 
-    Paginated<ExportRun> readExportRuns(InputStream input) throws IOException
+    Paginated<ExportRun> readExportRuns(InputStream input) throws IOException;
+    
+}
