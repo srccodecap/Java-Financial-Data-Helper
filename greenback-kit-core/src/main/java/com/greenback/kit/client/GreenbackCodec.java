@@ -58,3 +58,8 @@ public interface GreenbackCodec {
 
     Paginated<Transform> readTransforms(InputStream input) throws IOException;
     
+    AutoExport readAutoExport(InputStream input) throws IOException;
+
+    Paginated<AutoExport> readAutoExports(InputStream input) throws IOException;
+
+  
