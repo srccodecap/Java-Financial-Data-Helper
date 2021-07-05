@@ -570,3 +570,144 @@ abstract public class AbstractGreenbackClient implements GreenbackClient {
     }
     
     abstract protected TransactionExport postTransactionExportByUrl(
+            String url,
+            TransactionExportIntentRequest transactionExporterRequest) throws IOException;
+    
+    @Override
+    public TransactionExport getTransactionExportById(
+            String transactionExportId) throws IOException {
+        
+        Objects.requireNonNull(transactionExportId, "transactionExportId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transaction_exports")
+            .rel(transactionExportId)
+            .toString();
+
+        return toValue(() -> this.getTransactionExportByUrl(url));
+    }
+    
+    abstract protected TransactionExport getTransactionExportByUrl(
+            String url) throws IOException;
+    
+    @Override
+    public TransactionExport deleteTransactionExportById(
+            String transactionExportId,
+            TransactionExportDeleteMode deleteMode) throws IOException {
+
+        Objects.requireNonNull(transactionExportId, "transactionExportId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transaction_exports")
+            .rel(transactionExportId)
+            .queryIfPresent("mode", ofNullable(deleteMode))
+            .toString();
+
+        return toValue(() -> this.deleteTransactionExportByUrl(url));
+    }
+    
+    abstract protected TransactionExport deleteTransactionExportByUrl(
+            String url) throws IOException;
+
+    //
+    // Transforms
+    //
+
+    @Override
+    public Paginated<Transform> getTransforms(
+            TransformQuery transformQuery) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transforms")
+            .query(this.toQueryMap(transformQuery))
+            .toString();
+
+        return this.getTransformsByUrl(url);
+    }
+    
+    @Override
+    public Transform createTransform(
+            Transform transform) throws IOException {
+
+        Objects.requireNonNull(transform, "transform was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transforms")
+            .toString();
+
+        return this.postTransformByUrl(url, transform);
+    }
+
+    @Override
+    public Transform updateTransform(
+            Transform transform) throws IOException {
+
+        Objects.requireNonNull(transform, "transform was null");
+        Objects.requireNonNull(transform.getId(), "transform id was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transforms")
+            .rel(transform.getId())
+            .toString();
+
+        transform.setId(null);
+        
+        return this.postTransformByUrl(url, transform);
+    }
+
+    @Override
+    public Transform getTransformById(
+            String transformId) throws IOException {
+
+        Objects.requireNonNull(transformId, "transformId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transforms")
+            .rel(transformId)
+            //.queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+
+        return toValue(() -> this.getTransformByUrl(url));
+    }
+
+    @Override
+    public Transform deleteTransformById(
+            String transformId,
+            DeleteMode deleteMode) throws IOException {
+
+        Objects.requireNonNull(transformId, "autoExportId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transforms")
+            .rel(transformId)
+            .queryIfPresent("mode", ofNullable(deleteMode))
+            .toString();
+
+        return toValue(() -> this.deleteTransformByUrl(url));
+    }
+
+    
+    abstract protected Transform postTransformByUrl(
+        String url,
+        Object request) throws IOException;
+
+    abstract protected Paginated<Transform> getTransformsByUrl(
+        String url) throws IOException;
+
+    abstract protected Transform getTransformByUrl(
+        String url) throws IOException;
+    
+    abstract protected Transform deleteTransformByUrl(
+        String url) throws IOException;
+    
+    //
+    // Auto Exports
+    //
+
+    @Override
+    public AutoExport createAutoExport(
+            AutoExport autoExport) throws IOException {
+
+        Objects.requireNonNull(autoExport, "autoExport was null");
+
+        final String url = this.buildBaseUrl()
