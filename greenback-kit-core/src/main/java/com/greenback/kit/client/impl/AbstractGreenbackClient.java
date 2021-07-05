@@ -432,3 +432,141 @@ abstract public class AbstractGreenbackClient implements GreenbackClient {
     
     
     //
+    // Transactions
+    //
+    
+    @Override
+    public Transaction createTransaction(
+            Transaction transaction) throws IOException {
+
+        Objects.requireNonNull(transaction, "transaction was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .toString();
+        
+        return this.postTransactionByUrl(url, transaction);
+    }
+    
+    @Override
+    public Transaction updateTransaction(
+            Transaction transaction) throws IOException {
+
+        Objects.requireNonNull(transaction, "transaction was null");
+        Objects.requireNonNull(transaction.getId(), "transaction id was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .rel(transaction.getId())
+            .toString();
+        
+        return this.postTransactionByUrl(url, transaction);
+    }
+    
+    @Override
+    public Paginated<Transaction> getTransactions(
+            TransactionQuery transactionQuery) throws IOException {
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .query(this.toQueryMap(transactionQuery))
+            .toString();
+        
+        return toStreamingPaginated(url, v -> this.getTransactionsByUrl(v));
+    }
+    
+    @Override
+    public Transaction getTransactionById(
+            String transactionId,
+            Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(transactionId, "transactionId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .rel(transactionId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+        
+        return toValue(() -> this.getTransactionByUrl(url));
+    }
+
+    @Override
+    public Transaction deleteTransactionById(
+            String transactionId) throws IOException {
+
+        Objects.requireNonNull(transactionId, "transactionId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .rel(transactionId)
+            .toString();
+        
+        return toValue(() -> this.deleteTransactionByUrl(url));
+    }
+    
+    abstract protected Paginated<Transaction> getTransactionsByUrl(
+            String url) throws IOException;
+    
+    abstract protected Transaction getTransactionByUrl(
+            String url) throws IOException;
+    
+    abstract protected Transaction postTransactionByUrl(
+            String url,
+            Object request) throws IOException;
+    
+    abstract protected Transaction deleteTransactionByUrl(
+            String url) throws IOException;
+    
+    @Override
+    public TransactionExportIntent getTransactionExportIntent(
+            String transactionId,
+            String accountId,
+            String targetId,
+            TransactionExportIntentRequest transactionExportIntentRequest) throws IOException {
+
+        Objects.requireNonNull(transactionId, "transactionId was null");
+        Objects.requireNonNull(accountId, "accountId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .rel(transactionId, "exporters", accountId)
+            .relIfPresent(ofNullable(targetId))
+            .queryIfPresent("payment", ofNullable(transactionExportIntentRequest).map(v -> v.getPayment()))
+            .queryIfPresent("itemized", ofNullable(transactionExportIntentRequest).map(v -> v.getItemized()))
+            .queryIfPresent("verified_by", ofNullable(transactionExportIntentRequest).map(v -> toInstantParameter(v.getVerifiedBy())))
+            .queryIfPresent("expands", toExpandQueryParameter(transactionExportIntentRequest.getExpands()))
+            .toString();
+        
+        return toValue(() -> this.getTransactionExporterByUrl(url));
+    }
+    
+    abstract protected TransactionExportIntent getTransactionExporterByUrl(
+            String url) throws IOException;
+    
+    @Override
+    public TransactionExport applyTransactionExportIntent(
+            String transactionId,
+            String accountId,
+            TransactionExportIntentRequest transactionExportIntentRequest) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/transactions")
+            .rel(transactionId, "exporters", accountId)
+            .queryIfPresent("payment", ofNullable(transactionExportIntentRequest).map(v -> v.getPayment()))
+            .queryIfPresent("itemized", ofNullable(transactionExportIntentRequest).map(v -> v.getItemized()))
+            .queryIfPresent("verified_by", ofNullable(transactionExportIntentRequest)
+                .map(v -> toInstantParameter(v.getVerifiedBy())))
+            .toString();
+        
+        // we have to have a clean exporter w/ only parameters, so create new object
+        final TransactionExportIntentRequest request = new TransactionExportIntentRequest();
+        
+        if (transactionExportIntentRequest != null) {
+            request.setParameters(transactionExportIntentRequest.getParameters());
+        }
+        
+        return toValue(() -> this.postTransactionExportByUrl(url, request));
+    }
+    
+    abstract protected TransactionExport postTransactionExportByUrl(
