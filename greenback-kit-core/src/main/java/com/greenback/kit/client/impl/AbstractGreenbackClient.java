@@ -279,3 +279,156 @@ abstract public class AbstractGreenbackClient implements GreenbackClient {
         return this.getAccountsByUrl(url);
     }
     
+    @Override
+    public Account getAccountById(
+            String accountId,
+            Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(accountId, "accountId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .rel(accountId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+        
+        return toValue(() -> this.getAccountByUrl(url));
+    }
+    
+    @Override
+    public Account deleteAccountById(
+            String accountId) throws IOException {
+
+        Objects.requireNonNull(accountId, "accountId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/accounts")
+            .rel(accountId)
+            .toString();
+        
+        return toValue(() -> this.deleteAccountByUrl(url));
+    }
+    
+    abstract protected Account postAccountByUrl(
+            String url,
+            Object request) throws IOException;
+    
+    abstract protected Paginated<Account> getAccountsByUrl(
+            String url) throws IOException;
+    
+    abstract protected Account getAccountByUrl(
+            String url) throws IOException;
+    
+    abstract protected Account deleteAccountByUrl(
+            String url) throws IOException;
+
+    //
+    // Visions
+    //
+    
+    @Override
+    public Vision createVision(
+            VisionRequest visionRequest) throws IOException {
+        
+        Objects.requireNonNull(visionRequest, "visionRequest was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/visions")
+            .queryIfPresent("async", ofNullable(visionRequest.getAsync()))
+            .toString();
+        
+        return toValue(() -> this.createVisionByUrl(
+            url, visionRequest.getDocument()));
+    }
+    
+    abstract protected Vision createVisionByUrl(
+            String url,
+            Bytes documentBytes) throws IOException;
+    
+    @Override
+    public Vision getVisionById(
+            String visionId,
+            Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(visionId, "visionId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/visions")
+            .rel(visionId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+        
+        return toValue(() -> this.getVisionByUrl(url));
+    }
+    
+    abstract protected Vision getVisionByUrl(
+            String url) throws IOException;
+    
+    
+    //
+    // Messages
+    //
+    
+    @Override
+    public Paginated<Message> getMessages(
+            MessageQuery messageQuery) throws IOException {
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/messages")
+            .query(this.toQueryMap(messageQuery))
+            .toString();
+        
+        return toStreamingPaginated(url, v -> this.getMessagesByUrl(v));
+    }
+
+    @Override
+    public Message createMessage(
+            MessageRequest messageRequest,
+            String accountId) throws IOException {
+
+        // v2/messages if no account
+        // v2/accounts/<accountId>/message if account is provided
+        final MutableUri urlBuilder = this.buildBaseUrl()
+            .rel("v2");
+
+        if (accountId != null) {
+            urlBuilder.rel("accounts", accountId);
+        }
+
+        final String url = urlBuilder
+            .rel("messages")
+            .queryIfPresent("async", ofNullable(messageRequest.getAsync()))
+            .toString();
+
+        return toValue(() -> this.createMessageByUrl(
+            url, messageRequest.getDocument()));
+    }
+    
+    @Override
+    public Message getMessageById(
+            String messageId,
+            Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(messageId, "messageId was null");
+        
+        final String url = this.buildBaseUrl()
+            .path("v2/messages")
+            .rel(messageId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+        
+        return toValue(() -> this.getMessageByUrl(url));
+    }
+
+    abstract protected Paginated<Message> getMessagesByUrl(
+            String url) throws IOException;
+    
+    abstract protected Message createMessageByUrl(
+            String url,
+            Bytes documentBytes) throws IOException;
+    
+    abstract protected Message getMessageByUrl(
+            String url) throws IOException;
+    
+    
+    //
