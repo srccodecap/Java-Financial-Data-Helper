@@ -711,3 +711,134 @@ abstract public class AbstractGreenbackClient implements GreenbackClient {
         Objects.requireNonNull(autoExport, "autoExport was null");
 
         final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .toString();
+
+        return this.postAutoExportByUrl(url, autoExport);
+    }
+
+    @Override
+    public AutoExport updateAutoExport(
+            AutoExport autoExport) throws IOException {
+
+        Objects.requireNonNull(autoExport, "autoExport was null");
+        Objects.requireNonNull(autoExport.getId(), "autoExport id was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .rel(autoExport.getId())
+            .toString();
+
+        return this.postAutoExportByUrl(url, autoExport);
+    }
+
+    @Override
+    public Paginated<AutoExport> getAutoExports(
+            AutoExportQuery autoExportQuery) throws IOException {
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .query(this.toQueryMap(autoExportQuery))
+            .toString();
+
+        return this.getAutoExportsByUrl(url);
+    }
+
+    @Override
+    public AutoExport getAutoExportById(
+        String autoExportId,
+        Iterable<String> expands) throws IOException {
+
+        Objects.requireNonNull(autoExportId, "autoExportId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .rel(autoExportId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+
+        return toValue(() -> this.getAutoExportByUrl(url));
+    }
+
+    @Override
+    public AutoExport deleteAutoExportById(
+        String autoExportId) throws IOException {
+
+        Objects.requireNonNull(autoExportId, "autoExportId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .rel(autoExportId)
+            .toString();
+
+        return toValue(() -> this.deleteAutoExportByUrl(url));
+    }
+
+    abstract protected AutoExport postAutoExportByUrl(
+        String url,
+        Object request) throws IOException;
+
+    abstract protected Paginated<AutoExport> getAutoExportsByUrl(
+        String url) throws IOException;
+
+    abstract protected AutoExport getAutoExportByUrl(
+        String url) throws IOException;
+
+    abstract protected AutoExport deleteAutoExportByUrl(
+        String url) throws IOException;
+
+
+    //
+    // Auto Export Runs
+    //
+
+    @Override
+    public ExportRun createAutoExportRun(String autoExportId, ExportRun exportRun) throws IOException {
+        Objects.requireNonNull(exportRun, "ExportRun was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .rel(autoExportId, "runs")
+            .toString();
+
+        return this.postExportRunByUrl(url, exportRun);
+    }
+
+    @Override
+    public ExportRun getExportRunById(String exportRunId, Iterable<String> expands) throws IOException {
+        Objects.requireNonNull(exportRunId, "exportRunId was null");
+
+        //TODO JB: need to implement this route in lens
+        final String url = this.buildBaseUrl()
+            .path("v2/export_runs")
+            .rel(exportRunId)
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+
+        return toValue(() -> this.getExportRunByUrl(url));
+    }
+
+    @Override
+    public Paginated<ExportRun> getExportRunsByAutoExportId(String autoExportId, Iterable<String> expands) throws IOException {
+        Objects.requireNonNull(autoExportId, "autoExportId was null");
+
+        final String url = this.buildBaseUrl()
+            .path("v2/auto_exports")
+            .rel(autoExportId, "runs")
+            .queryIfPresent("expands", toExpandQueryParameter(expands))
+            .toString();
+
+        return toValue(() -> this.getExportRunsByUrl(url));
+    }
+
+    abstract protected ExportRun postExportRunByUrl(
+        String url,
+        Object request) throws IOException;
+
+    abstract protected Paginated<ExportRun> getExportRunsByUrl(
+        String url) throws IOException;
+
+    abstract protected ExportRun getExportRunByUrl(
+        String url) throws IOException;
+
+}
