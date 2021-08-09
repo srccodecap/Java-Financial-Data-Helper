@@ -22,4 +22,8 @@ import java.util.stream.StreamSupport;
 
 public class ClientHelper {
  
-    private static final DateTimeFormatter DTF_ISO_WITH_MILLIS = DateTimeFormatte
+    private static final DateTimeFormatter DTF_ISO_WITH_MILLIS = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+        .withZone(ZoneId.of("UTC"));
+    
+    static public Map<String,String> toQueryMap(
+          
