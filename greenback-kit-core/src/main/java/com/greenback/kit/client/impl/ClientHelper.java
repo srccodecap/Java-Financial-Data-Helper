@@ -17,4 +17,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import static java.util.Optional.ofNullable;
-import static java.util.stream.Collectors.joining
+import static java.util.stream.Collectors.joining;
+import java.util.stream.StreamSupport;
+
+public class ClientHelper {
+ 
+    private static final DateTimeFormatter DTF_ISO_WITH_MILLIS = DateTimeFormatte
