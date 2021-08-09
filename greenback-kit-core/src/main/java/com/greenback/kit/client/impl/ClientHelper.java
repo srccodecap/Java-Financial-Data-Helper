@@ -26,4 +26,7 @@ public class ClientHelper {
         .withZone(ZoneId.of("UTC"));
     
     static public Map<String,String> toQueryMap(
-          
+                GreenbackCodec codec,
+                Object value) throws IOException {
+        
+        Objects.requireNonNull(codec, "codec w
