@@ -34,4 +34,7 @@ public class ClientHelper {
         final Map<String,String> map = new LinkedHashMap<>();
 
         if (value != null) {
-            final Map<Stri
+            final Map<String,Object> flattenedMap = codec.toFlattenedMap(value);
+            if (flattenedMap != null) {
+                flattenedMap.forEach((k,v) -> {
+                    
