@@ -29,4 +29,9 @@ public class ClientHelper {
                 GreenbackCodec codec,
                 Object value) throws IOException {
         
-        Objects.requireNonNull(codec, "codec w
+        Objects.requireNonNull(codec, "codec was null");
+        
+        final Map<String,String> map = new LinkedHashMap<>();
+
+        if (value != null) {
+            final Map<Stri
