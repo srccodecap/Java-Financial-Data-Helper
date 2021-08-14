@@ -37,4 +37,9 @@ public class ClientHelper {
             final Map<String,Object> flattenedMap = codec.toFlattenedMap(value);
             if (flattenedMap != null) {
                 flattenedMap.forEach((k,v) -> {
-                    
+                    map.put(k, ClientHelper.toStringParameter(v));
+                });
+            }
+        }
+
+        return map
