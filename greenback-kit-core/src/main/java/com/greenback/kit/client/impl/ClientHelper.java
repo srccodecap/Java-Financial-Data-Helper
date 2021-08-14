@@ -42,4 +42,9 @@ public class ClientHelper {
             }
         }
 
-        return map
+        return map;
+    }
+    
+    static public String toStringParameter(Object value) {
+        if (value instanceof Iterable) {
+            return toStr
