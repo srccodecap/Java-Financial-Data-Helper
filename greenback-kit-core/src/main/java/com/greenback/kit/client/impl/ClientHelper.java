@@ -47,4 +47,7 @@ public class ClientHelper {
     
     static public String toStringParameter(Object value) {
         if (value instanceof Iterable) {
-            return toStr
+            return toStringList((Iterable)value);
+        } else if (value instanceof Instant) {
+            return toInstantParameter((Instant)value);
+        } 
