@@ -50,4 +50,11 @@ public class ClientHelper {
             return toStringList((Iterable)value);
         } else if (value instanceof Instant) {
             return toInstantParameter((Instant)value);
-        } 
+        } else {
+            return Objects.toString(value, "");
+        }
+    }
+    
+    static public String toInstantParameter(
+            Instant instant) {
+   
