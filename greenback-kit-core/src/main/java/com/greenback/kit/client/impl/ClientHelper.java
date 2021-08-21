@@ -65,4 +65,8 @@ public class ClientHelper {
         return null;
     }
     
-    static public 
+    static public Optional<Integer> toLimitQueryParameter(
+            Query<?> query) {
+        
+        if (query == null) {
+            return Optional
