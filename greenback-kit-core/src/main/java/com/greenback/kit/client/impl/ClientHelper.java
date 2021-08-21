@@ -57,4 +57,12 @@ public class ClientHelper {
     
     static public String toInstantParameter(
             Instant instant) {
-   
+        
+        if (instant != null) {
+            return DTF_ISO_WITH_MILLIS.format(instant);
+        }
+        
+        return null;
+    }
+    
+    static public 
