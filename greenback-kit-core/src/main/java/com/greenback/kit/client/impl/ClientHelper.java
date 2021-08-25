@@ -69,4 +69,11 @@ public class ClientHelper {
             Query<?> query) {
         
         if (query == null) {
-            return Optional
+            return Optional.empty();
+        }
+        
+        return ofNullable(query.getLimit());
+    }
+ 
+    static public Optional<String> toExpandQueryParameter(
+            Query
