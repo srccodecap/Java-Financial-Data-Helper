@@ -76,4 +76,10 @@ public class ClientHelper {
     }
  
     static public Optional<String> toExpandQueryParameter(
-            Query
+            Query<?> query) {
+        
+        if (query == null) {
+            return Optional.empty();
+        }
+        
+        return ofNullable(toListQueryParame
