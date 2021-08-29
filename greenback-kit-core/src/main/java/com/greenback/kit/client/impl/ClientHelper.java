@@ -82,4 +82,10 @@ public class ClientHelper {
             return Optional.empty();
         }
         
-        return ofNullable(toListQueryParame
+        return ofNullable(toListQueryParameter(query.getExpands()));
+    }
+ 
+    static public Optional<String> toExpandQueryParameter(
+            Iterable<String> expands) {
+        
+        return 
