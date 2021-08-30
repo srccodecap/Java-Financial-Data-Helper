@@ -93,3 +93,9 @@ public class ClientHelper {
  
     static public String toListQueryParameter(
             Iterable<?> expands) {
+        
+        if (expands == null) {
+            return null;
+        }
+        
+        final String param = StreamSupport.stream(expands.spliterator(), 
