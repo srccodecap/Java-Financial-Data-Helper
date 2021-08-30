@@ -88,4 +88,8 @@ public class ClientHelper {
     static public Optional<String> toExpandQueryParameter(
             Iterable<String> expands) {
         
-        return 
+        return ofNullable(toListQueryParameter(expands));
+    }
+ 
+    static public String toListQueryParameter(
+            Iterable<?> expands) {
