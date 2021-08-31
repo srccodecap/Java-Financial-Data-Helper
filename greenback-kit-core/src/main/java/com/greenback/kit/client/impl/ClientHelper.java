@@ -103,4 +103,10 @@ public class ClientHelper {
             .collect(joining(","));
         
         if (param == null || param.isEmpty()) {
- 
+            return null;
+        }
+        
+        return param;
+    }
+    
+    static public <T> T toValue(ClientIoConsumeHandler<T> consu
