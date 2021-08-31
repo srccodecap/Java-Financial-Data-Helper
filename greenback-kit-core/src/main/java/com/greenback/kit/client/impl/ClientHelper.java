@@ -98,4 +98,9 @@ public class ClientHelper {
             return null;
         }
         
-        final String param = StreamSupport.stream(expands.spliterator(), 
+        final String param = StreamSupport.stream(expands.spliterator(), false)
+            .map(v -> Objects.toString(v))
+            .collect(joining(","));
+        
+        if (param == null || param.isEmpty()) {
+ 
