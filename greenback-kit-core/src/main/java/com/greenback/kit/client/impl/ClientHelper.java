@@ -112,4 +112,7 @@ public class ClientHelper {
     static public <T> T toValue(ClientIoConsumeHandler<T> consumer) throws IOException {
         try {
             // run the deserializer (it also checks for json-based errors
-            return consumer.ap
+            return consumer.apply();
+        } catch (GreenbackException e) {
+            final String category = ofNullable(e.getError())
+                .map(v -> v.getCategory
