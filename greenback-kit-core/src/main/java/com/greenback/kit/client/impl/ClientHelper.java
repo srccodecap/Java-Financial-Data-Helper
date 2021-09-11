@@ -115,4 +115,8 @@ public class ClientHelper {
             return consumer.apply();
         } catch (GreenbackException e) {
             final String category = ofNullable(e.getError())
-                .map(v -> v.getCategory
+                .map(v -> v.getCategory())
+                .orElse(null);
+            
+            if (category != null && "not_found".equalsIgnoreCase(category)) {
+         
