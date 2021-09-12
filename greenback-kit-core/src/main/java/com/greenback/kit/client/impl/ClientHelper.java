@@ -119,4 +119,11 @@ public class ClientHelper {
                 .orElse(null);
             
             if (category != null && "not_found".equalsIgnoreCase(category)) {
-         
+                return null;
+            }
+            
+            throw e; // rethrow it
+        }
+    }
+    
+    static public <T> Paginated<T> toStreamingPagin
