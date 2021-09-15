@@ -126,4 +126,8 @@ public class ClientHelper {
         }
     }
     
-    static public <T> Paginated<T> toStreamingPagin
+    static public <T> Paginated<T> toStreamingPaginated(
+            String url,
+            IoFunction<String,Paginated<T>> method) throws IOException {
+        
+        Paginat
