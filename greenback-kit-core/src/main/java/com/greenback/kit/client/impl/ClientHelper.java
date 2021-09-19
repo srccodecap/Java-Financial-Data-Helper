@@ -130,4 +130,7 @@ public class ClientHelper {
             String url,
             IoFunction<String,Paginated<T>> method) throws IOException {
         
-        Paginat
+        Paginated<T> paginated = method.apply(url);
+
+        // convert into a streaming version
+        StreamingPaginated<T> streamingPaginated = new StreamingPaginat
