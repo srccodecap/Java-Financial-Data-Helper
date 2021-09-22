@@ -133,4 +133,8 @@ public class ClientHelper {
         Paginated<T> paginated = method.apply(url);
 
         // convert into a streaming version
-        StreamingPaginated<T> streamingPaginated = new StreamingPaginat
+        StreamingPaginated<T> streamingPaginated = new StreamingPaginated<>();
+        streamingPaginated.setPagination(paginated.getPagination());
+        streamingPaginated.setValues(paginated.getValues());
+        
+        // se
