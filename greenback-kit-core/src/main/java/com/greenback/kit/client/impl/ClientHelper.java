@@ -137,4 +137,7 @@ public class ClientHelper {
         streamingPaginated.setPagination(paginated.getPagination());
         streamingPaginated.setValues(paginated.getValues());
         
-        // se
+        // setup streaming pagination
+        streamingPaginated.nextMethod(v -> {
+            final String nextUrl = new MutableUri(url)
+                .setQuery("cursor", v.getNext())
