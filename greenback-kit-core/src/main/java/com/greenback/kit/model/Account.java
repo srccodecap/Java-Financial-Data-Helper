@@ -9,4 +9,9 @@ public class Account extends GreenbackObject {
     private String referenceId;
     private AccountType type;
     private AccountState state;
-    private AccountC
+    private AccountConnectionState connectionState;
+    private Integer consecutiveErrors;
+    private String defaultName;
+    private String overlayName;
+    
+    // expanda
