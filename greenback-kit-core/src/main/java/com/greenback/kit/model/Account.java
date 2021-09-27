@@ -14,4 +14,13 @@ public class Account extends GreenbackObject {
     private String defaultName;
     private String overlayName;
     
-    // expanda
+    // expandable
+    
+    private Connect connect;
+    private Map<String,Sync> syncs;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public Account setUserId
