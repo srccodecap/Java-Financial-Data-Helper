@@ -38,3 +38,8 @@ public class Account extends GreenbackObject {
     }
 
     public String getReferenceId() {
+        return referenceId;
+    }
+
+    public Account setReferenceId(String referenceId) {
+        this.referenceId = refere
