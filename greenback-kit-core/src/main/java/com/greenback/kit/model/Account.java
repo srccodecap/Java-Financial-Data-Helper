@@ -42,4 +42,12 @@ public class Account extends GreenbackObject {
     }
 
     public Account setReferenceId(String referenceId) {
-        this.referenceId = refere
+        this.referenceId = referenceId;
+        return this;
+    }
+    
+    public AccountType getType() {
+        return type;
+    }
+
+    public Account setType(AccountType 
