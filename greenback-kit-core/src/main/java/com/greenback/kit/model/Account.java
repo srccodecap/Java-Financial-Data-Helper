@@ -32,4 +32,9 @@ public class Account extends GreenbackObject {
         return connectId;
     }
 
-  
+    public Account setConnectId(String connectId) {
+        this.connectId = connectId;
+        return this;
+    }
+
+    public String getReferenceId() {
