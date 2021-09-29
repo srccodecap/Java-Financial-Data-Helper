@@ -23,4 +23,13 @@ public class Account extends GreenbackObject {
         return userId;
     }
 
-    public Account setUserId
+    public Account setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    public String getConnectId() {
+        return connectId;
+    }
+
+  
