@@ -59,4 +59,9 @@ public class Account extends GreenbackObject {
         return defaultName;
     }
 
-    public Acc
+    public Account setDefaultName(String defaultName) {
+        this.defaultName = defaultName;
+        return this;
+    }
+
+    public String getOverl
