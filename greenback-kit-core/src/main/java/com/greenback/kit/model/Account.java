@@ -50,4 +50,13 @@ public class Account extends GreenbackObject {
         return type;
     }
 
-    public Account setType(AccountType 
+    public Account setType(AccountType type) {
+        this.type = type;
+        return this;
+    }
+    
+    public String getDefaultName() {
+        return defaultName;
+    }
+
+    public Acc
