@@ -64,4 +64,10 @@ public class Account extends GreenbackObject {
         return this;
     }
 
-    public String getOverl
+    public String getOverlayName() {
+        return overlayName;
+    }
+
+    public Account setOverlayName(String overlayName) {
+        this.overlayName = overlayName;
+        retur
