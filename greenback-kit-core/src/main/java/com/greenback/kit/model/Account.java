@@ -78,4 +78,12 @@ public class Account extends GreenbackObject {
     }
 
     public Account setState(AccountState state) {
-        this.state =
+        this.state = state;
+        return this;
+    }
+
+    public AccountConnectionState getConnectionState() {
+        return connectionState;
+    }
+
+    publ
