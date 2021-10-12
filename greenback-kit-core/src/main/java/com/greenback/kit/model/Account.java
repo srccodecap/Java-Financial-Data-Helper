@@ -70,4 +70,12 @@ public class Account extends GreenbackObject {
 
     public Account setOverlayName(String overlayName) {
         this.overlayName = overlayName;
-        retur
+        return this;
+    }
+
+    public AccountState getState() {
+        return state;
+    }
+
+    public Account setState(AccountState state) {
+        this.state =
