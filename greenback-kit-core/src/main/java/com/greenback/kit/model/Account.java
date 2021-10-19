@@ -95,4 +95,11 @@ public class Account extends GreenbackObject {
         return consecutiveErrors;
     }
 
-    public Account setConsecutiveErrors(Integer consec
+    public Account setConsecutiveErrors(Integer consecutiveErrors) {
+        this.consecutiveErrors = consecutiveErrors;
+        return this;
+    }
+
+    // helpers
+    
+//    public S
