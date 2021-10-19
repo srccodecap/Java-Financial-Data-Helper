@@ -102,4 +102,9 @@ public class Account extends GreenbackObject {
 
     // helpers
     
-//    public S
+//    public String getName() {
+//        return maybe(this.overlayName).orElse(this.defaultName);
+//    }
+//    
+//    public GBSync getPendingSync() {
+//       
