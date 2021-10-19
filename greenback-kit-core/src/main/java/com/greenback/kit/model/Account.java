@@ -88,4 +88,11 @@ public class Account extends GreenbackObject {
 
     public Account setConnectionState(AccountConnectionState connectionState) {
         this.connectionState = connectionState;
-        return th
+        return this;
+    }
+
+    public Integer getConsecutiveErrors() {
+        return consecutiveErrors;
+    }
+
+    public Account setConsecutiveErrors(Integer consec
