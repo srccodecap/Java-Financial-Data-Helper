@@ -107,4 +107,10 @@ public class Account extends GreenbackObject {
 //    }
 //    
 //    public GBSync getPendingSync() {
-//       
+//        return maybe(this.syncs)
+//            .map(v -> v.get("pending"))
+//            .orElse(null);
+//    }
+//    
+//    public GBSync getLastSync() {
+//        retur
