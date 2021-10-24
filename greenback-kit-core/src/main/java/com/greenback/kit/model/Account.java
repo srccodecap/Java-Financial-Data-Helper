@@ -119,4 +119,10 @@ public class Account extends GreenbackObject {
 //    }
 //    
 //    public GBSync getOkSync() {
-/
+//        return maybe(this.syncs)
+//            .map(v -> v.get("ok"))
+//            .orElse(null);
+//    }
+//    
+//    public DateTime getOkSyncCreatedAt() {
+//    
