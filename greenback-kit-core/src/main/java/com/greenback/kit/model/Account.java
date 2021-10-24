@@ -113,4 +113,10 @@ public class Account extends GreenbackObject {
 //    }
 //    
 //    public GBSync getLastSync() {
-//        retur
+//        return maybe(this.syncs)
+//            .map(v -> v.get("last"))
+//            .orElse(null);
+//    }
+//    
+//    public GBSync getOkSync() {
+/
