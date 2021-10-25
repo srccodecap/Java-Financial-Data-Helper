@@ -142,4 +142,12 @@ public class Account extends GreenbackObject {
 //            .orElse(null);
 //    }
     
-    // 
+    // expandable
+
+    public Connect getConnect() {
+        return connect;
+    }
+
+    public Account setConnect(Connect connect) {
+        this.connect = connect;
+      
