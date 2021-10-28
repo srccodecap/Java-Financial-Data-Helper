@@ -158,4 +158,11 @@ public class Account extends GreenbackObject {
     }
 
     public Account setSyncs(Map<String,Sync> syncs) {
-     
+        this.syncs = syncs;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+         
