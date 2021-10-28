@@ -165,4 +165,7 @@ public class Account extends GreenbackObject {
     @Override
     public String toString() {
         return "Account{" +
-         
+            "userId='" + userId + '\'' +
+            ", connectId='" + connectId + '\'' +
+            ", referenceId='" + referenceId + '\'' +
+            ",
