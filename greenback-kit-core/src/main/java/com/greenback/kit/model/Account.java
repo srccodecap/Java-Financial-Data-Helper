@@ -150,4 +150,12 @@ public class Account extends GreenbackObject {
 
     public Account setConnect(Connect connect) {
         this.connect = connect;
-      
+        return this;
+    }
+    
+    public Map<String,Sync> getSyncs() {
+        return syncs;
+    }
+
+    public Account setSyncs(Map<String,Sync> syncs) {
+     
