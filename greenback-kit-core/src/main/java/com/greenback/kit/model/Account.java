@@ -179,4 +179,6 @@ public class Account extends GreenbackObject {
             ", id='" + id + '\'' +
             ", createdAt=" + createdAt +
             ", updatedAt=" + updatedAt +
-            '
+            '}';
+    }
+}
