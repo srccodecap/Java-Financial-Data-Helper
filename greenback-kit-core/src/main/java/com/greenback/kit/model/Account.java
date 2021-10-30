@@ -171,4 +171,7 @@ public class Account extends GreenbackObject {
             ", type=" + type +
             ", state=" + state +
             ", connectionState=" + connectionState +
-            ", consecutiveErrors=" + cons
+            ", consecutiveErrors=" + consecutiveErrors +
+            ", defaultName='" + defaultName + '\'' +
+            ", overlayName='" + overlayName + '\'' +
+            ", connect=" + conne
