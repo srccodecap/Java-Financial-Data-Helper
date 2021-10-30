@@ -168,4 +168,7 @@ public class Account extends GreenbackObject {
             "userId='" + userId + '\'' +
             ", connectId='" + connectId + '\'' +
             ", referenceId='" + referenceId + '\'' +
-            ",
+            ", type=" + type +
+            ", state=" + state +
+            ", connectionState=" + connectionState +
+            ", consecutiveErrors=" + cons
