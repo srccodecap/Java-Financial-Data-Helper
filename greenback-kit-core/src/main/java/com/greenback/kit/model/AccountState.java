@@ -4,4 +4,7 @@ public enum AccountState {
  
     ACTIVE,
     SUSPENDED,
-    DISCONNE
+    DISCONNECTED,
+    DELETED;
+    
+}
