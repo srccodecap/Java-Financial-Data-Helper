@@ -65,3 +65,6 @@ public class Attachment {
 
     public void setWhy(AttachmentWhy why) {
         this.why = why;
+    }
+
+}
