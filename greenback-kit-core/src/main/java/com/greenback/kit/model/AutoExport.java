@@ -13,3 +13,10 @@ public class AutoExport extends GreenbackObject {
     private Instant lastRunAt;
 
     // from expands
+    private Account accountingAccount;
+    private List<Account> accounts;
+    private ExportRun lastRun;
+    private ExportRun pendingRun;
+
+    public String getUserId() {
+      
