@@ -32,3 +32,10 @@ public class AutoExport extends GreenbackObject {
 
     public void setAccountingAccountId(String accountingAccountId) {
         this.accountingAccountId = accountingAccountId;
+    }
+
+    public AutoExportParameters getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(AutoExportPa
