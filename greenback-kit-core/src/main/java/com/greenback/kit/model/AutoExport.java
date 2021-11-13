@@ -27,4 +27,8 @@ public class AutoExport extends GreenbackObject {
     }
 
     public String getAccountingAccountId() {
-        re
+        return accountingAccountId;
+    }
+
+    public void setAccountingAccountId(String accountingAccountId) {
+        this.accountingAccountId = accountingAccountId;
