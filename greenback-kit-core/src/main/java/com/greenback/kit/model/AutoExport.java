@@ -38,4 +38,10 @@ public class AutoExport extends GreenbackObject {
         return parameters;
     }
 
-    public void setParameters(AutoExportPa
+    public void setParameters(AutoExportParameters parameters) {
+        this.parameters = parameters;
+    }
+
+    public AutoExportFrequency getFrequency() {
+        return frequency;
+    
