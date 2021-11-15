@@ -52,3 +52,10 @@ public class AutoExport extends GreenbackObject {
 
     public AutoExportState getState() {
         return state;
+    }
+
+    public void setState(AutoExportState state) {
+        this.state = state;
+    }
+
+    public List<String> get
