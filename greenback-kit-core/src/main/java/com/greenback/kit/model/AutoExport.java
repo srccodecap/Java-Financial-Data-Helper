@@ -44,4 +44,11 @@ public class AutoExport extends GreenbackObject {
 
     public AutoExportFrequency getFrequency() {
         return frequency;
-    
+    }
+
+    public void setFrequency(AutoExportFrequency frequency) {
+        this.frequency = frequency;
+    }
+
+    public AutoExportState getState() {
+        return state;
