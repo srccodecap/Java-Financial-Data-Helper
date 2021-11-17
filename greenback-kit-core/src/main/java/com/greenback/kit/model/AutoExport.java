@@ -58,4 +58,12 @@ public class AutoExport extends GreenbackObject {
         this.state = state;
     }
 
-    public List<String> get
+    public List<String> getAccountIds() {
+        return accountIds;
+    }
+
+    public void setAccountIds(List<String> accountIds) {
+        this.accountIds = accountIds;
+    }
+
+    public ExportRun getL
