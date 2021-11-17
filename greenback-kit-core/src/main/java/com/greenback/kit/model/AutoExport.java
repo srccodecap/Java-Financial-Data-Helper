@@ -75,4 +75,11 @@ public class AutoExport extends GreenbackObject {
     }
 
     public ExportRun getPendingRun() {
- 
+        return pendingRun;
+    }
+
+    public void setPendingRun(ExportRun pendingRun) {
+        this.pendingRun = pendingRun;
+    }
+
+    public List<
