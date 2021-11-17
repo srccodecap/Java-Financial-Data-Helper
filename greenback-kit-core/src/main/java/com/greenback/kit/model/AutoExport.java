@@ -82,4 +82,12 @@ public class AutoExport extends GreenbackObject {
         this.pendingRun = pendingRun;
     }
 
-    public List<
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
+    pub
