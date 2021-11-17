@@ -66,4 +66,13 @@ public class AutoExport extends GreenbackObject {
         this.accountIds = accountIds;
     }
 
-    public ExportRun getL
+    public ExportRun getLastRun() {
+        return lastRun;
+    }
+
+    public void setLastRun(ExportRun lastRun) {
+        this.lastRun = lastRun;
+    }
+
+    public ExportRun getPendingRun() {
+ 
