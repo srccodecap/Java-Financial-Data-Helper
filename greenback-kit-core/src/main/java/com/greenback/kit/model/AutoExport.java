@@ -90,4 +90,8 @@ public class AutoExport extends GreenbackObject {
         this.accounts = accounts;
     }
 
-    pub
+    public Account getAccountingAccount() {
+        return accountingAccount;
+    }
+
+    public void setAccountingAccount(Account accountingAccount) 
