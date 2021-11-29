@@ -102,4 +102,10 @@ public class AutoExport extends GreenbackObject {
         return this.lastRunAt;
     }
 
-    public
+    public void setLastRunAt(Instant lastRunAt) {
+        this.lastRunAt = lastRunAt;
+    }
+
+    @Override
+    public String toString() {
+        return "AutoExpo
