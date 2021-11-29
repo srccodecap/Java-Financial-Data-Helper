@@ -94,4 +94,12 @@ public class AutoExport extends GreenbackObject {
         return accountingAccount;
     }
 
-    public void setAccountingAccount(Account accountingAccount) 
+    public void setAccountingAccount(Account accountingAccount) {
+        this.accountingAccount = accountingAccount;
+    }
+
+    public Instant getLastRunAt() {
+        return this.lastRunAt;
+    }
+
+    public
