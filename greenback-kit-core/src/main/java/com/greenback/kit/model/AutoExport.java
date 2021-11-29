@@ -108,4 +108,8 @@ public class AutoExport extends GreenbackObject {
 
     @Override
     public String toString() {
-        return "AutoExpo
+        return "AutoExport{" +
+            "id='" + id + '\'' +
+            ", createdAt=" + createdAt +
+            ", updatedAt=" + updatedAt +
+            ", lastRunAt=" + l
