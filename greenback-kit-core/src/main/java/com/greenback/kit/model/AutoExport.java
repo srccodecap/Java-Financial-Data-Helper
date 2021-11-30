@@ -115,4 +115,7 @@ public class AutoExport extends GreenbackObject {
             ", lastRunAt=" + lastRunAt +
             ", userId='" + userId + '\'' +
             ", accountingAccountId='" + accountingAccountId + '\'' +
-       
+            ", parameters=" + parameters +
+            ", frequency=" + frequency +
+            ", state=" + state +
+            ", accountingAccount=" + accountin
