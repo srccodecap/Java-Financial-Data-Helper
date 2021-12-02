@@ -123,4 +123,6 @@ public class AutoExport extends GreenbackObject {
             ", accountIds=" + accountIds +
             ", lastRun=" + lastRun +
             ", pendingRun=" + pendingRun +
- 
+            '}';
+    }
+}
