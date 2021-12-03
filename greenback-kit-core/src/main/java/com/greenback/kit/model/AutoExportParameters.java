@@ -11,4 +11,12 @@ public class AutoExportParameters {
     private Integer limit;
     private Integer errorLimit;
 
-    public
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    public L
