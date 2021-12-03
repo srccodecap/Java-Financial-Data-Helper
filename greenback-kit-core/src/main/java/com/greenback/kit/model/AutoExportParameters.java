@@ -19,4 +19,10 @@ public class AutoExportParameters {
         this.query = query;
     }
 
-    public L
+    public List<TransactionType> getTypes() {
+        return types;
+    }
+
+    public void setTypes(List<TransactionType> types) {
+        this.types = types;
+    
