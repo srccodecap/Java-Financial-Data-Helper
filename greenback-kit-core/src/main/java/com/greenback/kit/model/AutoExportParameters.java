@@ -25,4 +25,10 @@ public class AutoExportParameters {
 
     public void setTypes(List<TransactionType> types) {
         this.types = types;
-    
+    }
+
+    public Instant getMinTransactedAt() {
+        return minTransactedAt;
+    }
+
+    public void setMinTransactedAt(Instant m
