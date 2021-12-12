@@ -51,4 +51,12 @@ public class AutoExportParameters {
         this.limit = limit;
     }
 
-    public Integer 
+    public Integer getErrorLimit() {
+        return errorLimit;
+    }
+
+    public void setErrorLimit(Integer errorLimit) {
+        this.errorLimit = errorLimit;
+    }
+
+    @Ove
