@@ -43,4 +43,12 @@ public class AutoExportParameters {
         this.maxTransactedAt = maxTransactedAt;
     }
 
-    public
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    public Integer 
