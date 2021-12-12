@@ -37,4 +37,10 @@ public class AutoExportParameters {
 
     public Instant getMaxTransactedAt() {
         return maxTransactedAt;
-  
+    }
+
+    public void setMaxTransactedAt(Instant maxTransactedAt) {
+        this.maxTransactedAt = maxTransactedAt;
+    }
+
+    public
