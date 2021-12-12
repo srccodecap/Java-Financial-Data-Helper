@@ -31,4 +31,10 @@ public class AutoExportParameters {
         return minTransactedAt;
     }
 
-    public void setMinTransactedAt(Instant m
+    public void setMinTransactedAt(Instant minTransactedAt) {
+        this.minTransactedAt = minTransactedAt;
+    }
+
+    public Instant getMaxTransactedAt() {
+        return maxTransactedAt;
+  
