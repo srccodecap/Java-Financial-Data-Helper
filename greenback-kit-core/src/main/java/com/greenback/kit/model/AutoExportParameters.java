@@ -64,4 +64,7 @@ public class AutoExportParameters {
         return "AutoExportRequest{" +
             "query='" + query + '\'' +
             ", types=" + types +
-       
+            ", minTransactedAt=" + minTransactedAt +
+            ", maxTransactedAt=" + maxTransactedAt +
+            ", limit=" + limit +
+            ", error
