@@ -67,4 +67,7 @@ public class AutoExportParameters {
             ", minTransactedAt=" + minTransactedAt +
             ", maxTransactedAt=" + maxTransactedAt +
             ", limit=" + limit +
-            ", error
+            ", errorLimit=" + errorLimit +
+            '}';
+    }
+}
