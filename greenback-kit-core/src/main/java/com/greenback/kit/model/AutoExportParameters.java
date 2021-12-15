@@ -59,4 +59,9 @@ public class AutoExportParameters {
         this.errorLimit = errorLimit;
     }
 
-    @Ove
+    @Override
+    public String toString() {
+        return "AutoExportRequest{" +
+            "query='" + query + '\'' +
+            ", types=" + types +
+       
