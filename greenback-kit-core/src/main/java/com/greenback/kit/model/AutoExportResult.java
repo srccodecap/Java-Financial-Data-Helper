@@ -6,4 +6,14 @@ public class AutoExportResult {
     private Integer updated;
     private Integer unmapped;
     private Integer matched;
-    private Inte
+    private Integer failed;
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+ 
