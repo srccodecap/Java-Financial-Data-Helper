@@ -16,4 +16,11 @@ public class AutoExportResult {
         this.total = total;
     }
 
- 
+    public Integer getCreated() {
+        return created;
+    }
+
+    public void setCreated(Integer created) {
+        this.created = created;
+    }
+
