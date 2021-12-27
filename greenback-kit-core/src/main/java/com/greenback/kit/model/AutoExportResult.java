@@ -32,4 +32,12 @@ public class AutoExportResult {
         this.updated = updated;
     }
 
-    public Integer getMa
+    public Integer getMatched() {
+        return matched;
+    }
+
+    public void setMatched(Integer matched) {
+        this.matched = matched;
+    }
+
+    public I
