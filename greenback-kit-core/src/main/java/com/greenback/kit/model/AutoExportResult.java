@@ -24,3 +24,12 @@ public class AutoExportResult {
         this.created = created;
     }
 
+    public Integer getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Integer updated) {
+        this.updated = updated;
+    }
+
+    public Integer getMa
