@@ -40,4 +40,12 @@ public class AutoExportResult {
         this.matched = matched;
     }
 
-    public I
+    public Integer getFailed() {
+        return failed;
+    }
+
+    public void setFailed(Integer failed) {
+        this.failed = failed;
+    }
+
+   
