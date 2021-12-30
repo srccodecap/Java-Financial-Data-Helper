@@ -48,4 +48,13 @@ public class AutoExportResult {
         this.failed = failed;
     }
 
-   
+    public Integer getUnmapped() {
+        return unmapped;
+    }
+
+    public void setUnmapped(Integer unmapped) {
+        this.unmapped = unmapped;
+    }
+
+    @Override
+  
