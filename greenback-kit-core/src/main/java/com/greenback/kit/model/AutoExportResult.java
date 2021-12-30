@@ -57,4 +57,8 @@ public class AutoExportResult {
     }
 
     @Override
-  
+    public String toString() {
+        return "AutoExportResult{" +
+            "total=" + total +
+            ", created=" + created +
+            ", updated=" + updat
