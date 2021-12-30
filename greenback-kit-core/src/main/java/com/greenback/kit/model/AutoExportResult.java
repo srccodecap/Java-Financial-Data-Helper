@@ -61,4 +61,10 @@ public class AutoExportResult {
         return "AutoExportResult{" +
             "total=" + total +
             ", created=" + created +
-            ", updated=" + updat
+            ", updated=" + updated +
+            ", unmapped=" + unmapped +
+            ", matched=" + matched +
+            ", failed=" + failed +
+            '}';
+    }
+}
