@@ -12,4 +12,11 @@ public class Connect extends GreenbackObject {
     private String logoUrl;
     private String contactId;
     private ConnectAuthStrategy authStrategy;
-    private
+    private AccountState accountState;
+    private AccountConnectionState accountConnectionState;
+
+    // expandable
+    
+    private ConnectCard card;
+    
+    public
