@@ -8,4 +8,8 @@ public class Connect extends GreenbackObject {
     private ConnectType type;
     private String name;
     private ConnectState state;
-  
+    private Set<String> tags;
+    private String logoUrl;
+    private String contactId;
+    private ConnectAuthStrategy authStrategy;
+    private
