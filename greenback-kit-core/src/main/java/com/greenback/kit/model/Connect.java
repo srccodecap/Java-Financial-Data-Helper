@@ -19,4 +19,12 @@ public class Connect extends GreenbackObject {
     
     private ConnectCard card;
     
-    public
+    public ConnectType getType() {
+        return type;
+    }
+
+    public void setType(ConnectType type) {
+        this.type = type;
+    }
+
+    pu
