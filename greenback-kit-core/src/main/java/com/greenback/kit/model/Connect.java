@@ -27,4 +27,12 @@ public class Connect extends GreenbackObject {
         this.type = type;
     }
 
-    pu
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLa
