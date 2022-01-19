@@ -35,4 +35,12 @@ public class Connect extends GreenbackObject {
         this.name = name;
     }
 
-    public String getLa
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public ConnectState get
