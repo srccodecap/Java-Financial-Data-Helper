@@ -43,4 +43,13 @@ public class Connect extends GreenbackObject {
         this.label = label;
     }
 
-    public ConnectState get
+    public ConnectState getState() {
+        return state;
+    }
+
+    public void setState(ConnectState state) {
+        this.state = state;
+    }
+
+    public Set<String> getTags() {
+    
