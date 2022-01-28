@@ -70,3 +70,10 @@ public class Connect extends GreenbackObject {
     public String getContactId() {
         return contactId;
     }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
+    }
+
+    public ConnectAuthStrategy getAuthStrategy() {
+   
