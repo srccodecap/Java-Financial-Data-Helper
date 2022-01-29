@@ -89,4 +89,10 @@ public class Connect extends GreenbackObject {
 
     public void setAccountState(AccountState accountState) {
         this.accountState = accountState;
-   
+    }
+
+    public AccountConnectionState getAccountConnectionState() {
+        return accountConnectionState;
+    }
+
+    public void setAcc
