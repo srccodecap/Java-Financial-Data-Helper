@@ -83,4 +83,10 @@ public class Connect extends GreenbackObject {
         this.authStrategy = authStrategy;
     }
 
-    public Accoun
+    public AccountState getAccountState() {
+        return accountState;
+    }
+
+    public void setAccountState(AccountState accountState) {
+        this.accountState = accountState;
+   
