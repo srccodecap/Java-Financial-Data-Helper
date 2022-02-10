@@ -99,4 +99,12 @@ public class Connect extends GreenbackObject {
         this.accountConnectionState = accountConnectionState;
     }
 
-    public Con
+    public ConnectCard getCard() {
+        return card;
+    }
+
+    public void setCard(ConnectCard card) {
+        this.card = card;
+    }
+
+}
