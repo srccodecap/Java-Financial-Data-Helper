@@ -13,3 +13,7 @@ public class ConnectIntentAuthorize {
         return parameters;
     }
 
+    public ConnectIntentAuthorize setParameters(Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+   
