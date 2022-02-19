@@ -16,4 +16,11 @@ public class ConnectIntentAuthorize {
     public ConnectIntentAuthorize setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
-   
+    }
+
+    public String getCompleteUrl() {
+        return completeUrl;
+    }
+
+    public ConnectIntentAuthorize setCompleteUrl(String completeUrl) {
+ 
