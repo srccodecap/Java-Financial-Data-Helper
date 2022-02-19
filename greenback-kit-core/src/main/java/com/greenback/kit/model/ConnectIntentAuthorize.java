@@ -6,4 +6,10 @@ import java.util.Objects;
 
 public class ConnectIntentAuthorize {
  
-    private Map<String,String> param
+    private Map<String,String> parameters;
+    private String completeUrl;
+
+    public Map<String, String> getParameters() {
+        return parameters;
+    }
+
