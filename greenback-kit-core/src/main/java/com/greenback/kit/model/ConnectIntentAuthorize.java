@@ -23,4 +23,10 @@ public class ConnectIntentAuthorize {
     }
 
     public ConnectIntentAuthorize setCompleteUrl(String completeUrl) {
- 
+        this.completeUrl = completeUrl;
+        return this;
+    }
+    
+    // helpers
+    
+    public ConnectIntentAuthorize addParameter(String name, Stri
