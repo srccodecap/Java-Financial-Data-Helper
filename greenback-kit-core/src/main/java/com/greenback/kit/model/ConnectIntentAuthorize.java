@@ -29,4 +29,8 @@ public class ConnectIntentAuthorize {
     
     // helpers
     
-    public ConnectIntentAuthorize addParameter(String name, Stri
+    public ConnectIntentAuthorize addParameter(String name, String value) {
+        Objects.requireNonNull(name, "name was null");
+        
+        if (this.parameters == null) {
+            this.parameters
