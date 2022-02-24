@@ -6,4 +6,11 @@ import java.util.Objects;
 
 public class ConnectIntentComplete {
 
-    private Map<String,Str
+    private Map<String,String> parameters;
+    private ConnectIntentCompleteAction action;
+
+    public Map<String, String> getParameters() {
+        return parameters;
+    }
+
+ 
