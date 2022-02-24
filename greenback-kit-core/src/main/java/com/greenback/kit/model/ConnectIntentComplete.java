@@ -1,3 +1,9 @@
 package com.greenback.kit.model;
 
-import 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+
+public class ConnectIntentComplete {
+
+    private Map<String,Str
