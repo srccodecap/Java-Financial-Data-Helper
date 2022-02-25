@@ -29,4 +29,8 @@ public class ConnectIntentComplete {
     
     // helpers
     
-    public ConnectIntentComplete addParameter(String name, S
+    public ConnectIntentComplete addParameter(String name, String value) {
+        Objects.requireNonNull(name, "name was null");
+        
+        if (this.parameters == null) {
+            this.paramet
