@@ -22,4 +22,11 @@ public class ConnectIntentComplete {
         return action;
     }
 
-    public ConnectIntentComplete setAction(ConnectIntentCompleteAction ac
+    public ConnectIntentComplete setAction(ConnectIntentCompleteAction action) {
+        this.action = action;
+        return this;
+    }
+    
+    // helpers
+    
+    public ConnectIntentComplete addParameter(String name, S
