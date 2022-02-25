@@ -13,4 +13,9 @@ public class ConnectIntentComplete {
         return parameters;
     }
 
- 
+    public ConnectIntentComplete setParameters(Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    
+    pub
