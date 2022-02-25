@@ -18,4 +18,8 @@ public class ConnectIntentComplete {
         return this;
     }
     
-    pub
+    public ConnectIntentCompleteAction getAction() {
+        return action;
+    }
+
+    public ConnectIntentComplete setAction(ConnectIntentCompleteAction ac
