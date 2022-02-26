@@ -33,4 +33,12 @@ public class ConnectIntentComplete {
         Objects.requireNonNull(name, "name was null");
         
         if (this.parameters == null) {
-            this.paramet
+            this.parameters = new LinkedHashMap<>();
+        }
+        
+        this.parameters.put(name, value);
+        
+        return this;
+    }
+    
+}
