@@ -1,1 +1,8 @@
-package com.greenback.ki
+package com.greenback.kit.model;
+
+public enum ConnectIntentCompleteAction {
+ 
+    CONFIRM,
+    CANCEL;
+    
+}
