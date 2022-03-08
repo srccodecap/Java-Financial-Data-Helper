@@ -14,4 +14,12 @@ public class ConnectQuery extends Query<ConnectQuery> {
     protected Instant maxUpdatedAt;
 
     public Iterable<String> getLabels() {
-        return l
+        return labels;
+    }
+
+    public ConnectQuery setLabels(Iterable<String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    public
