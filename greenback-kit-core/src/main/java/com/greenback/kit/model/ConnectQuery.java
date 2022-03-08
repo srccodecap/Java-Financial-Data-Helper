@@ -9,4 +9,9 @@ public class ConnectQuery extends Query<ConnectQuery> {
     protected Iterable<ConnectState> states;
     protected Iterable<ConnectType> types;
     protected Instant minCreatedAt;
-    
+    protected Instant maxCreatedAt;
+    protected Instant minUpdatedAt;
+    protected Instant maxUpdatedAt;
+
+    public Iterable<String> getLabels() {
+        return l
