@@ -22,4 +22,9 @@ public class ConnectQuery extends Query<ConnectQuery> {
         return this;
     }
     
-    public
+    public Iterable<ConnectState> getStates() {
+        return states;
+    }
+
+    public ConnectQuery setStates(Iterable<ConnectState> states) {
+        
