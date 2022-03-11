@@ -27,4 +27,12 @@ public class ConnectQuery extends Query<ConnectQuery> {
     }
 
     public ConnectQuery setStates(Iterable<ConnectState> states) {
-        
+        this.states = states;
+        return this;
+    }
+
+    public Iterable<ConnectType> getTypes() {
+        return types;
+    }
+
+    public ConnectQu
