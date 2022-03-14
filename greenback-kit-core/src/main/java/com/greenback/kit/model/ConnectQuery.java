@@ -35,4 +35,10 @@ public class ConnectQuery extends Query<ConnectQuery> {
         return types;
     }
 
-    public ConnectQu
+    public ConnectQuery setTypes(Iterable<ConnectType> types) {
+        this.types = types;
+        return this;
+    }
+
+    public Instant getMinCreatedAt() {
+        return
