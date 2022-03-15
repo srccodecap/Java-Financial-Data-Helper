@@ -53,4 +53,11 @@ public class ConnectQuery extends Query<ConnectQuery> {
         return maxCreatedAt;
     }
 
-    public ConnectQuery setMaxCreatedAt(Instant maxCreatedAt
+    public ConnectQuery setMaxCreatedAt(Instant maxCreatedAt) {
+        this.maxCreatedAt = maxCreatedAt;
+        return this;
+    }
+
+    public Instant getMinUpdatedAt() {
+        return minUpdatedAt;
+   
