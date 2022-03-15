@@ -41,4 +41,9 @@ public class ConnectQuery extends Query<ConnectQuery> {
     }
 
     public Instant getMinCreatedAt() {
-        return
+        return minCreatedAt;
+    }
+
+    public ConnectQuery setMinCreatedAt(Instant minCreatedAt) {
+        this.minCreatedAt = minCreatedAt;
+        return this;
