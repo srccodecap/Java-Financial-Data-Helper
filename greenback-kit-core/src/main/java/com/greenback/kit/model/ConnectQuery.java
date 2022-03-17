@@ -67,4 +67,9 @@ public class ConnectQuery extends Query<ConnectQuery> {
         return this;
     }
 
-    public Instant ge
+    public Instant getMaxUpdatedAt() {
+        return maxUpdatedAt;
+    }
+
+    public ConnectQuery setMaxUpdatedAt(Instant maxUpdatedAt) {
+        this.maxUpdatedAt =
