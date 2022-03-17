@@ -60,4 +60,11 @@ public class ConnectQuery extends Query<ConnectQuery> {
 
     public Instant getMinUpdatedAt() {
         return minUpdatedAt;
-   
+    }
+
+    public ConnectQuery setMinUpdatedAt(Instant minUpdatedAt) {
+        this.minUpdatedAt = minUpdatedAt;
+        return this;
+    }
+
+    public Instant ge
