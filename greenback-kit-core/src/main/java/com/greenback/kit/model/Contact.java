@@ -25,4 +25,14 @@ public class Contact {
     }
 
     public String getDomain() {
-    
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
