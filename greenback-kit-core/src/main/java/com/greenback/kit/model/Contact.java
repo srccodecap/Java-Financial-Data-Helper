@@ -36,3 +36,12 @@ public class Contact {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLogoUrl() {
+        return logoUrl;
+    }
+
+   
