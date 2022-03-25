@@ -44,4 +44,8 @@ public class Contact {
         return logoUrl;
     }
 
-   
+    public void setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
+    }
+
+}
