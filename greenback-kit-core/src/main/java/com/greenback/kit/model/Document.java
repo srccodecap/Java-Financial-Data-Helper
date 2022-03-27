@@ -8,4 +8,11 @@ public class Document extends GreenbackObject {
     protected String referenceId;
     protected DocumentMeta meta;
     protected Set<DocumentFlag> flags;
-    protected Map<String,S
+    protected Map<String,String> attributes;
+
+    public String getReferenceId() {
+        return referenceId;
+    }
+
+    public void setReferenceId(String referenceId) {
+ 
