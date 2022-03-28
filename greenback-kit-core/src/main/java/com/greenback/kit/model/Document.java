@@ -31,4 +31,11 @@ public class Document extends GreenbackObject {
     }
 
     public void setFlags(Set<DocumentFlag> flags) {
-     
+        this.flags = flags;
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(Map<String, Stri
