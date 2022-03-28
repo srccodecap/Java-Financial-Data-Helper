@@ -15,4 +15,12 @@ public class Document extends GreenbackObject {
     }
 
     public void setReferenceId(String referenceId) {
- 
+        this.referenceId = referenceId;
+    }
+
+    public DocumentMeta getMeta() {
+        return meta;
+    }
+
+    public void setMeta(DocumentMeta meta) {
+   
