@@ -23,4 +23,12 @@ public class Document extends GreenbackObject {
     }
 
     public void setMeta(DocumentMeta meta) {
-   
+        this.meta = meta;
+    }
+
+    public Set<DocumentFlag> getFlags() {
+        return flags;
+    }
+
+    public void setFlags(Set<DocumentFlag> flags) {
+     
