@@ -38,4 +38,8 @@ public class Document extends GreenbackObject {
         return attributes;
     }
 
-    public void setAttributes(Map<String, Stri
+    public void setAttributes(Map<String, String> attributes) {
+        this.attributes = attributes;
+    }
+    
+}
