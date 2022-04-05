@@ -4,4 +4,15 @@ public enum DocumentFlag {
 
     AUTO,
     MANUAL,
-    D
+    DRAFT,
+    
+    CONVERTED,
+    MATCHED,
+    
+    EXPORTED,
+    PARTIALLY_EXPORTED,
+
+    DEFAULT,    
+    ARCHIVED,
+    TRASHED,
+    DUPLICATE
