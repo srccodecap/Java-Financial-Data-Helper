@@ -15,4 +15,11 @@ public enum DocumentFlag {
     DEFAULT,    
     ARCHIVED,
     TRASHED,
-    DUPLICATE
+    DUPLICATE,
+    NOT_DUPLICATE,
+    
+    EXPORTABLE,
+    ROLLED_UP,
+    EXPORT_INVALID
+
+}
