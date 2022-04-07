@@ -16,4 +16,9 @@ public class DocumentMeta {
         this.progress = progress;
     }
 
-    public List
+    public List<String> getWarnings() {
+        return warnings;
+    }
+
+    public void setWarnings(List<String> warnings) {
+        this.warnin
