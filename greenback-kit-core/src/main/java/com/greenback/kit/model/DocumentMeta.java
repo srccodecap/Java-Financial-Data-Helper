@@ -21,4 +21,12 @@ public class DocumentMeta {
     }
 
     public void setWarnings(List<String> warnings) {
-        this.warnin
+        this.warnings = warnings;
+    }
+
+    public List<String> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(List<String> errors) {
+        this.errors 
