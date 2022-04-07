@@ -8,4 +8,12 @@ public class DocumentMeta {
     private List<String> warnings;
     private List<String> errors;
 
-    public D
+    public Double getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Double progress) {
+        this.progress = progress;
+    }
+
+    public List
