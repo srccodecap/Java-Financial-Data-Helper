@@ -29,4 +29,7 @@ public class DocumentMeta {
     }
 
     public void setErrors(List<String> errors) {
-        this.errors 
+        this.errors = errors;
+    }
+
+}
