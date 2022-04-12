@@ -12,4 +12,8 @@ public class Entitlements {
     private EntitlementFeaturePermission bulkExport;
     private EntitlementFeaturePermission mailboxDelivery;
 
-    public String
+    public String getDashboardExperience() {
+        return dashboardExperience;
+    }
+
+    public Entitlements setDashboardExperience(String dashboa
