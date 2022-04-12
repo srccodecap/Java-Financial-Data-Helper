@@ -4,4 +4,8 @@ public class Entitlements {
 
     private String dashboardExperience;     // this is an enum, but we'll do a string for now
     private Boolean personalWorkspace;
-    priva
+    private Boolean manageConnects;
+    private Boolean onboardingWizard;
+    private Boolean trialing;
+    private Boolean showAccounts;
+    private E
