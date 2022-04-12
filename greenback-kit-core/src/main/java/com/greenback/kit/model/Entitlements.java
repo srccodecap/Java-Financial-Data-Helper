@@ -8,4 +8,8 @@ public class Entitlements {
     private Boolean onboardingWizard;
     private Boolean trialing;
     private Boolean showAccounts;
-    private E
+    private EntitlementFeaturePermission autoExport;
+    private EntitlementFeaturePermission bulkExport;
+    private EntitlementFeaturePermission mailboxDelivery;
+
+    public String
