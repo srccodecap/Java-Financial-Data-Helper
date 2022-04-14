@@ -22,4 +22,8 @@ public class Entitlements {
     }
 
     public Boolean getPersonalWorkspace() {
-        r
+        return personalWorkspace;
+    }
+
+    public Entitlements setPersonalWorkspace(Boolean personalWorkspace) {
+        this.personalWorkspace = p
