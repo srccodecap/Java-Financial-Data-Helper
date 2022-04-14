@@ -16,4 +16,10 @@ public class Entitlements {
         return dashboardExperience;
     }
 
-    public Entitlements setDashboardExperience(String dashboa
+    public Entitlements setDashboardExperience(String dashboardExperience) {
+        this.dashboardExperience = dashboardExperience;
+        return this;
+    }
+
+    public Boolean getPersonalWorkspace() {
+        r
