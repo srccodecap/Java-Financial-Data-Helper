@@ -26,4 +26,12 @@ public class Entitlements {
     }
 
     public Entitlements setPersonalWorkspace(Boolean personalWorkspace) {
-        this.personalWorkspace = p
+        this.personalWorkspace = personalWorkspace;
+        return this;
+    }
+
+    public Boolean getManageConnects() {
+        return manageConnects;
+    }
+
+    public Entitlements setManageConnects(Boo
