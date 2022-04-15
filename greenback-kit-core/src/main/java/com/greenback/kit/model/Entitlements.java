@@ -34,4 +34,10 @@ public class Entitlements {
         return manageConnects;
     }
 
-    public Entitlements setManageConnects(Boo
+    public Entitlements setManageConnects(Boolean manageConnects) {
+        this.manageConnects = manageConnects;
+        return this;
+    }
+
+    public Boolean getOnboardingWizard() {
+ 
