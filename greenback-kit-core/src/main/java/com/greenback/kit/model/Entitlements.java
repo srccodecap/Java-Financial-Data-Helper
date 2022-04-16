@@ -44,4 +44,12 @@ public class Entitlements {
     }
 
     public Entitlements setOnboardingWizard(Boolean onboardingWizard) {
-        this.onboardingWizard = onb
+        this.onboardingWizard = onboardingWizard;
+        return this;
+    }
+
+    public Boolean getTrialing() {
+        return trialing;
+    }
+
+    public Entitlements setTrialing(Boolean
