@@ -52,4 +52,13 @@ public class Entitlements {
         return trialing;
     }
 
-    public Entitlements setTrialing(Boolean
+    public Entitlements setTrialing(Boolean trialing) {
+        this.trialing = trialing;
+        return this;
+    }
+
+    public Boolean getShowAccounts() {
+        return showAccounts;
+    }
+
+    public
