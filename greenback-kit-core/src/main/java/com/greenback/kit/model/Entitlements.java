@@ -71,4 +71,10 @@ public class Entitlements {
     }
 
     public Entitlements setAutoExport(EntitlementFeaturePermission autoExport) {
-        this.aut
+        this.autoExport = autoExport;
+        return this;
+    }
+
+    public EntitlementFeaturePermission getBulkExport() {
+        return bulkExport;
+   
