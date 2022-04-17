@@ -66,4 +66,9 @@ public class Entitlements {
         return this;
     }
 
-    public EntitlementFeaturePermission ge
+    public EntitlementFeaturePermission getAutoExport() {
+        return autoExport;
+    }
+
+    public Entitlements setAutoExport(EntitlementFeaturePermission autoExport) {
+        this.aut
