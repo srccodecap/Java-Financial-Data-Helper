@@ -61,4 +61,9 @@ public class Entitlements {
         return showAccounts;
     }
 
-    public
+    public Entitlements setShowAccounts(Boolean showAccounts) {
+        this.showAccounts = showAccounts;
+        return this;
+    }
+
+    public EntitlementFeaturePermission ge
