@@ -84,4 +84,8 @@ public class Entitlements {
         return this;
     }
 
-    
+    public EntitlementFeaturePermission getMailboxDelivery() {
+        return mailboxDelivery;
+    }
+
+    public Entitlements setMailboxDelivery(En
