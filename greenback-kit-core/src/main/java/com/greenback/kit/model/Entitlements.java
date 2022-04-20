@@ -77,4 +77,11 @@ public class Entitlements {
 
     public EntitlementFeaturePermission getBulkExport() {
         return bulkExport;
-   
+    }
+
+    public Entitlements setBulkExport(EntitlementFeaturePermission bulkExport) {
+        this.bulkExport = bulkExport;
+        return this;
+    }
+
+    
