@@ -6,4 +6,11 @@ public class ExchangeRate {
     private Double rate;
     private String currencyCode;
     private Double to;
-    
+    private ExchangeRateType type;
+
+    public Double getFrom() {
+        return from;
+    }
+
+    public void setFrom(Double from) {
+ 
