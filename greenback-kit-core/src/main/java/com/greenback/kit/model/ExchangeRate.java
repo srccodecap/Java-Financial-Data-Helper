@@ -13,4 +13,15 @@ public class ExchangeRate {
     }
 
     public void setFrom(Double from) {
- 
+        this.from = from;
+    }
+
+    public Double getRate() {
+        return rate;
+    }
+
+    public void setRate(Double rate) {
+        this.rate = rate;
+    }
+
+  
