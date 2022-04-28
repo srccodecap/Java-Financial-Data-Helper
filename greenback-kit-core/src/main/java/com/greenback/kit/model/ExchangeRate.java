@@ -40,4 +40,12 @@ public class ExchangeRate {
         this.to = to;
     }
 
-   
+    public ExchangeRateType getType() {
+        return type;
+    }
+
+    public void setType(ExchangeRateType type) {
+        this.type = type;
+    }
+    
+}
