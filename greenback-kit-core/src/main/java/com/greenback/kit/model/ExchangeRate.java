@@ -29,4 +29,15 @@ public class ExchangeRate {
     }
 
     public void setCurrencyCode(String currencyCode) {
-        this.cur
+        this.currencyCode = currencyCode;
+    }
+
+    public Double getTo() {
+        return to;
+    }
+
+    public void setTo(Double to) {
+        this.to = to;
+    }
+
+   
