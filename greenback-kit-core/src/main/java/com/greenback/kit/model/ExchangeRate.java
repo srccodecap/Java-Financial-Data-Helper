@@ -24,4 +24,9 @@ public class ExchangeRate {
         this.rate = rate;
     }
 
-  
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.cur
