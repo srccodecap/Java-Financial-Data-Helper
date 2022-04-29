@@ -4,4 +4,6 @@ public enum ExchangeRateType {
 
     SETTLEMENT,               // if the exchange rate is what was settled to (e.g. paid out in)
     PRESENTMENT,             // if the exchanger rate is really what was presented in (e.g. marketed as)
-    ESTIMATED;            
+    ESTIMATED;                 // an estimated exchange rate
+
+}
