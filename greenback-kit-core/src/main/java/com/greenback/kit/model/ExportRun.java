@@ -103,3 +103,24 @@ public class ExportRun extends GreenbackObject {
     public void setTriggeredBy(TriggeredBy triggeredBy) {
         this.triggeredBy = triggeredBy;
     }
+
+    @Override
+    public String toString() {
+        return "ExportRun{" +
+            ", id='" + id + '\'' +
+            ", createdAt=" + createdAt +
+            ", updatedAt=" + updatedAt +
+            ", referenceId='" + referenceId + '\'' +
+            ", status=" + status +
+            ", userId='" + userId + '\'' +
+            ", typeTagId='" + typeTagId + '\'' +
+            ", killedAt=" + killedAt +
+            ", completedAt=" + completedAt +
+            ", progress=" + progress +
+            ", message='" + message + '\'' +
+            ", parameters='" + parameters + '\'' +
+            ", results='" + results + '\'' +
+            ", triggeredBy=" + triggeredBy +
+            '}';
+    }
+}
