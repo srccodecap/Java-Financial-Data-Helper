@@ -5,4 +5,7 @@ public enum ExportAction {
     CREATE,
     UPDATE,
     LINK,
+    PSEUDO,
+    NONE
     
+}
