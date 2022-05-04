@@ -12,4 +12,15 @@ public class GeoPoint {
     }
 
     public void setLat(Double lat) {
-        this.la
+        this.lat = lat;
+    }
+
+    public Double getLon() {
+        return lon;
+    }
+
+    public void setLon(Double lon) {
+        this.lon = lon;
+    }
+
+    @Ov
