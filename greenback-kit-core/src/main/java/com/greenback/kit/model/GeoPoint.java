@@ -35,4 +35,10 @@ public class GeoPoint {
             return false;
         }
         final GeoPoint other = (GeoPoint) obj;
-        if (
+        if (!Objects.equals(this.lat, other.lat)) {
+            return false;
+        }
+        return Objects.equals(this.lon, other.lon);
+    }
+
+    @O
