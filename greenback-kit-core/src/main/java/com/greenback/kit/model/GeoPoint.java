@@ -41,4 +41,8 @@ public class GeoPoint {
         return Objects.equals(this.lon, other.lon);
     }
 
-    @O
+    @Override
+    public int hashCode() {
+        int hash = 11;
+        hash = 19 * hash + Objects.hashCode(this.lat);
+        hash = 19 * hash + Obje
