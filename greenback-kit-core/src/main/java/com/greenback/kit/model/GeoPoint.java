@@ -29,4 +29,10 @@ public class GeoPoint {
             return true;
         }
         if (obj == null) {
-            return fals
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final GeoPoint other = (GeoPoint) obj;
+        if (
