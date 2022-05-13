@@ -45,4 +45,13 @@ public class GeoPoint {
     public int hashCode() {
         int hash = 11;
         hash = 19 * hash + Objects.hashCode(this.lat);
-        hash = 19 * hash + Obje
+        hash = 19 * hash + Objects.hashCode(this.lon);
+        return hash;
+    }
+
+    @Override
+    public String toString() {
+        return lat + "," + lon;
+    }
+    
+}
