@@ -12,4 +12,12 @@ public class GreenbackObject {
         return id;
     }
 
-    public void setId(Strin
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreate
