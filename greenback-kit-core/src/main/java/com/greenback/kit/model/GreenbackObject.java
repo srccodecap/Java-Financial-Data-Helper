@@ -28,4 +28,8 @@ public class GreenbackObject {
         return updatedAt;
     }
 
-    pu
+    public void setUpdatedAt(Instant updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+}
