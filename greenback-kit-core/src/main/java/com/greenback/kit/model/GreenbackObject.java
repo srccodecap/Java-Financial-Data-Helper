@@ -20,4 +20,12 @@ public class GreenbackObject {
         return createdAt;
     }
 
-    public void setCreate
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
+
+    pu
