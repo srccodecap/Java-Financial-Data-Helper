@@ -1,4 +1,11 @@
 package com.greenback.kit.model;
 
 import java.util.List;
-im
+import java.util.Map;
+
+public class Item {
+ 
+    private String grn;
+    private List<String> altGrns;
+    private String name;
+    private String descripti
