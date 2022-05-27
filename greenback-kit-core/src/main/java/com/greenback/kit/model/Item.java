@@ -24,4 +24,13 @@ public class Item {
         return this;
     }
 
-    public List<String> get
+    public List<String> getAltGrns() {
+        return altGrns;
+    }
+
+    public Item setAltGrns(List<String> altGrns) {
+        this.altGrns = altGrns;
+        return this;
+    }
+
+    public String getName
