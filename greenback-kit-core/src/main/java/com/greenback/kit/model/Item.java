@@ -33,4 +33,13 @@ public class Item {
         return this;
     }
 
-    public String getName
+    public String getName() {
+        return name;
+    }
+
+    public Item setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public S
