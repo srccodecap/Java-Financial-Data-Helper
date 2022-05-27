@@ -15,4 +15,13 @@ public class Item {
     private String taxGrn;
     protected Map<String,String> attributes;
 
-   
+    public String getGrn() {
+        return grn;
+    }
+
+    public Item setGrn(String grn) {
+        this.grn = grn;
+        return this;
+    }
+
+    public List<String> get
