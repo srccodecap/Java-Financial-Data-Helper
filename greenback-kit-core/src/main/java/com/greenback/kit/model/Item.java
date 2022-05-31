@@ -42,4 +42,9 @@ public class Item {
         return this;
     }
 
-    public S
+    public String getDescription() {
+        return description;
+    }
+
+    public Item setDescription(String description) {
+        this.description = descriptio
