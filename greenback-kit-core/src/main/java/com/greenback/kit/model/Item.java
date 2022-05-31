@@ -64,4 +64,10 @@ public class Item {
         return unitPrice;
     }
 
-    public Item setUnitPrice
+    public Item setUnitPrice(Double unitPrice) {
+        this.unitPrice = unitPrice;
+        return this;
+    }
+
+    public Double getAmount() {
+        r
