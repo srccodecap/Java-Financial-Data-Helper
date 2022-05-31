@@ -47,4 +47,13 @@ public class Item {
     }
 
     public Item setDescription(String description) {
-        this.description = descriptio
+        this.description = description;
+        return this;
+    }
+
+    public Double getQuantity() {
+        return quantity;
+    }
+
+    public Item setQuantity(Double quantity) {
+        this.quantit
