@@ -56,4 +56,12 @@ public class Item {
     }
 
     public Item setQuantity(Double quantity) {
-        this.quantit
+        this.quantity = quantity;
+        return this;
+    }
+
+    public Double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public Item setUnitPrice
