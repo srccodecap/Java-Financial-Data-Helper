@@ -70,4 +70,12 @@ public class Item {
     }
 
     public Double getAmount() {
-        r
+        return amount;
+    }
+
+    public Item setAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+
+    public String getTaxG
