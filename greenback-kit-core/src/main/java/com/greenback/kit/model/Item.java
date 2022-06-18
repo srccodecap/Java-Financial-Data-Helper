@@ -78,4 +78,13 @@ public class Item {
         return this;
     }
 
-    public String getTaxG
+    public String getTaxGrn() {
+        return taxGrn;
+    }
+
+    public Item setTaxGrn(String taxGrn) {
+        this.taxGrn = taxGrn;
+        return this;
+    }
+
+    public Map<
