@@ -87,4 +87,9 @@ public class Item {
         return this;
     }
 
-    public Map<
+    public Map<String,String> getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(Map<String,String> attributes) {
+        this.attri
