@@ -122,3 +122,25 @@ public class Message extends Document {
     public String getFullText() {
         return fullText;
     }
+
+    public void setFullText(String fullText) {
+        this.fullText = fullText;
+    }
+
+    public Instant getPostedAt() {
+        return postedAt;
+    }
+
+    public void setPostedAt(Instant postedAt) {
+        this.postedAt = postedAt;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+}
