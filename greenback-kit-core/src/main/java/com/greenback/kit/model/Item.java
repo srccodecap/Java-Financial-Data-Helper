@@ -92,4 +92,6 @@ public class Item {
     }
 
     public void setAttributes(Map<String,String> attributes) {
-        this.attri
+        this.attributes = attributes;
+    }
+}
