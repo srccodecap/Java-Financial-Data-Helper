@@ -8,4 +8,13 @@ public class MessageQuery extends DocumentQuery<MessageQuery> {
     protected Instant minPostedAt;          // start
     protected Instant maxPostedAt;          // end
 
-    p
+    public String getQuery() {
+        return query;
+    }
+
+    public MessageQuery setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+
+    publ
