@@ -17,4 +17,9 @@ public class MessageQuery extends DocumentQuery<MessageQuery> {
         return this;
     }
 
-    publ
+    public Instant getMinPostedAt() {
+        return minPostedAt;
+    }
+
+    public MessageQuery setMinPostedAt(Instant minPostedAt) {
+        this.
