@@ -30,4 +30,9 @@ public class MessageQuery extends DocumentQuery<MessageQuery> {
         return maxPostedAt;
     }
 
-    publ
+    public MessageQuery setMaxPostedAt(Instant maxPostedAt) {
+        this.maxPostedAt = maxPostedAt;
+        return this;
+    }
+
+}
