@@ -22,4 +22,12 @@ public class MessageQuery extends DocumentQuery<MessageQuery> {
     }
 
     public MessageQuery setMinPostedAt(Instant minPostedAt) {
-        this.
+        this.minPostedAt = minPostedAt;
+        return this;
+    }
+
+    public Instant getMaxPostedAt() {
+        return maxPostedAt;
+    }
+
+    publ
