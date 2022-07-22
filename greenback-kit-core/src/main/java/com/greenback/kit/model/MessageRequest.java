@@ -7,4 +7,11 @@ import java.util.Objects;
 public class MessageRequest {
  
     private Boolean async;
-    pr
+    private Bytes document;
+
+    public Boolean getAsync() {
+        return async;
+    }
+
+    public MessageRequest setAsync(Boolean async) {
+ 
