@@ -14,4 +14,12 @@ public class MessageRequest {
     }
 
     public MessageRequest setAsync(Boolean async) {
- 
+        this.async = async;
+        return this;
+    }
+
+    public Bytes getDocument() {
+        return document;
+    }
+
+    public MessageRequest setDocume
