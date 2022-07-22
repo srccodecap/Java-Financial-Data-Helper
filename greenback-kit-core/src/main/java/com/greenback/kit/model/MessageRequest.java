@@ -22,4 +22,10 @@ public class MessageRequest {
         return document;
     }
 
-    public MessageRequest setDocume
+    public MessageRequest setDocument(Bytes document) {
+        this.document = document;
+        return this;
+    }
+    
+    public MessageRequest setDocument(File file) {
+        Objects.require
