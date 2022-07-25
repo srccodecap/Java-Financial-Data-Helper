@@ -28,4 +28,9 @@ public class MessageRequest {
     }
     
     public MessageRequest setDocument(File file) {
-        Objects.require
+        Objects.requireNonNull(file, "file was null");
+        this.document = Bytes.of(file);
+        return this;
+    }
+    
+    public MessageRequest setDocument(byte[] b
