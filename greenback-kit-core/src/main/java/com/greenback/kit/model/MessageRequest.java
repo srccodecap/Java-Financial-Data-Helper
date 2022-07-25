@@ -33,4 +33,10 @@ public class MessageRequest {
         return this;
     }
     
-    public MessageRequest setDocument(byte[] b
+    public MessageRequest setDocument(byte[] bytes) {
+        Objects.requireNonNull(bytes, "bytes was null");
+        this.document = Bytes.of(bytes);
+        return this;
+    }
+    
+    public MessageRequest se
