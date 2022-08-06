@@ -7,4 +7,11 @@ import static java.util.Optional.ofNullable;
 public class Paginated<T> extends Response implements Iterable<T> {
  
     private Pagination pagination;
-    private List<T> val
+    private List<T> values;
+    
+    public Pagination getPagination() {
+        return pagination;
+    }
+
+    public void setPagination(Pagination pagination) {
+   
