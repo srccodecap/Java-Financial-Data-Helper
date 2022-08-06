@@ -14,4 +14,11 @@ public class Paginated<T> extends Response implements Iterable<T> {
     }
 
     public void setPagination(Pagination pagination) {
-   
+        this.pagination = pagination;
+    }
+
+    public List<T> getValues() {
+        return values;
+    }
+
+    public void setValues(List<T> v
