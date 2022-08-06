@@ -41,4 +41,8 @@ public class MessageRequest {
     
     public MessageRequest setDocument(byte[] bytes, String name) {
         Objects.requireNonNull(bytes, "bytes was null");
-        this.document = Bytes.of(bytes, nam
+        this.document = Bytes.of(bytes, name);
+        return this;
+    }
+    
+}
