@@ -21,4 +21,10 @@ public class Paginated<T> extends Response implements Iterable<T> {
         return values;
     }
 
-    public void setValues(List<T> v
+    public void setValues(List<T> values) {
+        this.values = values;
+    }
+    
+    public String getNext() {
+        return ofNullable(this.pagination)
+            .map(v -> v.getNext(
