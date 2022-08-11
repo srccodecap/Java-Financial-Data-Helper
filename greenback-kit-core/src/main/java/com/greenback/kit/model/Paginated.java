@@ -27,4 +27,11 @@ public class Paginated<T> extends Response implements Iterable<T> {
     
     public String getNext() {
         return ofNullable(this.pagination)
-            .map(v -> v.getNext(
+            .map(v -> v.getNext())
+            .orElse(null);
+    }
+    
+    public boolean hasNext() {
+        return ofNullable(this.pagination)
+            .map(v -> v.getNext())
+    
