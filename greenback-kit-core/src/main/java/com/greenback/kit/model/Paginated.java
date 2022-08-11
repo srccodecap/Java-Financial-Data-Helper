@@ -34,4 +34,12 @@ public class Paginated<T> extends Response implements Iterable<T> {
     public boolean hasNext() {
         return ofNullable(this.pagination)
             .map(v -> v.getNext())
+            .isPresent();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return this.getValues().iterator();
+    }
     
+   
