@@ -45,4 +45,9 @@ public class Paginated<T> extends Response implements Iterable<T> {
     
     static public <T> long getTotalCount(Paginated<T> paginated) {
         return ofNullable(paginated)
-            .map(v -> v.getPaginatio
+            .map(v -> v.getPagination())
+            .map(v -> v.getTotalCount())
+            .orElse(0L);
+    }
+    
+}
