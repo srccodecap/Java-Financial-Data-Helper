@@ -17,4 +17,14 @@ public class Pagination {
     }
 
     public Long getCount() {
-        return c
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
+    }
+
+    public Long getTotalCount() {
+        return totalCount;
+    }
+
