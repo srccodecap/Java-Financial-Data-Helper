@@ -9,3 +9,12 @@ public class Pagination {
     private String next;
 
     public Long getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Long limit) {
+        this.limit = limit;
+    }
+
+    public Long getCount() {
+        return c
