@@ -28,3 +28,9 @@ public class Pagination {
         return totalCount;
     }
 
+    public void setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    public String getPrevious() {
+        return 
