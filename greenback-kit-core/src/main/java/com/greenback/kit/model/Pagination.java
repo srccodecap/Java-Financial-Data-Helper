@@ -33,4 +33,12 @@ public class Pagination {
     }
 
     public String getPrevious() {
-        return 
+        return previous;
+    }
+
+    public void setPrevious(String previous) {
+        this.previous = previous;
+    }
+
+    public String getNext() {
+       
