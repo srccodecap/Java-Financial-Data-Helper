@@ -50,3 +50,96 @@ public class Payment {
     public Payment setRelId(String relId) {
         this.relId = relId;
         return this;
+    }
+
+    public PaymentMethod getMethod() {
+        return method;
+    }
+
+    public Payment setMethod(PaymentMethod method) {
+        this.method = method;
+        return this;
+    }
+
+    public String getSubMethod() {
+        return subMethod;
+    }
+
+    public Payment setSubMethod(String subMethod) {
+        this.subMethod = subMethod;
+        return this;
+    }
+    
+    public PaymentNetwork getNetwork() {
+        return network;
+    }
+
+    public Payment setNetwork(PaymentNetwork network) {
+        this.network = network;
+        return this;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public Payment setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    public String getEndsWith() {
+        return endsWith;
+    }
+
+    public Payment setEndsWith(String endsWith) {
+        this.endsWith = endsWith;
+        return this;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public Payment setAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    public Instant getPaidAt() {
+        return paidAt;
+    }
+    
+    public Payment setPaidAt(Instant paidAt) {
+        this.paidAt = paidAt;
+        return this;
+    }
+    
+    public String getReferenceId() {
+        return referenceId;
+    }
+    
+    public Payment setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Payment setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public Payment setMemo(String memo) {
+        this.memo = memo;
+        return this;
+    }
+    
+}
