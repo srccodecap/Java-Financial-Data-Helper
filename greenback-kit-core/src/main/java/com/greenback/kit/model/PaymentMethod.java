@@ -10,4 +10,11 @@ public enum PaymentMethod {
     GIFT_CARD,
     MONEY_TRANSFER,
     CASH,
-    STORE_CREDI
+    STORE_CREDIT,
+    CHECK,
+    APPLE_PAY,
+    MONEY_ORDER,
+    BANK_ACCOUNT,
+    SELLER_ACCOUNT;
+    
+}
