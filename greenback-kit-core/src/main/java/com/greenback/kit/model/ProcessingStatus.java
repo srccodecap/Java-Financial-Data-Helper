@@ -10,4 +10,11 @@ public enum ProcessingStatus {
     private final boolean terminal;
     
     ProcessingStatus(boolean terminal) {
-        this.te
+        this.terminal = terminal;
+    }
+
+    public boolean isTerminal() {
+        return terminal;
+    }
+
+}
