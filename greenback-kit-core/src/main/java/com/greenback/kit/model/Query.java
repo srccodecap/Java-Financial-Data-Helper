@@ -25,4 +25,13 @@ public class Query<T> implements Serializable {
     }
 
     @SuppressWarnings("unchecked")
-    public T setExpands(Iterable<String> expan
+    public T setExpands(Iterable<String> expands) {
+        this.expands = expands;
+        return (T)this;
+    }
+
+    public String getCursor() {
+        return cursor;
+    }
+
+    public T setCursor(String cur
