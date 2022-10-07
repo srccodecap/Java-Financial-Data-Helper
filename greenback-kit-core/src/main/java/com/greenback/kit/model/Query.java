@@ -20,4 +20,9 @@ public class Query<T> implements Serializable {
         return (T)this;
     }
     
-    public Iterable<Strin
+    public Iterable<String> getExpands() {
+        return this.expands;
+    }
+
+    @SuppressWarnings("unchecked")
+    public T setExpands(Iterable<String> expan
