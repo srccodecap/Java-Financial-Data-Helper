@@ -34,4 +34,9 @@ public class Query<T> implements Serializable {
         return cursor;
     }
 
-    public T setCursor(String cur
+    public T setCursor(String cursor) {
+        this.cursor = cursor;
+        return (T)this;
+    }
+
+}
