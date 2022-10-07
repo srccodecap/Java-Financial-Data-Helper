@@ -12,4 +12,12 @@ public class Query<T> implements Serializable {
 
     public Integer getLimit() {
         return limit;
+    }
+
+    @SuppressWarnings("unchecked")
+    public T setLimit(Integer limit) {
+        this.limit = limit;
+        return (T)this;
+    }
     
+    public Iterable<Strin
