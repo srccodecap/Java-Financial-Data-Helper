@@ -20,4 +20,9 @@ public class QuotedMessage {
         this.from = from;
     }
 
-    public List<EmailAddress> getR
+    public List<EmailAddress> getReplyTo() {
+        return replyTo;
+    }
+
+    public void setReplyTo(List<EmailAddress> replyTo) {
+        this.replyTo = repl
