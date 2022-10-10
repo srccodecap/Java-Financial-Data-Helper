@@ -14,4 +14,10 @@ public class QuotedMessage {
 
     public EmailAddress getFrom() {
         return from;
-  
+    }
+
+    public void setFrom(EmailAddress from) {
+        this.from = from;
+    }
+
+    public List<EmailAddress> getR
