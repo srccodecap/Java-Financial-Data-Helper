@@ -25,4 +25,13 @@ public class QuotedMessage {
     }
 
     public void setReplyTo(List<EmailAddress> replyTo) {
-        this.replyTo = repl
+        this.replyTo = replyTo;
+    }
+
+    public List<EmailAddress> getTo() {
+        return to;
+    }
+
+    public void setTo(List<EmailAddress> to) {
+        this.to = to;
+    }
