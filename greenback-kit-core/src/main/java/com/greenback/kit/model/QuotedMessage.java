@@ -35,3 +35,13 @@ public class QuotedMessage {
     public void setTo(List<EmailAddress> to) {
         this.to = to;
     }
+
+    public List<EmailAddress> getCc() {
+        return cc;
+    }
+
+    public void setCc(List<EmailAddress> cc) {
+        this.cc = cc;
+    }
+
+    public Str
