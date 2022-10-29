@@ -52,4 +52,12 @@ public class QuotedMessage {
         this.subject = subject;
     }
 
-    public Instant getPosted
+    public Instant getPostedAt() {
+        return postedAt;
+    }
+
+    public void setPostedAt(Instant postedAt) {
+        this.postedAt = postedAt;
+    }
+
+}
