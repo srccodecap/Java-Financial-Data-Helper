@@ -9,4 +9,9 @@ public class Sync extends GreenbackObject {
     private String message;
     private Double progress;
     private ProcessingStatus status;
-    private GreenbackEr
+    private GreenbackError error;
+    private SyncRequest request;
+    private SyncSummary summary;
+
+    public String getReferenceId() {
+        return referen
