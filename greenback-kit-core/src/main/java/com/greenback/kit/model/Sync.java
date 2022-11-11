@@ -14,4 +14,11 @@ public class Sync extends GreenbackObject {
     private SyncSummary summary;
 
     public String getReferenceId() {
-        return referen
+        return referenceId;
+    }
+
+    public void setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+    }
+
+    public ProcessingStatus getStatus(
