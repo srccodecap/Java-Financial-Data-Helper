@@ -21,4 +21,12 @@ public class Sync extends GreenbackObject {
         this.referenceId = referenceId;
     }
 
-    public ProcessingStatus getStatus(
+    public ProcessingStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProcessingStatus status) {
+        this.status = status;
+    }
+    
+    public Str
