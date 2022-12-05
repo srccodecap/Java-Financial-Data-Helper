@@ -29,4 +29,11 @@ public class Sync extends GreenbackObject {
         this.status = status;
     }
     
-    public Str
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
