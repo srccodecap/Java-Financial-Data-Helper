@@ -53,3 +53,12 @@ public class Sync extends GreenbackObject {
         this.triggeredBy = triggeredBy;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    
