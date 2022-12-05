@@ -37,3 +37,12 @@ public class Sync extends GreenbackObject {
         this.accountId = accountId;
     }
 
+    public SyncType getType() {
+        return type;
+    }
+
+    public void setType(SyncType type) {
+        this.type = type;
+    }
+
+    public String getTr
