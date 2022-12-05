@@ -45,4 +45,11 @@ public class Sync extends GreenbackObject {
         this.type = type;
     }
 
-    public String getTr
+    public String getTriggeredBy() {
+        return triggeredBy;
+    }
+
+    public void setTriggeredBy(String triggeredBy) {
+        this.triggeredBy = triggeredBy;
+    }
+
