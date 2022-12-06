@@ -61,4 +61,12 @@ public class Sync extends GreenbackObject {
         this.message = message;
     }
 
-    
+    public Double getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Double progress) {
+        this.progress = progress;
+    }
+
+    p
