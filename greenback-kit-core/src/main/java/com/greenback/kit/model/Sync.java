@@ -69,4 +69,12 @@ public class Sync extends GreenbackObject {
         this.progress = progress;
     }
 
-    p
+    public GreenbackError getError() {
+        return error;
+    }
+
+    public void setError(GreenbackError error) {
+        this.error = error;
+    }
+
+  
