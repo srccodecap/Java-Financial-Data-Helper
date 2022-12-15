@@ -82,4 +82,12 @@ public class Sync extends GreenbackObject {
     }
 
     public void setSummary(SyncSummary summary) {
-        this.summary =
+        this.summary = summary;
+    }
+
+    public SyncRequest getRequest() {
+        return request;
+    }
+
+    public void setRequest(SyncRequest request) {
+        th
