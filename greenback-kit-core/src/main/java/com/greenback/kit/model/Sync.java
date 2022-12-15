@@ -77,4 +77,9 @@ public class Sync extends GreenbackObject {
         this.error = error;
     }
 
-  
+    public SyncSummary getSummary() {
+        return summary;
+    }
+
+    public void setSummary(SyncSummary summary) {
+        this.summary =
