@@ -90,4 +90,7 @@ public class Sync extends GreenbackObject {
     }
 
     public void setRequest(SyncRequest request) {
-        th
+        this.request = request;
+    }
+
+}
