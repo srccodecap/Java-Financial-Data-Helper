@@ -113,3 +113,73 @@ public class SyncDocumentTotals {
 
     // helpers
     
+    public void collectWarnedAt(Instant warnedAt) {
+        if (warnedAt == null) {
+            return;
+        }
+        if (this.warnedAt == null || warnedAt.isBefore(this.warnedAt)) {
+            this.warnedAt = warnedAt;
+        }
+    }
+
+    public void incrementTotal(int increment) {
+        if (this.total == null) {
+            this.total = increment;
+        } else {
+            this.total += increment;
+        }
+    }
+
+    public void incrementCreated(int increment) {
+        if (this.created == null) {
+            this.created = increment;
+        } else {
+            this.created += increment;
+        }
+    }
+
+    public void incrementUpdated(int increment) {
+        if (this.updated == null) {
+            this.updated = increment;
+        } else {
+            this.updated += increment;
+        }
+    }
+
+    public void incrementStaged(int increment) {
+        if (this.staged == null) {
+            this.staged = increment;
+        } else {
+            this.staged += increment;
+        }
+    }
+
+    public void incrementIgnored(int increment) {
+        if (this.ignored == null) {
+            this.ignored = increment;
+        } else {
+            this.ignored += increment;
+        }
+    }
+
+    public void incrementWarnings(int increment) {
+        if (increment != 0) {
+            if (this.warnings == null) {
+                this.warnings = increment;
+            } else {
+                this.warnings += increment;
+            }
+        }
+    }
+
+    public void incrementErrors(int increment) {
+        if (increment != 0) {
+            if (this.errors == null) {
+                this.errors = increment;
+            } else {
+                this.errors += increment;
+            }
+        }
+    }
+    
+}
