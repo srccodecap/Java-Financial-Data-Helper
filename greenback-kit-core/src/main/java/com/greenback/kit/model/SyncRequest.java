@@ -9,4 +9,8 @@ public class SyncRequest {
     private Instant from;
     private Instant to;
     private Integer limit;
-    private Boolean reu
+    private Boolean reuseProfile;
+    private Map<String,String> attributes;
+    private List<String> includeIds;
+    private List<String> excludeIds;
+    // 
