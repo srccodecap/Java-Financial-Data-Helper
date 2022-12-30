@@ -45,4 +45,9 @@ public class SyncRequest {
         return this;
     }
 
-    public Boo
+    public Boolean getReuseProfile() {
+        return reuseProfile;
+    }
+
+    public SyncRequest setReuseProfile(Boolean reuseProfile) {
+        this.reus
