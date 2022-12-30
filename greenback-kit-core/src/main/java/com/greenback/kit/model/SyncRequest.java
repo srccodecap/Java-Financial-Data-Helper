@@ -37,4 +37,12 @@ public class SyncRequest {
     }
 
     public Integer getLimit() {
-  
+        return limit;
+    }
+
+    public SyncRequest setLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+
+    public Boo
