@@ -28,4 +28,13 @@ public class SyncRequest {
     }
 
     public Instant getTo() {
-    
+        return to;
+    }
+
+    public SyncRequest setTo(Instant to) {
+        this.to = to;
+        return this;
+    }
+
+    public Integer getLimit() {
+  
