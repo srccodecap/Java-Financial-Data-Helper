@@ -19,4 +19,13 @@ public class SyncRequest {
     private Boolean preview;
     
     public Instant getFrom() {
-        return f
+        return from;
+    }
+
+    public SyncRequest setFrom(Instant from) {
+        this.from = from;
+        return this;
+    }
+
+    public Instant getTo() {
+    
