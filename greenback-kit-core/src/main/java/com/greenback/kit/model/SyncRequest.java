@@ -13,4 +13,10 @@ public class SyncRequest {
     private Map<String,String> attributes;
     private List<String> includeIds;
     private List<String> excludeIds;
-    // 
+    // read only
+    private Instant initial;
+    // for previewing what the sync would do
+    private Boolean preview;
+    
+    public Instant getFrom() {
+        return f
