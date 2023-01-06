@@ -50,4 +50,12 @@ public class SyncRequest {
     }
 
     public SyncRequest setReuseProfile(Boolean reuseProfile) {
-        this.reus
+        this.reuseProfile = reuseProfile;
+        return this;
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
+    }
+
+    public SyncRequest set
