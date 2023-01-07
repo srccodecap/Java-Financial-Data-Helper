@@ -58,4 +58,9 @@ public class SyncRequest {
         return attributes;
     }
 
-    public SyncRequest set
+    public SyncRequest setAttributes(Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public List<String> getIncludeIds() 
