@@ -63,4 +63,12 @@ public class SyncRequest {
         return this;
     }
 
-    public List<String> getIncludeIds() 
+    public List<String> getIncludeIds() {
+        return includeIds;
+    }
+
+    public void setIncludeIds(List<String> includeIds) {
+        this.includeIds = includeIds;
+    }
+
+    public List<S
