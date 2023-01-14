@@ -76,4 +76,12 @@ public class SyncRequest {
     }
 
     public void setExcludeIds(List<String> excludeIds) {
-        this.excludeIds = excludeId
+        this.excludeIds = excludeIds;
+    }
+
+    public Instant getInitial() {
+        return initial;
+    }
+
+    public void setInitial(Instant initial) {
+        this.initia
