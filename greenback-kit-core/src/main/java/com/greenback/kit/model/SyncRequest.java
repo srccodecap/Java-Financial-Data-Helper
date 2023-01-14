@@ -71,4 +71,9 @@ public class SyncRequest {
         this.includeIds = includeIds;
     }
 
-    public List<S
+    public List<String> getExcludeIds() {
+        return excludeIds;
+    }
+
+    public void setExcludeIds(List<String> excludeIds) {
+        this.excludeIds = excludeId
