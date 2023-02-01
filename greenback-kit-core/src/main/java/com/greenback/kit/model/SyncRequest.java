@@ -84,4 +84,12 @@ public class SyncRequest {
     }
 
     public void setInitial(Instant initial) {
-        this.initia
+        this.initial = initial;
+    }
+
+    public Boolean getPreview() {
+        return preview;
+    }
+
+    public SyncRequest setPreview(Boolean preview) {
+        this
