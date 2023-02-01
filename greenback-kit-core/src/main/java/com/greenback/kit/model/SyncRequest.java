@@ -92,4 +92,8 @@ public class SyncRequest {
     }
 
     public SyncRequest setPreview(Boolean preview) {
-        this
+        this.preview = preview;
+        return this;
+    }
+    
+}
