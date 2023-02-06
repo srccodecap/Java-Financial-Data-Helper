@@ -1,3 +1,8 @@
 package com.greenback.kit.model;
 
-public cl
+public class TeamMember extends GreenbackObject {
+
+    private String teamId;
+    private String userId;
+    private TeamMemberRole role;
+ 
