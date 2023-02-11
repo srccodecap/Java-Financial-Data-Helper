@@ -18,4 +18,13 @@ public class TeamMember extends GreenbackObject {
         return this;
     }
 
-    public String getUse
+    public String getUserId() {
+        return userId;
+    }
+
+    public TeamMember setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    publi
