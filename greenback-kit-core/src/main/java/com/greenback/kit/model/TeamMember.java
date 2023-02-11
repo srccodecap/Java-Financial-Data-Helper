@@ -13,4 +13,9 @@ public class TeamMember extends GreenbackObject {
         return teamId;
     }
 
-   
+    public TeamMember setTeamId(String teamId) {
+        this.teamId = teamId;
+        return this;
+    }
+
+    public String getUse
