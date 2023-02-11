@@ -5,4 +5,12 @@ public class TeamMember extends GreenbackObject {
     private String teamId;
     private String userId;
     private TeamMemberRole role;
- 
+    private TeamMemberState state;
+    private User team;
+    private User user;
+
+    public String getTeamId() {
+        return teamId;
+    }
+
+   
