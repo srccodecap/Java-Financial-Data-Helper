@@ -27,4 +27,10 @@ public class TeamMember extends GreenbackObject {
         return this;
     }
 
-    publi
+    public TeamMemberRole getRole() {
+        return role;
+    }
+
+    public TeamMember setRole(TeamMemberRole role) {
+        this.role = role;
+        return t
