@@ -41,4 +41,13 @@ public class TeamMember extends GreenbackObject {
     }
 
     public TeamMember setState(TeamMemberState state) {
-        this.state
+        this.state = state;
+        return this;
+    }
+
+    public User getTeam() {
+        return team;
+    }
+
+    public TeamMember setTeam(User team) {
+  
