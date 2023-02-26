@@ -58,4 +58,9 @@ public class TeamMember extends GreenbackObject {
         return user;
     }
 
-    public TeamMember setUser
+    public TeamMember setUser(User user) {
+        this.user = user;
+        return this;
+    }
+
+}
