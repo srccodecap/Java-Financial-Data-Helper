@@ -4,4 +4,7 @@ public enum TeamMemberRole {
 
     ADMIN,
     ACCOUNTANT,
-    ST
+    STANDARD,
+    SUPER_ADMIN;
+
+}
