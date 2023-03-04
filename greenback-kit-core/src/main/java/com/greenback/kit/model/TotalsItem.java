@@ -21,4 +21,13 @@ public class TotalsItem {
     }
 
     public TotalsItem setName(String name) {
-        this.name =
+        this.name = name;
+        return this;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public TotalsItem setAmount(Double amount) {
+        this.amo
