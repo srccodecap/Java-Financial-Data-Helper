@@ -12,4 +12,13 @@ public class TotalsItem {
     }
 
     public TotalsItem setType(TotalsItemType type) {
-        this.type = 
+        this.type = type;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public TotalsItem setName(String name) {
+        this.name =
