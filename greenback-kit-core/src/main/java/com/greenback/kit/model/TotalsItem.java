@@ -5,4 +5,11 @@ public class TotalsItem {
     private TotalsItemType type;
     private String name;
     private Double amount;
-    private
+    private String taxGrn;
+
+    public TotalsItemType getType() {
+        return type;
+    }
+
+    public TotalsItem setType(TotalsItemType type) {
+        this.type = 
