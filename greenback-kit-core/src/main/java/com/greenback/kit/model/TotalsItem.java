@@ -30,4 +30,13 @@ public class TotalsItem {
     }
 
     public TotalsItem setAmount(Double amount) {
-        this.amo
+        this.amount = amount;
+        return this;
+    }
+
+    public String getTaxGrn() {
+        return taxGrn;
+    }
+
+    public TotalsItem setTaxGrn(String taxGrn) {
+        this
