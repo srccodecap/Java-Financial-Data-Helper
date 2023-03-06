@@ -39,4 +39,8 @@ public class TotalsItem {
     }
 
     public TotalsItem setTaxGrn(String taxGrn) {
-        this
+        this.taxGrn = taxGrn;
+        return this;
+    }
+    
+}
