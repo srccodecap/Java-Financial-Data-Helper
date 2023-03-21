@@ -9,4 +9,10 @@ public class TransactionExport extends GreenbackObject {
     protected String triggeredBy;
     protected TransactionExportMode mode;
     protected AccountingMethod accountingMethod;
-    protected Lis
+    protected List<TransactionExportStep> steps;
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transact
