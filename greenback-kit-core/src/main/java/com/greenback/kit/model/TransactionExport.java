@@ -31,4 +31,8 @@ public class TransactionExport extends GreenbackObject {
         return triggeredBy;
     }
 
-    publi
+    public void setTriggeredBy(String triggeredBy) {
+        this.triggeredBy = triggeredBy;
+    }
+
+    public TransactionExportMode g
