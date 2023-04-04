@@ -23,4 +23,12 @@ public class TransactionExport extends GreenbackObject {
         return accountId;
     }
 
-    public void set
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getTriggeredBy() {
+        return triggeredBy;
+    }
+
+    publi
