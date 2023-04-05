@@ -43,4 +43,9 @@ public class TransactionExport extends GreenbackObject {
         this.mode = mode;
     }
 
-    public Accountin
+    public AccountingMethod getAccountingMethod() {
+        return accountingMethod;
+    }
+
+    public void setAccountingMethod(AccountingMethod accountingMethod) {
+ 
