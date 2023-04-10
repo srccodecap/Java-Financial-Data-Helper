@@ -52,4 +52,11 @@ public class TransactionExport extends GreenbackObject {
     }
 
     public List<TransactionExportStep> getSteps() {
-        retu
+        return steps;
+    }
+
+    public void setSteps(List<TransactionExportStep> steps) {
+        this.steps = steps;
+    }
+
+}
