@@ -48,4 +48,8 @@ public class TransactionExport extends GreenbackObject {
     }
 
     public void setAccountingMethod(AccountingMethod accountingMethod) {
- 
+        this.accountingMethod = accountingMethod;
+    }
+
+    public List<TransactionExportStep> getSteps() {
+        retu
