@@ -4,4 +4,12 @@ import java.util.List;
 
 public class TransactionExportIntent {
  
-    private String ta
+    private String targetId;
+    private Form form;
+    private List<TransactionMatch> matches;
+
+    public String getTargetId() {
+        return targetId;
+    }
+
+    p
