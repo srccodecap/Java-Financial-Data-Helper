@@ -12,4 +12,12 @@ public class TransactionExportIntent {
         return targetId;
     }
 
-    p
+    public void setTargetId(String targetId) {
+        this.targetId = targetId;
+    }
+
+    public Form getForm() {
+        return form;
+    }
+
+  
