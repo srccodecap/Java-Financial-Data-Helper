@@ -25,4 +25,11 @@ public class TransactionExportIntent {
     }
 
     public List<TransactionMatch> getMatches() {
-        return ma
+        return matches;
+    }
+
+    public void setMatches(List<TransactionMatch> matches) {
+        this.matches = matches;
+    }
+
+}
