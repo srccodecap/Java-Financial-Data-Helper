@@ -20,4 +20,9 @@ public class TransactionExportIntent {
         return form;
     }
 
-  
+    public void setForm(Form form) {
+        this.form = form;
+    }
+
+    public List<TransactionMatch> getMatches() {
+        return ma
