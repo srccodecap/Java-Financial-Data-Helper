@@ -9,4 +9,11 @@ public class TransactionExportIntentRequest {
     private String payment;
     private Boolean itemized;
     private Instant verifiedBy;
-    private Map<String,
+    private Map<String,String> parameters;
+    private Iterable<String> expands;
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public TransactionExportInte
