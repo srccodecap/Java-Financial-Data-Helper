@@ -16,4 +16,10 @@ public class TransactionExportIntentRequest {
         return payment;
     }
 
-    public TransactionExportInte
+    public TransactionExportIntentRequest setPayment(String payment) {
+        this.payment = payment;
+        return this;
+    }
+
+    public Boolean getItemized() {
+       
