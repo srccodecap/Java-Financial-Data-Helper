@@ -22,4 +22,9 @@ public class TransactionExportIntentRequest {
     }
 
     public Boolean getItemized() {
+        return itemized;
+    }
+
+    public TransactionExportIntentRequest setItemized(Boolean itemized) {
+        this.itemized = itemized;
        
