@@ -27,4 +27,11 @@ public class TransactionExportIntentRequest {
 
     public TransactionExportIntentRequest setItemized(Boolean itemized) {
         this.itemized = itemized;
-       
+        return this;
+    }
+
+    public Instant getVerifiedBy() {
+        return verifiedBy;
+    }
+
+    public TransactionExportIntentRequest 
