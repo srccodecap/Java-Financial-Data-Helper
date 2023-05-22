@@ -34,4 +34,9 @@ public class TransactionExportIntentRequest {
         return verifiedBy;
     }
 
-    public TransactionExportIntentRequest 
+    public TransactionExportIntentRequest setVerifiedBy(Instant verifiedBy) {
+        this.verifiedBy = verifiedBy;
+        return this;
+    }
+    
+    public Map<String, String> g
