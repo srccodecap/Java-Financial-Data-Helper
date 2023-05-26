@@ -39,4 +39,9 @@ public class TransactionExportIntentRequest {
         return this;
     }
     
-    public Map<String, String> g
+    public Map<String, String> getParameters() {
+        return parameters;
+    }
+
+    public TransactionExportIntentRequest setParameters(Map<String, String> parameters) {
+        this.parameters = parameters;
