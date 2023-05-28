@@ -45,3 +45,11 @@ public class TransactionExportIntentRequest {
 
     public TransactionExportIntentRequest setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
+        return this;
+    }
+
+    public Iterable<String> getExpands() {
+        return this.expands;
+    }
+
+    public TransactionExportIntentReque
