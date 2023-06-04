@@ -1,3 +1,8 @@
 package com.greenback.kit.model;
 
-public
+public enum TransactionExportMode {
+    
+    LEGACY,
+    PAYMENT
+    
+}
