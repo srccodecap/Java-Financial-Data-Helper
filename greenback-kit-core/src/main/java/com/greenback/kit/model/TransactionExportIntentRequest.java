@@ -52,4 +52,9 @@ public class TransactionExportIntentRequest {
         return this.expands;
     }
 
-    public TransactionExportIntentReque
+    public TransactionExportIntentRequest setExpands(Iterable<String> expands) {
+        this.expands = expands;
+        return this;
+    }
+    
+}
