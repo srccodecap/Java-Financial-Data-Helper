@@ -14,4 +14,12 @@ public class TransactionMatch {
     }
 
     public void setScore(Double score) {
-  
+        this.score = score;
+    }
+
+    public Boolean getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(Boolean current) {
+        this.
