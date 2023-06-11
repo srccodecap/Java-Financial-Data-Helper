@@ -22,4 +22,12 @@ public class TransactionMatch {
     }
 
     public void setCurrent(Boolean current) {
-        this.
+        this.current = current;
+    }
+
+    public List<String> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<String> messages) {
+ 
