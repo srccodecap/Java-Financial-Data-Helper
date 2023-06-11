@@ -30,4 +30,11 @@ public class TransactionMatch {
     }
 
     public void setMessages(List<String> messages) {
- 
+        this.messages = messages;
+    }
+
+    public Transaction getDocument() {
+        return document;
+    }
+
+    public void setDocume
