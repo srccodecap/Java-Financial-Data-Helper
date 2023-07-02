@@ -5,4 +5,7 @@ import java.time.Instant;
 
 public class TransactionQuery extends DocumentQuery<TransactionQuery> {
     
-    protected Iterable<T
+    protected Iterable<TransactionArchetype> archetypes;
+    protected Iterable<TransactionType> types;
+    protected String query;
+    protected Instant minTransa
