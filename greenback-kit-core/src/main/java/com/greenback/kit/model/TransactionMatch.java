@@ -37,4 +37,8 @@ public class TransactionMatch {
         return document;
     }
 
-    public void setDocume
+    public void setDocument(Transaction document) {
+        this.document = document;
+    }
+
+}
