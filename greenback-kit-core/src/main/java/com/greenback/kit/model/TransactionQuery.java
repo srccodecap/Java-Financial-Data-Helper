@@ -8,4 +8,9 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
     protected Iterable<TransactionArchetype> archetypes;
     protected Iterable<TransactionType> types;
     protected String query;
-    protected Instant minTransa
+    protected Instant minTransactedAt;
+    protected Instant maxTransactedAt;
+    protected Boolean descending;
+    protected Iterable<String> rollupIds;
+
+    public Iterable<Transact
