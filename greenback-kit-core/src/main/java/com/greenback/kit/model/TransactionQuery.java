@@ -13,4 +13,9 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
     protected Boolean descending;
     protected Iterable<String> rollupIds;
 
-    public Iterable<Transact
+    public Iterable<TransactionArchetype> getArchetypes() {
+        return archetypes;
+    }
+
+    public TransactionQuery setArchetypes(Iterable<TransactionArchetype> archetypes) {
+     
