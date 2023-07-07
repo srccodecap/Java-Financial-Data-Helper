@@ -26,4 +26,9 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
         return this.types;
     }
 
-    publi
+    public TransactionQuery setTypes(Iterable<TransactionType> types) {
+        this.types = types;
+        return this;
+    }
+
+    public Iterable<String> getRollupIds()
