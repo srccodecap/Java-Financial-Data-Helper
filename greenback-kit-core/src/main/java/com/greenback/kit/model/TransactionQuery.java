@@ -18,4 +18,12 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
     }
 
     public TransactionQuery setArchetypes(Iterable<TransactionArchetype> archetypes) {
-     
+        this.archetypes = archetypes;
+        return this;
+    }
+    
+    public Iterable<TransactionType> getTypes() {
+        return this.types;
+    }
+
+    publi
