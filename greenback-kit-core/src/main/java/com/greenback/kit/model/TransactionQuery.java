@@ -31,4 +31,9 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
         return this;
     }
 
-    public Iterable<String> getRollupIds()
+    public Iterable<String> getRollupIds() {
+        return rollupIds;
+    }
+
+    public TransactionQuery setRollupIds(Iterable<String> rollupIds) {
+        this.rollupIds =
