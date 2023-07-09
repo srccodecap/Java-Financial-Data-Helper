@@ -44,4 +44,11 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
         return query;
     }
 
-    public TransactionQuery s
+    public TransactionQuery setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+
+    public Instant getMinTransactedAt() {
+        return minTransactedAt;
+ 
