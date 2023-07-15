@@ -58,4 +58,8 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
         return this;
     }
 
- 
+    public Instant getMaxTransactedAt() {
+        return maxTransactedAt;
+    }
+
+    public TransactionQuery setMaxTransactedAt(Instant maxTransa
