@@ -51,4 +51,11 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
 
     public Instant getMinTransactedAt() {
         return minTransactedAt;
+    }
+
+    public TransactionQuery setMinTransactedAt(Instant minTransactedAt) {
+        this.minTransactedAt = minTransactedAt;
+        return this;
+    }
+
  
