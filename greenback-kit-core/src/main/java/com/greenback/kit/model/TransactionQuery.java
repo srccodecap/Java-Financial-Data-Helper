@@ -62,4 +62,11 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
         return maxTransactedAt;
     }
 
-    public TransactionQuery setMaxTransactedAt(Instant maxTransa
+    public TransactionQuery setMaxTransactedAt(Instant maxTransactedAt) {
+        this.maxTransactedAt = maxTransactedAt;
+        return this;
+    }
+
+    public Boolean getDescending() {
+        return descending;
+    }
