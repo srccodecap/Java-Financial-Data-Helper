@@ -70,3 +70,10 @@ public class TransactionQuery extends DocumentQuery<TransactionQuery> {
     public Boolean getDescending() {
         return descending;
     }
+
+    public TransactionQuery setDescending(Boolean descending) {
+        this.descending = descending;
+        return this;
+    }
+    
+}
