@@ -12,4 +12,9 @@ public class TransactionStatus {
         return state;
     }
 
-    public Transa
+    public TransactionStatus setState(TransactionState state) {
+        this.state = state;
+        return this;
+    }
+
+    public String getMessa
