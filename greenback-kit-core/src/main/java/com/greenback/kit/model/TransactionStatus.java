@@ -5,4 +5,11 @@ import java.time.Instant;
 public class TransactionStatus {
 
     private TransactionState state;
-    private String 
+    private String message;
+    private Instant updatedAt;
+
+    public TransactionState getState() {
+        return state;
+    }
+
+    public Transa
