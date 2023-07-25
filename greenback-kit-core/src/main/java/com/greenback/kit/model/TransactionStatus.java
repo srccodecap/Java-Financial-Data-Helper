@@ -17,4 +17,9 @@ public class TransactionStatus {
         return this;
     }
 
-    public String getMessa
+    public String getMessage() {
+        return message;
+    }
+
+    public TransactionStatus setMessage(String message) {
+        this.message = mes
