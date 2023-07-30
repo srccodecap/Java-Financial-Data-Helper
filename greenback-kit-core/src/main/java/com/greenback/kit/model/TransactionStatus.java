@@ -22,4 +22,12 @@ public class TransactionStatus {
     }
 
     public TransactionStatus setMessage(String message) {
-        this.message = mes
+        this.message = message;
+        return this;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public TransactionStatus setUpdatedAt(Instant upda
