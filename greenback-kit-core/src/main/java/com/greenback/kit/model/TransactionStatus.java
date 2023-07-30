@@ -30,4 +30,9 @@ public class TransactionStatus {
         return updatedAt;
     }
 
-    public TransactionStatus setUpdatedAt(Instant upda
+    public TransactionStatus setUpdatedAt(Instant updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    
+}
