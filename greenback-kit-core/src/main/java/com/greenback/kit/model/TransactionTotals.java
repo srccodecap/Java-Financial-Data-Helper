@@ -61,3 +61,39 @@ public class TransactionTotals {
     }
 
     public Double getTax() {
+        return tax;
+    }
+
+    public TransactionTotals setTax(Double tax) {
+        this.tax = tax;
+        return this;
+    }
+
+    public Double getOther() {
+        return other;
+    }
+
+    public TransactionTotals setOther(Double other) {
+        this.other = other;
+        return this;
+    }
+
+    public Double getGrand() {
+        return grand;
+    }
+
+    public TransactionTotals setGrand(Double grand) {
+        this.grand = grand;
+        return this;
+    }
+
+    public List<TotalsItem> getItems() {
+        return items;
+    }
+
+    public TransactionTotals setItems(List<TotalsItem> items) {
+        this.items = items;
+        return this;
+    }
+
+}
