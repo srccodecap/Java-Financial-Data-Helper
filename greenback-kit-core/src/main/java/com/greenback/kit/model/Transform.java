@@ -7,4 +7,12 @@ public class Transform extends GreenbackObject {
     private TransformType type;
     private TransformState state;
     private String name;
-    private Object
+    private Object matcher;
+    private Object methods;
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+       
