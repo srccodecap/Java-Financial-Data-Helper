@@ -22,4 +22,12 @@ public class Transform extends GreenbackObject {
         return sortOrder;
     }
 
-    public void setSort
+    public void setSortOrder(Long sortOrder) {
+        this.sortOrder = sortOrder;
+    }
+
+    public TransformType getType() {
+        return type;
+    }
+
+    pu
