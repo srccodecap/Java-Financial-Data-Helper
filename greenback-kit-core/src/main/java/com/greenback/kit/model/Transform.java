@@ -30,4 +30,10 @@ public class Transform extends GreenbackObject {
         return type;
     }
 
-    pu
+    public void setType(TransformType type) {
+        this.type = type;
+    }
+
+    public TransformState getState() {
+        return state;
+    }
