@@ -37,3 +37,13 @@ public class Transform extends GreenbackObject {
     public TransformState getState() {
         return state;
     }
+
+    public void setState(TransformState state) {
+        this.state = state;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    p
