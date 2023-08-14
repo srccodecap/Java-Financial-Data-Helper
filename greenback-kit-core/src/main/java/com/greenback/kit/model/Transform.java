@@ -46,4 +46,12 @@ public class Transform extends GreenbackObject {
         return name;
     }
 
-    p
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Object getMatcher() {
+        return matcher;
+    }
+
+    public v
