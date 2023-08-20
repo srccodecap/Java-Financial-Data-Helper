@@ -62,4 +62,8 @@ public class Transform extends GreenbackObject {
         return methods;
     }
 
-    public void setMeth
+    public void setMethods(Object methods) {
+        this.methods = methods;
+    }
+
+}
