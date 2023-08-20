@@ -54,4 +54,12 @@ public class Transform extends GreenbackObject {
         return matcher;
     }
 
-    public v
+    public void setMatcher(Object matcher) {
+        this.matcher = matcher;
+    }
+
+    public Object getMethods() {
+        return methods;
+    }
+
+    public void setMeth
