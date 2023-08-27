@@ -11,4 +11,9 @@ public class TransformQuery extends Query<TransformQuery> {
     protected Instant minUpdatedAt;
     protected Instant maxUpdatedAt;
 
-    public Iterable<String> getAccountIds()
+    public Iterable<String> getAccountIds() {
+        return accountIds;
+    }
+
+    public TransformQuery setAccountIds(Iterable<String> accountIds) {
+        this.accountIds = accoun
