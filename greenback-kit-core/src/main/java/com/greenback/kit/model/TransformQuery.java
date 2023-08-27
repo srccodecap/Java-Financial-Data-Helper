@@ -6,4 +6,9 @@ public class TransformQuery extends Query<TransformQuery> {
 
     protected Iterable<String> accountIds;
     protected Iterable<TransformState> states;
-    protected Instant min
+    protected Instant minCreatedAt;
+    protected Instant maxCreatedAt;
+    protected Instant minUpdatedAt;
+    protected Instant maxUpdatedAt;
+
+    public Iterable<String> getAccountIds()
