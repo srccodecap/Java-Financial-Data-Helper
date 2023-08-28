@@ -16,4 +16,12 @@ public class TransformQuery extends Query<TransformQuery> {
     }
 
     public TransformQuery setAccountIds(Iterable<String> accountIds) {
-        this.accountIds = accoun
+        this.accountIds = accountIds;
+        return this;
+    }
+
+    public Iterable<TransformState> getStates() {
+        return states;
+    }
+
+    public TransformQuer
