@@ -24,4 +24,9 @@ public class TransformQuery extends Query<TransformQuery> {
         return states;
     }
 
-    public TransformQuer
+    public TransformQuery setStates(Iterable<TransformState> states) {
+        this.states = states;
+        return this;
+    }
+
+    public In
