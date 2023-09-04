@@ -34,4 +34,12 @@ public class TransformQuery extends Query<TransformQuery> {
     }
 
     public TransformQuery setMinCreatedAt(Instant minCreatedAt) {
-        this.minC
+        this.minCreatedAt = minCreatedAt;
+        return this;
+    }
+
+    public Instant getMaxCreatedAt() {
+        return maxCreatedAt;
+    }
+
+    p
