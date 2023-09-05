@@ -42,4 +42,9 @@ public class TransformQuery extends Query<TransformQuery> {
         return maxCreatedAt;
     }
 
-    p
+    public TransformQuery setMaxCreatedAt(Instant maxCreatedAt) {
+        this.maxCreatedAt = maxCreatedAt;
+        return this;
+    }
+
+    public Instant g
