@@ -47,4 +47,9 @@ public class TransformQuery extends Query<TransformQuery> {
         return this;
     }
 
-    public Instant g
+    public Instant getMinUpdatedAt() {
+        return minUpdatedAt;
+    }
+
+    public TransformQuery setMinUpdatedAt(Instant minUpdatedAt) {
+        this.minUpdatedAt = minUpdat
