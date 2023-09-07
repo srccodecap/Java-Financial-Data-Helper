@@ -52,4 +52,12 @@ public class TransformQuery extends Query<TransformQuery> {
     }
 
     public TransformQuery setMinUpdatedAt(Instant minUpdatedAt) {
-        this.minUpdatedAt = minUpdat
+        this.minUpdatedAt = minUpdatedAt;
+        return this;
+    }
+
+    public Instant getMaxUpdatedAt() {
+        return maxUpdatedAt;
+    }
+
+    public TransformQuery setMaxU
