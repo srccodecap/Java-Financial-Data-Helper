@@ -60,4 +60,9 @@ public class TransformQuery extends Query<TransformQuery> {
         return maxUpdatedAt;
     }
 
-    public TransformQuery setMaxU
+    public TransformQuery setMaxUpdatedAt(Instant maxUpdatedAt) {
+        this.maxUpdatedAt = maxUpdatedAt;
+        return this;
+    }
+
+}
