@@ -1,3 +1,8 @@
 package com.greenback.kit.model;
 
-public enum UserPassw
+public enum UserPasswordState {
+ 
+    VALID,
+    GENERATED;
+    
+}
