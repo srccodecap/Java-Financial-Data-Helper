@@ -8,4 +8,8 @@ public class UserPrefs extends GreenbackObject {
         return transactionExportMode;
     }
 
-    public void setTransactionExportMode(Transaction
+    public void setTransactionExportMode(TransactionExportMode transactionExportMode) {
+        this.transactionExportMode = transactionExportMode;
+    }
+
+}
