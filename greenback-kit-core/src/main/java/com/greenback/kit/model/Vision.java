@@ -9,4 +9,8 @@ public class Vision extends GreenbackObject {
     private String name;
     private ProcessingStatus status;
     private VisionAnnotations annotations;
-    priva
+    private VisionTransactionMatcher transactionMatcher;
+    private List<Attachment> attachments;
+    
+    // expandable
+    private List<Transaction> tran
