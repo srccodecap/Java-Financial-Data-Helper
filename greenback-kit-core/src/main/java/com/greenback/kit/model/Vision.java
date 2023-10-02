@@ -13,4 +13,12 @@ public class Vision extends GreenbackObject {
     private List<Attachment> attachments;
     
     // expandable
-    private List<Transaction> tran
+    private List<Transaction> transactions;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    
