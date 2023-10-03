@@ -21,4 +21,12 @@ public class Vision extends GreenbackObject {
 
     public void setName(String name) {
         this.name = name;
-    
+    }
+
+    public ProcessingStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProcessingStatus status) {
+        this.status = status;
+ 
