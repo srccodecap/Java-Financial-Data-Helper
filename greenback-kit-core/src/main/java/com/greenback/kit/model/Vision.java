@@ -29,4 +29,10 @@ public class Vision extends GreenbackObject {
 
     public void setStatus(ProcessingStatus status) {
         this.status = status;
- 
+    }
+
+    public List<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attac
