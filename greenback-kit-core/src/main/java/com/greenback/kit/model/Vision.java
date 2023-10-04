@@ -43,4 +43,9 @@ public class Vision extends GreenbackObject {
         return annotations;
     }
 
-    public void 
+    public void setAnnotations(VisionAnnotations annotations) {
+        this.annotations = annotations;
+    }
+
+    public VisionTransactionMatcher getTransactionMatcher() {
+  
