@@ -35,4 +35,12 @@ public class Vision extends GreenbackObject {
         return attachments;
     }
 
-    public void setAttachments(List<Attac
+    public void setAttachments(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
+    public VisionAnnotations getAnnotations() {
+        return annotations;
+    }
+
+    public void 
