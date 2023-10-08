@@ -52,4 +52,11 @@ public class Vision extends GreenbackObject {
     }
 
     public void setTransactionMatcher(VisionTransactionMatcher transactionMatcher) {
-        this.t
+        this.transactionMatcher = transactionMatcher;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTran
