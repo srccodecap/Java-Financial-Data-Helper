@@ -59,4 +59,8 @@ public class Vision extends GreenbackObject {
         return transactions;
     }
 
-    public void setTran
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+}
