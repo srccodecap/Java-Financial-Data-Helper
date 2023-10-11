@@ -7,4 +7,11 @@ import java.util.Objects;
 public class VisionRequest {
  
     private Boolean async;
+    private Bytes document;
+
+    public Boolean getAsync() {
+        return async;
+    }
+
+    public VisionRequest setAsync(Boolean async) {
     
