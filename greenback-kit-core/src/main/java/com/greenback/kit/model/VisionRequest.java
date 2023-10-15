@@ -14,4 +14,12 @@ public class VisionRequest {
     }
 
     public VisionRequest setAsync(Boolean async) {
-    
+        this.async = async;
+        return this;
+    }
+
+    public Bytes getDocument() {
+        return document;
+    }
+
+    public VisionReque
