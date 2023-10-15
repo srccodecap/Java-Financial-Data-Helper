@@ -22,4 +22,9 @@ public class VisionRequest {
         return document;
     }
 
-    public VisionReque
+    public VisionRequest setDocument(Bytes document) {
+        this.document = document;
+        return this;
+    }
+    
+    public VisionRequest se
