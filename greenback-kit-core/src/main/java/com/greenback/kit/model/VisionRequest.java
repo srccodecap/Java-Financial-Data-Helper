@@ -27,4 +27,7 @@ public class VisionRequest {
         return this;
     }
     
-    public VisionRequest se
+    public VisionRequest setDocument(File file) {
+        Objects.requireNonNull(file, "file was null");
+        this.document = Bytes.of(file);
+     
