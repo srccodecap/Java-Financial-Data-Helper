@@ -35,4 +35,9 @@ public class VisionRequest {
     
     public VisionRequest setDocument(byte[] bytes) {
         Objects.requireNonNull(bytes, "bytes was null");
-        this.doc
+        this.document = Bytes.of(bytes);
+        return this;
+    }
+    
+    public VisionRequest setDocument(byte[] bytes, String name) {
+        Objects.re
