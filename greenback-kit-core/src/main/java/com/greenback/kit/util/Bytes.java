@@ -8,4 +8,13 @@ public class Bytes {
     private byte[] bytes;
     private String name;
 
-    public File getF
+    public File getFile() {
+        return this.file;
+    }
+
+    public byte[] getBytes() {
+        return this.bytes;
+    }
+    
+    public String getName() {
+        
