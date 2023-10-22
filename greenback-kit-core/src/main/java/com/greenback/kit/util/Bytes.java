@@ -17,4 +17,12 @@ public class Bytes {
     }
     
     public String getName() {
-        
+        return this.name;
+    }
+    
+    static public Bytes of(File file) {
+        Bytes bd = new Bytes();
+        bd.file = file;
+        bd.name = file.getName();
+        return bd;
+   
