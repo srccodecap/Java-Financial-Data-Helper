@@ -25,4 +25,11 @@ public class Bytes {
         bd.file = file;
         bd.name = file.getName();
         return bd;
-   
+    }
+    
+    static public Bytes of(byte[] bytes) {
+        return of(bytes, null);
+    }
+    
+    static public Bytes of(byte[] bytes, String name) {
+        Bytes
