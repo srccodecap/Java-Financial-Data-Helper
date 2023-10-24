@@ -32,4 +32,10 @@ public class Bytes {
     }
     
     static public Bytes of(byte[] bytes, String name) {
-        Bytes
+        Bytes bd = new Bytes();
+        bd.bytes = bytes;
+        bd.name = name;
+        return bd;
+    }
+    
+}
