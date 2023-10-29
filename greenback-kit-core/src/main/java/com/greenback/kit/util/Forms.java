@@ -24,4 +24,9 @@ public class Forms {
             .orElse(null);
     }
     
-    static public Map<String,St
+    static public Map<String,String> computeParameters(
+            Form form) {
+        
+        final Map<String,String> values = new LinkedHashMap<>();
+        
+        if (form != null && f
