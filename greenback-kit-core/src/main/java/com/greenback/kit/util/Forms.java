@@ -14,4 +14,9 @@ public class Forms {
             Form form,
             String name) {
         
-        if (form == null || f
+        if (form == null || form.getFields() == null || form.getFields().isEmpty()) {
+            return null;
+        }
+        
+        return form.getFields().stream()
+       
