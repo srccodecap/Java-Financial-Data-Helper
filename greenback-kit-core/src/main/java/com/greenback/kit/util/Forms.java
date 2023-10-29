@@ -6,4 +6,12 @@ import com.greenback.kit.model.FormField;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.ut
+import java.util.List;
+
+public class Forms {
+ 
+    static public FormField findFieldByName(
+            Form form,
+            String name) {
+        
+        if (form == null || f
