@@ -33,4 +33,12 @@ public class Forms {
             form.getFields().forEach(f -> {
                 values.put(f.getName(), f.computeValue());
             });
-      
+        }
+        
+        return values;
+    }
+    
+    static public boolean isCompleted(
+            Form form,
+            Map<String,String> values) {
+ 
