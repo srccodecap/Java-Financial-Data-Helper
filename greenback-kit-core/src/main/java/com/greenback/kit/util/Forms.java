@@ -29,4 +29,8 @@ public class Forms {
         
         final Map<String,String> values = new LinkedHashMap<>();
         
-        if (form != null && f
+        if (form != null && form.getFields() != null) {
+            form.getFields().forEach(f -> {
+                values.put(f.getName(), f.computeValue());
+            });
+      
