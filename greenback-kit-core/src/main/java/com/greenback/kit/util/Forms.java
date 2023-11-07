@@ -41,4 +41,9 @@ public class Forms {
     static public boolean isCompleted(
             Form form,
             Map<String,String> values) {
- 
+        
+        if (form == null || values == null) {
+            return false;
+        }
+        
+        for (Map.Entry<String,String> entry : value
