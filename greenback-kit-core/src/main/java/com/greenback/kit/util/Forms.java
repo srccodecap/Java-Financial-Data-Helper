@@ -50,4 +50,9 @@ public class Forms {
             final FormField field = findFieldByName(form, entry.getKey());
             
             if (field == null) {
-        
+                return false;
+            }
+            
+            // is it required?
+            if (field.getRequired() != null && field.getRequired()) {
+    
