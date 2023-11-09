@@ -65,4 +65,9 @@ public class Forms {
     }
   
     static public List<String> unmappedMessages(
-     
+            Form form,
+            Map<String,String> values) {
+
+        final List<String> result = new ArrayList<>();
+        
+        if (form == null || values == null) {
