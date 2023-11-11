@@ -71,3 +71,9 @@ public class Forms {
         final List<String> result = new ArrayList<>();
         
         if (form == null || values == null) {
+            result.add("Unknown mapping error");
+            return result;
+        }
+        
+        for (Map.Entry<String,String> entry : values.entrySet()) {
+ 
