@@ -84,4 +84,6 @@ public class Forms {
             }
             
             // is it required?
-            if (field
+            if (field.getRequired() != null && field.getRequired()) {
+                if (entry.getValue() == null || entry.getValue().isEmpty() || entry.getValue().trim().isEmpty()) {
+    
