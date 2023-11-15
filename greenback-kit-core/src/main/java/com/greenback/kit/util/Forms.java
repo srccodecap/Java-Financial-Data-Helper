@@ -79,4 +79,9 @@ public class Forms {
             final FormField field = findFieldByName(form, entry.getKey());
             
             if (field == null) {
+                result.add("'" + entry.getKey() + "'' is missing in form");
+                continue;
+            }
             
+            // is it required?
+            if (field
