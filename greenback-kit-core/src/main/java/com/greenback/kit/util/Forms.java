@@ -88,4 +88,11 @@ public class Forms {
                 if (entry.getValue() == null || entry.getValue().isEmpty() || entry.getValue().trim().isEmpty()) {
                     String msg = "'"+ field.getLabel() + "' is missing.";
                     if (field.getHelp() != null) {
-                        msg = msg + " " + f
+                        msg = msg + " " + field.getHelp();
+                    }
+                    result.add(msg);
+                }
+            }
+        }
+        
+        return res
