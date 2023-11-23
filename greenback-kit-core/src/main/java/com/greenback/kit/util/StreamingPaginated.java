@@ -10,4 +10,10 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class StreamingPaginated<T> extends Paginated<T> {
 
-    private IoFunction<Paginated<T>,Paginated
+    private IoFunction<Paginated<T>,Paginated<T>> nextMethod;
+
+    public IoFunction<Paginated<T>,Paginated<T>> nextMethod() {
+        return this.nextMethod;
+    }
+
+    public void nextMethod(IoFunction<Paginated<
