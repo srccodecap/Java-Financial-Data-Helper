@@ -16,4 +16,10 @@ public class StreamingPaginated<T> extends Paginated<T> {
         return this.nextMethod;
     }
 
-    public void nextMethod(IoFunction<Paginated<
+    public void nextMethod(IoFunction<Paginated<T>,Paginated<T>> nextMethod) {
+        this.nextMethod = nextMethod;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        final A
