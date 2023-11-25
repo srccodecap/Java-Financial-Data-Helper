@@ -29,4 +29,8 @@ public class StreamingPaginated<T> extends Paginated<T> {
         
         return new Iterator<T>() {
             @Override
-            
+            public boolean hasNext() {
+                final Iterator<T> iter = iterRef.get();
+                
+                if (iter == null || !iter.hasNext()) {
+           
