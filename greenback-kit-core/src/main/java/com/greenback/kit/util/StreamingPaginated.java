@@ -23,4 +23,10 @@ public class StreamingPaginated<T> extends Paginated<T> {
     @Override
     public Iterator<T> iterator() {
         final AtomicReference<Paginated<T>> responseRef = new AtomicReference<>(this);
-        final AtomicReference<Iterator<T>> iterRef = new AtomicReference<>(ofNullable(thi
+        final AtomicReference<Iterator<T>> iterRef = new AtomicReference<>(ofNullable(this.getValues())
+            .map(v -> v.iterator())
+            .orElse(null));
+        
+        return new Iterator<T>() {
+            @Override
+            
