@@ -40,4 +40,8 @@ public class StreamingPaginated<T> extends Paginated<T> {
                     try {
                         Paginated<T> nextPage = ((StreamingPaginated<T>)responseRef.get())
                             .nextMethod()
-                         
+                            .apply(responseRef.get());
+
+                        responseRef.set(nextPage);
+                        
+                        Iterato
