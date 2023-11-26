@@ -37,4 +37,7 @@ public class StreamingPaginated<T> extends Paginated<T> {
                         return false;
                     }
                     
-               
+                    try {
+                        Paginated<T> nextPage = ((StreamingPaginated<T>)responseRef.get())
+                            .nextMethod()
+                         
