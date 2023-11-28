@@ -44,4 +44,7 @@ public class StreamingPaginated<T> extends Paginated<T> {
 
                         responseRef.set(nextPage);
                         
-                        Iterato
+                        Iterator<T> nextPageIterator = ofNullable(nextPage)
+                            .map(v -> v.getValues())
+                            .map(v -> v.iterator())
+                   
