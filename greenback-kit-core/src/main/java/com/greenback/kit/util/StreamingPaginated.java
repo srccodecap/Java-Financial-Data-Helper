@@ -52,4 +52,8 @@ public class StreamingPaginated<T> extends Paginated<T> {
                         iterRef.set(nextPageIterator);
 
                         if (iterRef.get() == null) {
-         
+                            return false;   // done
+                        }
+
+                        return iterRef.get().hasNext();
+                    
