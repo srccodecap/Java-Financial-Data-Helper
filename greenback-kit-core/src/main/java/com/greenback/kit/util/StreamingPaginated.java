@@ -56,4 +56,9 @@ public class StreamingPaginated<T> extends Paginated<T> {
                         }
 
                         return iterRef.get().hasNext();
-                    
+                    } catch (IOException e) {
+                        throw new UncheckedIOException(e);
+                    }
+                }
+                
+   
