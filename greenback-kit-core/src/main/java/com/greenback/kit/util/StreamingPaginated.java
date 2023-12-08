@@ -61,4 +61,10 @@ public class StreamingPaginated<T> extends Paginated<T> {
                     }
                 }
                 
-   
+                return true;
+            }
+
+            @Override
+            public T next() {
+                return iterRef.get().next();
+       
