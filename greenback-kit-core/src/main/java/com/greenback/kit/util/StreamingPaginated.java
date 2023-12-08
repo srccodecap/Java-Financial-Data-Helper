@@ -67,4 +67,8 @@ public class StreamingPaginated<T> extends Paginated<T> {
             @Override
             public T next() {
                 return iterRef.get().next();
-       
+            }
+        };
+    }
+    
+}
