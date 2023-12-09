@@ -12,4 +12,8 @@ import java.util.Set;
 public class Utils {
     
     static public String toStringList(Iterable<?> values) {
-       
+        final StringBuilder sb = new StringBuilder();
+        
+        if (values != null) {
+            for (Object v : values) {
+                if (sb.
