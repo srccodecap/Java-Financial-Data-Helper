@@ -16,4 +16,11 @@ public class Utils {
         
         if (values != null) {
             for (Object v : values) {
-                if (sb.
+                if (sb.length() > 0) {
+                    sb.append(",");
+                }
+                sb.append(Objects.toString(v, ""));
+            }
+        }
+        
+      
