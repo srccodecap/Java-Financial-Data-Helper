@@ -23,4 +23,8 @@ public class Utils {
             }
         }
         
-      
+        return sb.toString();
+    }
+    
+    @SuppressWarnings("unchecked")
+    static public <T> Iterable<T> appendIterable(Iterable<T> values, T valu
