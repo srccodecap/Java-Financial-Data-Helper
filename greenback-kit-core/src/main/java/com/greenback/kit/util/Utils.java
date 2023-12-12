@@ -27,4 +27,11 @@ public class Utils {
     }
     
     @SuppressWarnings("unchecked")
-    static public <T> Iterable<T> appendIterable(Iterable<T> values, T valu
+    static public <T> Iterable<T> appendIterable(Iterable<T> values, T value) {
+        Objects.requireNonNull(value, "value was null");
+        
+        if (values == null) {
+            values = new ArrayList<>();
+        }
+        
+        if (
