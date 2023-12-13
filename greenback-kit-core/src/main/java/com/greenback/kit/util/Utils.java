@@ -34,4 +34,8 @@ public class Utils {
             values = new ArrayList<>();
         }
         
-        if (
+        if (values instanceof Collection) {
+            // add the value
+            ((Collection)values).add(value);
+        } else {
+            throw new IllegalArgum
