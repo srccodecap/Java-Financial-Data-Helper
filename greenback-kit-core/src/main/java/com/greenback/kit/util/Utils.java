@@ -38,4 +38,11 @@ public class Utils {
             // add the value
             ((Collection)values).add(value);
         } else {
-            throw new IllegalArgum
+            throw new IllegalArgumentException("Values was not an instanceof a Collection");
+        }
+        
+        return values;
+    }
+    
+    @SafeVarargs
+    @SuppressWa
