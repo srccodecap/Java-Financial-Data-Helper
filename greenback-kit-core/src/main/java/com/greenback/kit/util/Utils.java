@@ -49,4 +49,11 @@ public class Utils {
     static public <T> Iterable<T> toIterable(T... values) {
         if (values == null) {
             return null;
+        } else {
+            return asList(values);
+        }
+    }
+ 
+    static public <T> Set<T> toSet(Iterable<T> values) {
+        if (values == null) {
    
