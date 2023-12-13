@@ -45,4 +45,8 @@ public class Utils {
     }
     
     @SafeVarargs
-    @SuppressWa
+    @SuppressWarnings("varargs")
+    static public <T> Iterable<T> toIterable(T... values) {
+        if (values == null) {
+            return null;
+   
