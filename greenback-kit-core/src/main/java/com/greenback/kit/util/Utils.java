@@ -60,4 +60,9 @@ public class Utils {
         }
         else {
             Set<T> newValues = new HashSet<>();
-            values.forEach(v -> newValues.add
+            values.forEach(v -> newValues.add(v));
+            return newValues;
+        }
+    }
+    
+}
