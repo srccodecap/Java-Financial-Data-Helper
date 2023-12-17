@@ -56,4 +56,8 @@ public class Utils {
  
     static public <T> Set<T> toSet(Iterable<T> values) {
         if (values == null) {
-   
+            return null;
+        }
+        else {
+            Set<T> newValues = new HashSet<>();
+            values.forEach(v -> newValues.add
