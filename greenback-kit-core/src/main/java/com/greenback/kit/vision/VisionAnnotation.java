@@ -10,4 +10,15 @@ public class VisionAnnotation {
     private List<VisionTextSpan> spans;
     
     public String getType() {
+        return "text";
+    }
+   
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     
+    public St
