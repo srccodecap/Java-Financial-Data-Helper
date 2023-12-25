@@ -29,4 +29,12 @@ public class VisionAnnotation {
         this.text = text;
     }
     
-    public List<VisionRectangle> getBound
+    public List<VisionRectangle> getBounds() {
+        return bounds;
+    }
+
+    public void setBounds(List<VisionRectangle> bounds) {
+        this.bounds = bounds;
+    }
+
+    public List
