@@ -45,4 +45,9 @@ public class VisionAnnotation {
         this.spans = spans;
     }
     
-    @Ove
+    @Override
+    public String toString() {
+        return this.getType() + ": " + this.text;
+    }
+    
+}
