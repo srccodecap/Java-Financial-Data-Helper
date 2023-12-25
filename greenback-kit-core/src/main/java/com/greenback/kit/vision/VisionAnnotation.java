@@ -37,4 +37,12 @@ public class VisionAnnotation {
         this.bounds = bounds;
     }
 
-    public List
+    public List<VisionTextSpan> getSpans() {
+        return spans;
+    }
+
+    public void setSpans(List<VisionTextSpan> spans) {
+        this.spans = spans;
+    }
+    
+    @Ove
