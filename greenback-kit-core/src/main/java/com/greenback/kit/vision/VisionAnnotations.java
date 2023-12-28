@@ -9,4 +9,7 @@ public class VisionAnnotations {
     private List<VisionAnnotation> symbols;
     private List<VisionImageAnnotation> images;
     private List<VisionPlaceAnnotation> places;
-    private List<VisionTemporalAnnotation
+    private List<VisionTemporalAnnotation> temporals;
+    private List<VisionPhoneAnnotation> phones;
+    private List<VisionMoneyAnnotation> moneys;
+    private List<VisionTenderAnnotation> tend
