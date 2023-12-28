@@ -12,4 +12,7 @@ public class VisionAnnotations {
     private List<VisionTemporalAnnotation> temporals;
     private List<VisionPhoneAnnotation> phones;
     private List<VisionMoneyAnnotation> moneys;
-    private List<VisionTenderAnnotation> tend
+    private List<VisionTenderAnnotation> tenders;
+    private List<VisionUrlAnnotation> urls;
+    private List<VisionEmailAnnotation> emails;
+    private List<VisionTermAnnota
