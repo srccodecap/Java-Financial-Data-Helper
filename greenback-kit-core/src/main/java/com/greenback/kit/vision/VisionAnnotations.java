@@ -21,4 +21,12 @@ public class VisionAnnotations {
         return fullText;
     }
 
-    public void setFullText(VisionAnnotation fullTe
+    public void setFullText(VisionAnnotation fullText) {
+        this.fullText = fullText;
+    }
+
+    public List<VisionAnnotation> getTexts() {
+        return texts;
+    }
+
+    public void setTexts(
