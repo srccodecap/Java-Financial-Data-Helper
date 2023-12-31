@@ -15,4 +15,10 @@ public class VisionAnnotations {
     private List<VisionTenderAnnotation> tenders;
     private List<VisionUrlAnnotation> urls;
     private List<VisionEmailAnnotation> emails;
-    private List<VisionTermAnnota
+    private List<VisionTermAnnotation> terms;
+    
+    public VisionAnnotation getFullText() {
+        return fullText;
+    }
+
+    public void setFullText(VisionAnnotation fullTe
