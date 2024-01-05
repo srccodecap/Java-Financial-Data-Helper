@@ -49,4 +49,9 @@ public class VisionAnnotations {
         this.images = images;
     }
 
-    public List<VisionP
+    public List<VisionPlaceAnnotation> getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(List<VisionPlaceAnnotation> places) {
+        this.places = p
