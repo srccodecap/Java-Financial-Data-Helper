@@ -42,4 +42,11 @@ public class VisionAnnotations {
     }
     
     public List<VisionImageAnnotation> getImages() {
-        retur
+        return images;
+    }
+
+    public void setImages(List<VisionImageAnnotation> images) {
+        this.images = images;
+    }
+
+    public List<VisionP
