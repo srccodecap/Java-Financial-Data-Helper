@@ -37,4 +37,9 @@ public class VisionAnnotations {
         return symbols;
     }
 
-    public void setSymbols(
+    public void setSymbols(List<VisionAnnotation> symbols) {
+        this.symbols = symbols;
+    }
+    
+    public List<VisionImageAnnotation> getImages() {
+        retur
