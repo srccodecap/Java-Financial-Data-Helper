@@ -29,4 +29,12 @@ public class VisionAnnotations {
         return texts;
     }
 
-    public void setTexts(
+    public void setTexts(List<VisionAnnotation> texts) {
+        this.texts = texts;
+    }
+
+    public List<VisionAnnotation> getSymbols() {
+        return symbols;
+    }
+
+    public void setSymbols(
