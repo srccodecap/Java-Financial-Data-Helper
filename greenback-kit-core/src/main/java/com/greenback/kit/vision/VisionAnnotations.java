@@ -54,4 +54,11 @@ public class VisionAnnotations {
     }
 
     public void setPlaces(List<VisionPlaceAnnotation> places) {
-        this.places = p
+        this.places = places;
+    }
+
+    public List<VisionTemporalAnnotation> getTemporals() {
+        return temporals;
+    }
+
+    public void setTemporals(List<VisionTemporalA
