@@ -61,4 +61,9 @@ public class VisionAnnotations {
         return temporals;
     }
 
-    public void setTemporals(List<VisionTemporalA
+    public void setTemporals(List<VisionTemporalAnnotation> temporals) {
+        this.temporals = temporals;
+    }
+
+    public List<VisionPhoneAnnotation> getPhones() {
+        return phone
