@@ -66,4 +66,11 @@ public class VisionAnnotations {
     }
 
     public List<VisionPhoneAnnotation> getPhones() {
-        return phone
+        return phones;
+    }
+
+    public void setPhones(List<VisionPhoneAnnotation> phones) {
+        this.phones = phones;
+    }
+
+    public List<VisionMone
