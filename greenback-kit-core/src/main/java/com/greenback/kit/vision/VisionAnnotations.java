@@ -73,4 +73,11 @@ public class VisionAnnotations {
         this.phones = phones;
     }
 
-    public List<VisionMone
+    public List<VisionMoneyAnnotation> getMoneys() {
+        return moneys;
+    }
+
+    public void setMoneys(List<VisionMoneyAnnotation> moneys) {
+        this.moneys = moneys;
+    }
+
