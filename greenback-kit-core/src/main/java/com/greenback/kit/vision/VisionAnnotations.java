@@ -81,3 +81,9 @@ public class VisionAnnotations {
         this.moneys = moneys;
     }
 
+    public List<VisionTenderAnnotation> getTenders() {
+        return tenders;
+    }
+
+    public void setTenders(List<VisionTenderAnnotation> tenders) {
+        thi
