@@ -86,4 +86,11 @@ public class VisionAnnotations {
     }
 
     public void setTenders(List<VisionTenderAnnotation> tenders) {
-        thi
+        this.tenders = tenders;
+    }
+
+    public List<VisionUrlAnnotation> getUrls() {
+        return urls;
+    }
+
+    public void setUrls(List<VisionUr
