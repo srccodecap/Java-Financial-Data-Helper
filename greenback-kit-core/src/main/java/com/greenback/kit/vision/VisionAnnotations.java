@@ -93,4 +93,12 @@ public class VisionAnnotations {
         return urls;
     }
 
-    public void setUrls(List<VisionUr
+    public void setUrls(List<VisionUrlAnnotation> urls) {
+        this.urls = urls;
+    }
+
+    public List<VisionEmailAnnotation> getEmails() {
+        return emails;
+    }
+
+    public void setEma
