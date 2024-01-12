@@ -101,4 +101,9 @@ public class VisionAnnotations {
         return emails;
     }
 
-    public void setEma
+    public void setEmails(List<VisionEmailAnnotation> emails) {
+        this.emails = emails;
+    }
+
+    public List<VisionTermAnnotation> getTerms() {
+        retur
