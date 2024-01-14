@@ -37,3 +37,26 @@ public class VisionDateTimeInterval {
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final VisionDateTimeInterval other = (VisionDateTimeInterval) obj;
+        if (!Objects.equals(this.start, other.start)) {
+            return false;
+        }
+        if (!Objects.equals(this.end, other.end)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + start + " -> " + end + ']';
+    }
+
+}
