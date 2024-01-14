@@ -106,4 +106,11 @@ public class VisionAnnotations {
     }
 
     public List<VisionTermAnnotation> getTerms() {
-        retur
+        return terms;
+    }
+
+    public void setTerms(List<VisionTermAnnotation> terms) {
+        this.terms = terms;
+    }
+    
+}
