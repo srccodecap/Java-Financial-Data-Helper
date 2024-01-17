@@ -24,4 +24,11 @@ public class VisionImageAnnotation extends VisionAnnotation {
     }
 
     public void setNaturalWidth(Integer naturalWidth) {
- 
+        this.naturalWidth = naturalWidth;
+    }
+
+    public Integer getNaturalHeight() {
+        return naturalHeight;
+    }
+
+    public void setNaturalHeight(Integer naturalHeig
