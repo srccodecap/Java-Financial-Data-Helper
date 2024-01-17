@@ -31,4 +31,8 @@ public class VisionImageAnnotation extends VisionAnnotation {
         return naturalHeight;
     }
 
-    public void setNaturalHeight(Integer naturalHeig
+    public void setNaturalHeight(Integer naturalHeight) {
+        this.naturalHeight = naturalHeight;
+    }
+
+}
