@@ -17,3 +17,11 @@ public class VisionImageAnnotation extends VisionAnnotation {
 
     public void setMd5(String md5) {
         this.md5 = md5;
+    }
+
+    public Integer getNaturalWidth() {
+        return naturalWidth;
+    }
+
+    public void setNaturalWidth(Integer naturalWidth) {
+ 
