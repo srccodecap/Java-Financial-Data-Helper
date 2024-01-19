@@ -7,4 +7,12 @@ public class VisionTemporalAnnotation extends VisionAnnotation {
     
     private LocalDate date;
     private LocalTime time;
-    private VisionTemporalGranular
+    private VisionTemporalGranularity granularity;
+    private String tz;
+    
+    @Override
+    public String getType() {
+        return "temporal";
+    }
+    
+    public LocalDate
