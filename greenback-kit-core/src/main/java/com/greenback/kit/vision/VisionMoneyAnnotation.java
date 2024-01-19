@@ -44,3 +44,5 @@ public class VisionMoneyAnnotation extends VisionAnnotation {
     public void setCode(String code) {
         this.code = code;
     }
+    
+}
