@@ -15,4 +15,12 @@ public class VisionTemporalAnnotation extends VisionAnnotation {
         return "temporal";
     }
     
-    public LocalDate
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalTime 
