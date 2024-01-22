@@ -31,4 +31,9 @@ public class VisionTemporalAnnotation extends VisionAnnotation {
         this.time = time;
     }
 
-    public VisionTemporalGranularity g
+    public VisionTemporalGranularity getGranularity() {
+        return granularity;
+    }
+
+    public void setGranularity(VisionTemporalGranularity granularity) {
+        this.granu
