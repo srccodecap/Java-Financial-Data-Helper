@@ -23,4 +23,12 @@ public class VisionTemporalAnnotation extends VisionAnnotation {
         this.date = date;
     }
 
-    public LocalTime 
+    public LocalTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+    public VisionTemporalGranularity g
