@@ -36,4 +36,15 @@ public class VisionTemporalAnnotation extends VisionAnnotation {
     }
 
     public void setGranularity(VisionTemporalGranularity granularity) {
-        this.granu
+        this.granularity = granularity;
+    }
+
+    public String getTz() {
+        return tz;
+    }
+
+    public void setTz(String tz) {
+        this.tz = tz;
+    }
+
+}
