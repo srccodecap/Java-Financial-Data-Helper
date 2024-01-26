@@ -5,4 +5,12 @@ package com.greenback.kit.vision;
  */
 public enum VisionTemporalGranularity {
  
-   
+    YEAR,
+    MONTH,
+    DAY,
+    HOUR,
+    MINUTE,
+    SECOND,
+    MILLISECOND;
+    
+}
