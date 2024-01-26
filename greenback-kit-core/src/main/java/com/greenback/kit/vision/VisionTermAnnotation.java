@@ -8,3 +8,13 @@ public class VisionTermAnnotation extends VisionAnnotation {
     public String getType() {
         return "term";
     }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+    
+}
