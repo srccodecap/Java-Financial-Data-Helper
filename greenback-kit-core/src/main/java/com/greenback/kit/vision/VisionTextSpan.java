@@ -9,4 +9,12 @@ public class VisionTextSpan {
         return s;
     }
 
-    publ
+    public void setS(Integer s) {
+        this.s = s;
+    }
+
+    public Integer getE() {
+        return e;
+    }
+
+    public void setE(Integer e)
