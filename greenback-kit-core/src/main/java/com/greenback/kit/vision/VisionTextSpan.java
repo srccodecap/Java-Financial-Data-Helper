@@ -27,4 +27,11 @@ public class VisionTextSpan {
     }
     
     @Override
-    pu
+    public int hashCode() {
+        int hash = 5;
+        hash = 19 * hash + this.s;
+        hash = 19 * hash + this.e;
+        return hash;
+    }
+
+ 
