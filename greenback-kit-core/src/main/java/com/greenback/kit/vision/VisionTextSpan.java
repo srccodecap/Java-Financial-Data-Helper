@@ -17,4 +17,14 @@ public class VisionTextSpan {
         return e;
     }
 
-    public void setE(Integer e)
+    public void setE(Integer e) {
+        this.e = e;
+    }
+    
+    @Override
+    public String toString() {
+        return this.s + "->" + this.e;
+    }
+    
+    @Override
+    pu
