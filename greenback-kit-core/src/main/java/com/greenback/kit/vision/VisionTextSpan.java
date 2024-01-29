@@ -34,4 +34,9 @@ public class VisionTextSpan {
         return hash;
     }
 
- 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj 
