@@ -39,4 +39,10 @@ public class VisionTextSpan {
         if (this == obj) {
             return true;
         }
-        if (obj 
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final VisionTe
