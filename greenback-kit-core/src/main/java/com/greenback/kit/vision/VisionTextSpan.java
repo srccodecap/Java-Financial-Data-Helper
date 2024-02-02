@@ -45,4 +45,9 @@ public class VisionTextSpan {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final VisionTe
+        final VisionTextSpan other = (VisionTextSpan) obj;
+        if (this.s != other.s) {
+            return false;
+        }
+        return this.e == other.e;
+    }
