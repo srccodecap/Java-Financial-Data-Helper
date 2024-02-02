@@ -10,4 +10,12 @@ public class VisionUrlAnnotation extends VisionAnnotation {
         return "url";
     }
     
-    public S
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Stri
