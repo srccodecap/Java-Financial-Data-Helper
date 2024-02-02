@@ -51,3 +51,5 @@ public class VisionTextSpan {
         }
         return this.e == other.e;
     }
+
+}
