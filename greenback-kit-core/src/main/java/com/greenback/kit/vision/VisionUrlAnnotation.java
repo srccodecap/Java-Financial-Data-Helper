@@ -18,4 +18,12 @@ public class VisionUrlAnnotation extends VisionAnnotation {
         this.url = url;
     }
 
-    public Stri
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+}
