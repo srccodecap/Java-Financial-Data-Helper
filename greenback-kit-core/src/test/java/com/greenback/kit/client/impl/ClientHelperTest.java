@@ -18,4 +18,11 @@ package com.greenback.kit.client.impl;
 import java.time.Instant;
 import java.time.ZonedDateTime;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.
+import static org.junit.Assert.assertThat;
+import org.junit.Test;
+
+public class ClientHelperTest {
+ 
+    @Test
+    public void instantToString() {
+        assertThat(ClientHelper.toInstant
