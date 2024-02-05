@@ -25,4 +25,5 @@ public class ClientHelperTest {
  
     @Test
     public void instantToString() {
-        assertThat(ClientHelper.toInstant
+        assertThat(ClientHelper.toInstantParameter(Instant.parse("2020-02-01T01:02:03.456Z")), is("2020-02-01T01:02:03.456Z"));
+        assertThat(ClientHelper.toInstantParameter(ZonedDateTime.parse("202
