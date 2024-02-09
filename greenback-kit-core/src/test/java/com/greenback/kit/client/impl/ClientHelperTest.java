@@ -28,4 +28,8 @@ public class ClientHelperTest {
         assertThat(ClientHelper.toInstantParameter(Instant.parse("2020-02-01T01:02:03.456Z")), is("2020-02-01T01:02:03.456Z"));
         assertThat(ClientHelper.toInstantParameter(ZonedDateTime.parse("2020-02-01T03:01:09.987-01:00").toInstant()), is("2020-02-01T04:01:09.987Z"));
         // are zeroed millis preserved?
-        assertThat(ClientHelper.toI
+        assertThat(ClientHelper.toInstantParameter(Instant.parse("2020-02-01T01:02:03Z")), is("2020-02-01T01:02:03.000Z"));
+    }
+ 
+    @Test
+    public void toStringParameter(
