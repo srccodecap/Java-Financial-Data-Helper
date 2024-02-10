@@ -1,0 +1,125 @@
+
+package com.greenback.kit.jackson;
+
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.fizzed.crux.jackson.EnumDeserializeStrategy;
+import com.fizzed.crux.jackson.EnumSerializeStrategy;
+import com.fizzed.crux.jackson.EnumStrategyModule;
+import com.fizzed.crux.jackson.JavaTimePlusModule;
+import com.greenback.kit.client.GreenbackCodec;
+import com.greenback.kit.model.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Map;
+import java.util.TimeZone;
+
+public class JacksonGreenbackCodec implements GreenbackCodec {
+
+    protected ObjectMapper objectMapper;
+    
+    public JacksonGreenbackCodec() {
+        this.objectMapper = new ObjectMapper()
+//            .enable(SerializationFeature.INDENT_OUTPUT)
+            .setSerializationInclusion(Include.NON_NULL)
+            .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+            .setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE)
+            .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
+//            .registerModule(new JavaTimeModule())
+            // much more flexible JSR310 de(serializing)
+            .registerModule(JavaTimePlusModule.build(false))
+            .registerModule(new EnumStrategyModule(EnumSerializeStrategy.LOWER_CASE, EnumDeserializeStrategy.IGNORE_CASE)
+                .setNullOnUnknown(true));
+        
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        df.setTimeZone(TimeZone.getTimeZone("UTC"));
+        this.objectMapper.setDateFormat(df);
+    }
+    
+    public ObjectMapper getObjectMapper() {
+        return objectMapper;
+    }
+
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
+
+    protected void verifySuccess(JsonNode rootNode) throws IOException, GreenbackException {
+        // has error?
+        if (rootNode.has("error")) {
+            GreenbackError error = this.objectMapper.treeToValue(rootNode.get("error"), GreenbackError.class);
+            
+            throw new GreenbackException(error);
+        }
+    }
+    
+    protected <T> T read(
+            InputStream input,
+            TypeReference<T> typeReference) throws IOException, GreenbackException {
+        
+        final JsonNode rootNode = this.objectMapper.readTree(input);
+
+        this.verifySuccess(rootNode);
+        
+        return this.objectMapper.convertValue(rootNode, typeReference);
+    }
+    
+    static private final TypeReference<Map<String,Object>> TYPEREF_FLATTENED_MAP
+        = new TypeReference<Map<String,Object>>() {};
+    static private final TypeReference<Paginated<User>> TYPEREF_USERS
+        = new TypeReference<Paginated<User>>() {};
+    static private final TypeReference<Value<User>> TYPEREF_USER
+        = new TypeReference<Value<User>>() {};
+    static private final TypeReference<Paginated<TeamMember>> TYPEREF_TEAM_MEMBERS
+        = new TypeReference<Paginated<TeamMember>>() {};
+    static private final TypeReference<Value<TeamMember>> TYPEREF_TEAM_MEMBER
+        = new TypeReference<Value<TeamMember>>() {};
+    static private final TypeReference<Value<Entitlements>> TYPEREF_ENTITLEMENTS
+        = new TypeReference<Value<Entitlements>>() {};
+    static private final TypeReference<Paginated<Connect>> TYPEREF_CONNECTS
+        = new TypeReference<Paginated<Connect>>() {};
+    static private final TypeReference<Value<Connect>> TYPEREF_CONNECT
+        = new TypeReference<Value<Connect>>() {};
+    static private final TypeReference<Value<ConnectIntent>> TYPEREF_CONNECT_INTENT
+        = new TypeReference<Value<ConnectIntent>>() {};
+    static private final TypeReference<Paginated<Account>> TYPEREF_ACCOUNTS
+        = new TypeReference<Paginated<Account>>() {};
+    static private final TypeReference<Value<Account>> TYPEREF_ACCOUNT
+        = new TypeReference<Value<Account>>() {};
+    static private final TypeReference<Paginated<Vision>> TYPEREF_VISIONS
+        = new TypeReference<Paginated<Vision>>() {};
+    static private final TypeReference<Value<Vision>> TYPEREF_VISION
+        = new TypeReference<Value<Vision>>() {};
+    static private final TypeReference<Paginated<Message>> TYPEREF_MESSAGES
+        = new TypeReference<Paginated<Message>>() {};
+    static private final TypeReference<Value<Message>> TYPEREF_MESSAGE
+        = new TypeReference<Value<Message>>() {};
+    static private final TypeReference<Paginated<Sync>> TYPEREF_SYNCS
+        = new TypeReference<Paginated<Sync>>() {};
+    static private final TypeReference<Value<Sync>> TYPEREF_SYNC
+        = new TypeReference<Value<Sync>>() {};
+    static private final TypeReference<Paginated<Transaction>> TYPEREF_TRANSACTIONS
+        = new TypeReference<Paginated<Transaction>>() {};
+    static private final TypeReference<Value<Transaction>> TYPEREF_TRANSACTION
+        = new TypeReference<Value<Transaction>>() {};
+    static private final TypeReference<Value<TransactionExportIntent>> TYPEREF_TRANSACTION_EXPORTER
+        = new TypeReference<Value<TransactionExportIntent>>() {};
+    static private final TypeReference<Value<TransactionExport>> TYPEREF_TRANSACTION_EXPORT
+        = new TypeReference<Value<TransactionExport>>() {};
+    static private final TypeReference<Paginated<Transform>> TYPEREF_TRANSFORMS
+        = new TypeReference<Paginated<Transform>>() {};
+    static private final TypeReference<Value<Transform>> TYPEREF_TRANSFORM
+        = new TypeReference<Value<Transform>>() {};
+    static private final TypeReference<Paginated<AutoExport>> TYPEREF_AUTO_EXPORTS
+        = new TypeReference<Paginated<AutoExport>>() {};
+    static private final TypeReference<Value<AutoExport>> TYPEREF_AUTO_EXPORT
+        = new TypeReference<Value<AutoExport>>() {};
+    static private final TypeReference<Paginated<ExportRun>> TYPEREF_AUTO_EXPORT_RUNS
+        = new TypeReference<Paginated<ExportRun>>() {};
