@@ -123,3 +123,155 @@ public class JacksonGreenbackCodec implements GreenbackCodec {
         = new TypeReference<Value<AutoExport>>() {};
     static private final TypeReference<Paginated<ExportRun>> TYPEREF_AUTO_EXPORT_RUNS
         = new TypeReference<Paginated<ExportRun>>() {};
+    static private final TypeReference<Value<ExportRun>> TYPEREF_AUTO_EXPORT_RUN
+        = new TypeReference<Value<ExportRun>>() {};
+
+    @Override
+    public String prettyPrint(Object value) throws IOException {
+        return this.objectMapper.writeValueAsString(value);
+    }
+    
+    @Override
+    public Map<String,Object> toFlattenedMap(Object value) throws IOException {
+        if (value == null) {
+            return null;
+        }
+        return this.objectMapper.convertValue(value, TYPEREF_FLATTENED_MAP);
+    }
+    
+    @Override
+    public byte[] writeBytes(Object value) throws IOException {
+        if (value == null) {
+            return new byte[0];
+        }
+        return this.objectMapper.writeValueAsBytes(value);
+    }
+    
+    @Override
+    public Paginated<User> readUsers(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_USERS);
+    }
+    
+    @Override
+    public User readUser(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_USER).getValue();
+    }
+
+    @Override
+    public Paginated<TeamMember> readTeamMembers(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_TEAM_MEMBERS);
+    }
+
+    @Override
+    public TeamMember readTeamMember(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_TEAM_MEMBER).getValue();
+    }
+
+    @Override
+    public Entitlements readEntitlements(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_ENTITLEMENTS).getValue();
+    }
+
+    @Override
+    public Paginated<Connect> readConnects(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_CONNECTS);
+    }
+    
+    @Override
+    public Connect readConnect(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_CONNECT).getValue();
+    }
+    
+    @Override
+    public ConnectIntent readConnectIntent(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_CONNECT_INTENT).getValue();
+    }
+    
+    @Override
+    public Paginated<Account> readAccounts(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_ACCOUNTS);
+    }
+    
+    @Override
+    public Account readAccount(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_ACCOUNT).getValue();
+    }
+    
+    @Override
+    public Paginated<Vision> readVisions(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_VISIONS);
+    }
+    
+    @Override
+    public Vision readVision(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_VISION).getValue();
+    }
+    
+    @Override
+    public Paginated<Message> readMessages(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_MESSAGES);
+    }
+    
+    @Override
+    public Message readMessage(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_MESSAGE).getValue();
+    }
+    
+    @Override
+    public Paginated<Sync> readSyncs(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_SYNCS);
+    }
+    
+    @Override
+    public Sync readSync(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_SYNC).getValue();
+    }
+    
+    @Override
+    public Paginated<Transaction> readTransactions(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_TRANSACTIONS);
+    }
+    
+    @Override
+    public Transaction readTransaction(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_TRANSACTION).getValue();
+    }
+    
+    @Override
+    public TransactionExportIntent readTransactionExporter(
