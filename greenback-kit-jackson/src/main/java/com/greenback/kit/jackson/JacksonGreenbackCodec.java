@@ -275,3 +275,58 @@ public class JacksonGreenbackCodec implements GreenbackCodec {
     
     @Override
     public TransactionExportIntent readTransactionExporter(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_TRANSACTION_EXPORTER).getValue();
+    }
+    
+    @Override
+    public TransactionExport readTransactionExport(
+            InputStream input) throws IOException {
+        
+        return this.read(input, TYPEREF_TRANSACTION_EXPORT).getValue();
+    }
+
+    @Override
+    public Paginated<Transform> readTransforms(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_TRANSFORMS);
+    }
+
+    @Override
+    public Transform readTransform(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_TRANSFORM).getValue();
+    }
+    
+    @Override
+    public Paginated<AutoExport> readAutoExports(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_AUTO_EXPORTS);
+    }
+
+    @Override
+    public AutoExport readAutoExport(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_AUTO_EXPORT).getValue();
+    }
+
+    @Override
+    public Paginated<ExportRun> readExportRuns(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_AUTO_EXPORT_RUNS);
+    }
+
+    @Override
+    public ExportRun readExportRun(
+            InputStream input) throws IOException {
+
+        return this.read(input, TYPEREF_AUTO_EXPORT_RUN).getValue();
+    }
+
+}
