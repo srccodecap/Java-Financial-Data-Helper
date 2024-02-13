@@ -3,4 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.greenback</groupId>
     <artifactId>greenback-kit-okhttp</artifactId>
-    <name>green
+    <name>greenback-kit-okhttp</name>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.greenback</groupId>
+        <artifactId>greenback-java<
