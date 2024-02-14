@@ -18,4 +18,9 @@
 
     <dependencies>
 
-        <
+        <dependency>
+            <groupId>com.greenback</groupId>
+            <artifactId>greenback-kit-core</artifactId>
+        </dependency>
+
+        <!-- okhttp bi
