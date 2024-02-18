@@ -65,3 +65,7 @@
         </dependency>
         
         <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>crux-okhttp</artifactId>
+            <scope>test</scope>
+        </dependency
