@@ -59,4 +59,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.g
+            <groupId>com.greenback</groupId>
+            <artifactId>greenback-kit-jackson</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
