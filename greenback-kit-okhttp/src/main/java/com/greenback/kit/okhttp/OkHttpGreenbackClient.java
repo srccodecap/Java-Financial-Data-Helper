@@ -96,3 +96,147 @@ public class OkHttpGreenbackClient extends AbstractGreenbackClient implements Ba
     @Override
     protected ConnectIntent postConnectIntentRequestByUrl(
             String url,
+            Object request) throws IOException {
+        
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+        
+        return this.execute(requestBuilder, this.codec::readConnectIntent);
+    }
+    
+    @Override
+    protected Paginated<Account> getAccountsByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readAccounts);
+    }
+    
+    @Override
+    protected Account getAccountByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readAccount);
+    }
+    
+    @Override
+    protected Account deleteAccountByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .delete();
+        
+        return this.execute(requestBuilder, this.codec::readAccount);
+    }
+    
+    @Override
+    protected Account postAccountByUrl(
+            String url,
+            Object request) throws IOException {
+        
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+        
+        return this.execute(requestBuilder, this.codec::readAccount);
+    }
+    
+    private RequestBody toRequestBody(Bytes bytes) {
+        if (bytes.getFile() != null) {
+            return RequestBody.create(MediaType.parse("application/octet-stream"), bytes.getFile());
+        }
+        else {
+            return RequestBody.create(MediaType.parse("application/octet-stream"), bytes.getBytes());
+        }
+    }
+    
+    @Override
+    protected Vision createVisionByUrl(
+            String url,
+            Bytes documentBytes) throws IOException {
+        
+        final String name = ofNullable(documentBytes.getName()).orElse("file");
+        
+        final MultipartBody multipartBody = new MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("file", name, toRequestBody(documentBytes))
+            .build();
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(multipartBody);
+        
+        return this.execute(requestBuilder, this.codec::readVision);
+    }
+    
+    @Override
+    protected Vision getVisionByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readVision);
+    }
+    
+    //
+    // Messages
+    //
+    
+    @Override
+    protected Message createMessageByUrl(
+            String url,
+            Bytes documentBytes) throws IOException {
+        
+        final String name = ofNullable(documentBytes.getName()).orElse("file");
+        
+        final MultipartBody multipartBody = new MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("file", name, toRequestBody(documentBytes))
+            .build();
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(multipartBody);
+        
+        return this.execute(requestBuilder, this.codec::readMessage);
+    }
+    
+    @Override
+    protected Paginated<Message> getMessagesByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readMessages);
+    }
+    
+    @Override
+    protected Message getMessageByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readMessage);
+    }
+    
+    //
+    // Transactions
+    //
+    
+    @Override
+    protected Paginated<Transaction> getTransactionsByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
