@@ -240,3 +240,152 @@ public class OkHttpGreenbackClient extends AbstractGreenbackClient implements Ba
         
         final Request.Builder requestBuilder = new Request.Builder()
             .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readTransactions);
+    }
+    
+    @Override
+    protected Transaction getTransactionByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readTransaction);
+    }
+    
+    @Override
+    protected Transaction postTransactionByUrl(
+            String url,
+            Object request) throws IOException {
+        
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+        
+        return this.execute(requestBuilder, this.codec::readTransaction);
+    }
+    
+    @Override
+    protected Transaction deleteTransactionByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .delete()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readTransaction);
+    }
+
+    //
+    // Exports
+    //
+    
+    @Override
+    protected TransactionExportIntent getTransactionExporterByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readTransactionExporter);
+    }
+
+    @Override
+    protected TransactionExport postTransactionExportByUrl(
+            String url,
+            TransactionExportIntentRequest transactionExporterRequest) throws IOException {
+        
+        final byte[] body = this.codec.writeBytes(transactionExporterRequest);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+        
+        return this.execute(requestBuilder, this.codec::readTransactionExport);
+    }
+
+    @Override
+    protected TransactionExport getTransactionExportByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+        
+        return this.execute(requestBuilder, this.codec::readTransactionExport);
+    }
+
+    @Override
+    protected TransactionExport deleteTransactionExportByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .delete();
+        
+        return this.execute(requestBuilder, this.codec::readTransactionExport);
+    }
+
+    //
+    // Transforms
+    //
+    
+    @Override
+    protected Transform postTransformByUrl(String url, Object request) throws IOException {
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+
+        return this.execute(requestBuilder, this.codec::readTransform);
+    }
+
+    @Override
+    protected Paginated<Transform> getTransformsByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+
+        return this.execute(requestBuilder, this.codec::readTransforms);
+    }
+    
+    @Override
+    protected Transform getTransformByUrl(String url) throws IOException {
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+
+        return this.execute(requestBuilder, this.codec::readTransform);
+    }
+    
+    @Override
+    protected Transform deleteTransformByUrl(String url) throws IOException {
+        
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .delete();
+        
+        return this.execute(requestBuilder, this.codec::readTransform);
+    }
+    
+    //
+    // Auto Exports
+    //
+
+    @Override
+    protected Paginated<AutoExport> getAutoExportsByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+
+        return this.execute(requestBuilder, this.codec::readAutoExports);
+    }
+
+    @Override
+    protected AutoExport getAutoExportByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
