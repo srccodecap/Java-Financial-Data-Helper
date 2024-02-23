@@ -389,3 +389,68 @@ public class OkHttpGreenbackClient extends AbstractGreenbackClient implements Ba
 
         final Request.Builder requestBuilder = new Request.Builder()
             .url(url);
+
+        return this.execute(requestBuilder, this.codec::readAutoExport);
+    }
+
+    @Override
+    protected AutoExport deleteAutoExportByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .delete();
+
+        return this.execute(requestBuilder, this.codec::readAutoExport);
+    }
+    
+    @Override
+    protected AutoExport postAutoExportByUrl(
+            String url,
+            Object request) throws IOException {
+
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+
+        return this.execute(requestBuilder, this.codec::readAutoExport);
+    }
+
+    @Override
+    protected Paginated<ExportRun> getExportRunsByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+
+        return this.execute(requestBuilder, this.codec::readExportRuns);
+    }
+
+    @Override
+    protected ExportRun getExportRunByUrl(String url) throws IOException {
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url);
+
+        return this.execute(requestBuilder, this.codec::readExportRun);
+    }
+
+    @Override
+    protected ExportRun postExportRunByUrl(
+        String url,
+        Object request) throws IOException {
+
+        final byte[] body = this.codec.writeBytes(request);
+
+        final RequestBody requestBody = this.jsonRequestBody(body);
+
+        final Request.Builder requestBuilder = new Request.Builder()
+            .url(url)
+            .post(requestBody);
+
+        return this.execute(requestBuilder, this.codec::readExportRun);
+    }
+
+}
