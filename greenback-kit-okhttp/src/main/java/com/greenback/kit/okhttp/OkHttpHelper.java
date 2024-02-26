@@ -11,4 +11,8 @@ public class OkHttpHelper {
             .callTimeout(140, TimeUnit.SECONDS)
             .build();
     }
-  
+    
+    static public void shutdown(OkHttpClient httpClient) {
+        if (httpClient != null) {
+            httpClient.dispatcher().executorService().shutdown();
+     
