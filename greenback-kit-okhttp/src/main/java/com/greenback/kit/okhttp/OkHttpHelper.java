@@ -7,4 +7,8 @@ public class OkHttpHelper {
  
     static public OkHttpClient build() {
         return new OkHttpClient.Builder()
-            .rea
+            .readTimeout(130, TimeUnit.SECONDS)     // some API calls like exports can take 2 mins
+            .callTimeout(140, TimeUnit.SECONDS)
+            .build();
+    }
+  
