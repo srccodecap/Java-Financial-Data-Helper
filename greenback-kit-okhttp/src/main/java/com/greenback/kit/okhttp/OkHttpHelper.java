@@ -15,4 +15,8 @@ public class OkHttpHelper {
     static public void shutdown(OkHttpClient httpClient) {
         if (httpClient != null) {
             httpClient.dispatcher().executorService().shutdown();
-     
+            httpClient.connectionPool().evictAll();
+        }
+    }
+    
+}
