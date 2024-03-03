@@ -17,4 +17,8 @@ public interface BaseOkHttpClient {
     public String getAccessToken();
         
     default public <T> T execute(
-            Request.Builder request
+            Request.Builder requestBuilder,
+            ClientDeserializeHandler<T> deserializeHandler) throws IOException {
+        
+        if (this.getAccessToken() != null) {
+            reque
