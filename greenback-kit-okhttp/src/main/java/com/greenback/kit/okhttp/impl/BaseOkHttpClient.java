@@ -12,3 +12,9 @@ import okhttp3.Response;
 
 public interface BaseOkHttpClient {
  
+    public OkHttpClient getHttpClient();
+    
+    public String getAccessToken();
+        
+    default public <T> T execute(
+            Request.Builder request
