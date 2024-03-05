@@ -21,4 +21,7 @@ public interface BaseOkHttpClient {
             ClientDeserializeHandler<T> deserializeHandler) throws IOException {
         
         if (this.getAccessToken() != null) {
-            reque
+            requestBuilder.addHeader("Authorization", "Bearer " + this.getAccessToken());
+        }
+        
+        requestBuilder.addHeader("Accept", 
