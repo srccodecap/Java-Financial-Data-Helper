@@ -24,4 +24,7 @@ public interface BaseOkHttpClient {
             requestBuilder.addHeader("Authorization", "Bearer " + this.getAccessToken());
         }
         
-        requestBuilder.addHeader("Accept", 
+        requestBuilder.addHeader("Accept", "application/json");
+        
+        // make sure response is always closed
+        try (Response response = this.getHttpClient().newCall(requestBuilder.b
