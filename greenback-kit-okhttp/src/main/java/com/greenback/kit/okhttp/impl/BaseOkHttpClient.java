@@ -27,4 +27,8 @@ public interface BaseOkHttpClient {
         requestBuilder.addHeader("Accept", "application/json");
         
         // make sure response is always closed
-        try (Response response = this.getHttpClient().newCall(requestBuilder.b
+        try (Response response = this.getHttpClient().newCall(requestBuilder.build()).execute()) {
+            String contentType = response.header("Content-Type");
+
+            // we can only handle json
+        
