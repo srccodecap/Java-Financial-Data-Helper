@@ -31,4 +31,5 @@ public interface BaseOkHttpClient {
             String contentType = response.header("Content-Type");
 
             // we can only handle json
-        
+            if (contentType == null || !contentType.toLowerCase().contains("application/json")) {
+                throw new IOException("con
