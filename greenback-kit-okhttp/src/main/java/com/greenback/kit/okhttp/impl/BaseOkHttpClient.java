@@ -35,4 +35,8 @@ public interface BaseOkHttpClient {
                 throw new IOException("content is not application/json (status=" + response.code() + ", actual=" + contentType + ")");
             }
 
-            try (InputStream input 
+            try (InputStream input = response.body().byteStream()) {
+
+                // if response was not successful and isn't json
+                if (!response.isSuccessful()) {
+           
