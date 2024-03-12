@@ -32,4 +32,7 @@ public interface BaseOkHttpClient {
 
             // we can only handle json
             if (contentType == null || !contentType.toLowerCase().contains("application/json")) {
-                throw new IOException("con
+                throw new IOException("content is not application/json (status=" + response.code() + ", actual=" + contentType + ")");
+            }
+
+            try (InputStream input 
