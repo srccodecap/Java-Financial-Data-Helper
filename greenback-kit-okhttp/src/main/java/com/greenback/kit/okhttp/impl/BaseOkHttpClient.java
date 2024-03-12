@@ -39,4 +39,5 @@ public interface BaseOkHttpClient {
 
                 // if response was not successful and isn't json
                 if (!response.isSuccessful()) {
-           
+                    if (!response.header("Content-Type").toLowerCase().startsWith("application/json")) {
+                        throw new IOException("Unable to cleanly execute
