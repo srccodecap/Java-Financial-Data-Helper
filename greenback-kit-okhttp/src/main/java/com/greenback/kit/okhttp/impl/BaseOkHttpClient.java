@@ -45,4 +45,6 @@ public interface BaseOkHttpClient {
                 }
                 
                 try {
-           
+                    // run the deserializer (it also checks for json-based errors
+                    return deserializeHandler.apply(input);
+                } catc
