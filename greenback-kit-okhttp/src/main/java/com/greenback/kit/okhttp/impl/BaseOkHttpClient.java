@@ -47,4 +47,11 @@ public interface BaseOkHttpClient {
                 try {
                     // run the deserializer (it also checks for json-based errors
                     return deserializeHandler.apply(input);
-                } catc
+                } catch (GreenbackException e) {
+                    throw e; // rethrow it
+                }
+            }
+        }
+    }
+    
+    default public Re
