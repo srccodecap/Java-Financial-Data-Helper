@@ -152,3 +152,12 @@ public class ApiDemo {
 //            log.debug("Connect: id={}, name={}, type={}, state={}", connect.getId(), connect.getName(), connect.getType(), connect.getState());
             
         }
+        catch (Exception e) {
+            log.error("Uh oh!", e);
+        }
+        finally {
+            OkHttpHelper.shutdown(httpClient);
+        }
+    }
+    
+}
