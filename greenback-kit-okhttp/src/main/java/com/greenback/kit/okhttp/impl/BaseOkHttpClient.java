@@ -54,4 +54,10 @@ public interface BaseOkHttpClient {
         }
     }
     
-    default public Re
+    default public RequestBody jsonRequestBody(
+            byte[] bytes) {
+        
+        return RequestBody.create(MediaType.parse("application/json"), bytes);
+    }
+    
+}
