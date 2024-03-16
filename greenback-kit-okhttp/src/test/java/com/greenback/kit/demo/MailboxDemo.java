@@ -6,4 +6,7 @@ import com.greenback.kit.jackson.JacksonGreenbackCodec;
 import com.greenback.kit.model.Message;
 import com.greenback.kit.model.MessageRequest;
 import com.greenback.kit.model.Vision;
-import com.g
+import com.greenback.kit.model.VisionRequest;
+import com.greenback.kit.okhttp.OkHttpGreenbackClient;
+import com.greenback.kit.okhttp.OkHttpHelper;
+imp
