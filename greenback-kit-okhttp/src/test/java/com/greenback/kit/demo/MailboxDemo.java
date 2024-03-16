@@ -9,4 +9,9 @@ import com.greenback.kit.model.Vision;
 import com.greenback.kit.model.VisionRequest;
 import com.greenback.kit.okhttp.OkHttpGreenbackClient;
 import com.greenback.kit.okhttp.OkHttpHelper;
-imp
+import java.io.File;
+import static java.util.Optional.ofNullable;
+import java.util.Properties;
+import okhttp3.OkHttpClient;
+import org.slf4j.Logger;
+import org.slf4
