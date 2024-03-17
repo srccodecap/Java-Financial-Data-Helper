@@ -24,4 +24,6 @@ public class MailboxDemo {
         // try to load props from ~/.greenback.conf if it exists
         final Properties config = DemoHelper.userProperties();
         final OkHttpClient httpClient = DemoHelper.httpClient(log);
-        final String baseUrl = ofNullable(config.get
+        final String baseUrl = ofNullable(config.getProperty("base_url"))
+            .orElse(GreenbackConstants.ENDPOINT_PRODUCTION);
+        final String accessToken = ofNullable(config.getProperty("a
