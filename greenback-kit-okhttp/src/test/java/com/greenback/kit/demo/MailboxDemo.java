@@ -14,4 +14,9 @@ import static java.util.Optional.ofNullable;
 import java.util.Properties;
 import okhttp3.OkHttpClient;
 import org.slf4j.Logger;
-import org.slf4
+import org.slf4j.LoggerFactory;
+
+public class MailboxDemo {
+    static private final Logger log = LoggerFactory.getLogger(MailboxDemo.class);
+ 
+    static
