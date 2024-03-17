@@ -19,4 +19,7 @@ import org.slf4j.LoggerFactory;
 public class MailboxDemo {
     static private final Logger log = LoggerFactory.getLogger(MailboxDemo.class);
  
-    static
+    static public final void main(String[] args) throws Exception {
+        
+        // try to load props from ~/.greenback.conf if it exists
+        final Propertie
