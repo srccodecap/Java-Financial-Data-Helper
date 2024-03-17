@@ -22,4 +22,6 @@ public class MailboxDemo {
     static public final void main(String[] args) throws Exception {
         
         // try to load props from ~/.greenback.conf if it exists
-        final Propertie
+        final Properties config = DemoHelper.userProperties();
+        final OkHttpClient httpClient = DemoHelper.httpClient(log);
+        final String baseUrl = ofNullable(config.get
