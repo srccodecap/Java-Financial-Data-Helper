@@ -26,4 +26,9 @@ public class MailboxDemo {
         final OkHttpClient httpClient = DemoHelper.httpClient(log);
         final String baseUrl = ofNullable(config.getProperty("base_url"))
             .orElse(GreenbackConstants.ENDPOINT_PRODUCTION);
-        final String accessToken = ofNullable(config.getProperty("a
+        final String accessToken = ofNullable(config.getProperty("access_token"))
+            .orElse("access-token-here");
+
+        try {
+            final GreenbackClient client = new OkHttpGreenbackClient(
+        
