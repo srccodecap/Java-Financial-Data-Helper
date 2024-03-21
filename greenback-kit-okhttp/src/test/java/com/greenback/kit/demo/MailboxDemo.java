@@ -36,4 +36,8 @@ public class MailboxDemo {
                 new JacksonGreenbackCodec(),
                 accessToken);
 
-            Message message = cl
+            Message message = client.createMessage(new MessageRequest()
+                .setAsync(true)
+                .setDocument(new File("../samples/disney_sample.msg")));
+
+ 
