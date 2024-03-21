@@ -31,4 +31,9 @@ public class MailboxDemo {
 
         try {
             final GreenbackClient client = new OkHttpGreenbackClient(
-        
+                httpClient,
+                baseUrl,
+                new JacksonGreenbackCodec(),
+                accessToken);
+
+            Message message = cl
