@@ -40,4 +40,5 @@ public class MailboxDemo {
                 .setAsync(true)
                 .setDocument(new File("../samples/disney_sample.msg")));
 
- 
+            log.debug("Message: id={}, name={}, status={}, updated={}",
+                message.getId(), message.getName(), message.getStatus(), message
