@@ -44,4 +44,7 @@ public class MailboxDemo {
                 message.getId(), message.getName(), message.getStatus(), message.getUpdatedAt());
             
             while (!message.getStatus().isTerminal()) {
-                message = client.g
+                message = client.getMessageById(message.getId());
+                
+                log.debug("Message: id={}, name={}, status={}, updated={}",
+                    message.getId
