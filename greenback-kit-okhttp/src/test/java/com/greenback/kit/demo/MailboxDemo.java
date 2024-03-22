@@ -41,4 +41,7 @@ public class MailboxDemo {
                 .setDocument(new File("../samples/disney_sample.msg")));
 
             log.debug("Message: id={}, name={}, status={}, updated={}",
-                message.getId(), message.getName(), message.getStatus(), message
+                message.getId(), message.getName(), message.getStatus(), message.getUpdatedAt());
+            
+            while (!message.getStatus().isTerminal()) {
+                message = client.g
