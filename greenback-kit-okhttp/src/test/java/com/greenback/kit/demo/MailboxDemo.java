@@ -47,4 +47,9 @@ public class MailboxDemo {
                 message = client.getMessageById(message.getId());
                 
                 log.debug("Message: id={}, name={}, status={}, updated={}",
-                    message.getId
+                    message.getId(), message.getName(), message.getStatus(), message.getUpdatedAt());
+             
+                Thread.sleep(500L);
+            }
+        }
+        ca
