@@ -52,4 +52,11 @@ public class MailboxDemo {
                 Thread.sleep(500L);
             }
         }
-        ca
+        catch (Exception e) {
+            log.error("Uh oh!", e);
+        }
+        finally {
+            OkHttpHelper.shutdown(httpClient);
+        }
+    }
+  
